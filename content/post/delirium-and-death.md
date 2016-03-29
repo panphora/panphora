@@ -1,0 +1,11 @@
++++
+date = "2014-09-26"
+title = "delirium and death"
+
++++
+
+*I don't think you can ever know for sure where you stand in relation to other people.*
+
+**What I worked on today:**
+
+The image of the girl with the crazy hair in the footer of the [Lovenicely](http://lovenicely.com) website &mdash; inspired by <a href="http://en.wikipedia.org/wiki/Endless_(comics)">Delirium and Death</a> from the Sandman comics.

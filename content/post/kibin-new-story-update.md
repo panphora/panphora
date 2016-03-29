@@ -1,0 +1,11 @@
++++
+date = "2014-10-24"
+title = "kibin new story update"
+
++++
+
+*We are forged by suffering.*
+
+**What I worked on today:**
+
+Got feedback on the the new story for <a href="http://lovenicely.com">Love nicely</a> back from <a href="https://www.kibin.com/">Kibin</a>. Reached out to a different artist to do an illustration for it. I'm hoping to publish the story by the end of November.

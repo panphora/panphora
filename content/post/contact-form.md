@@ -1,0 +1,11 @@
++++
+date = "2014-09-29"
+title = "contact form"
+
++++
+
+*The time I lose chasing paths that are not mine...*
+
+**What I worked on today:**
+
+The contact form that pops up when you click the "contact me" link at the bottom of this site. It uses a <a href="http://www.immersionmedia.com/blog/customizing-and-styling-google-forms/">customized Google Form</a>.

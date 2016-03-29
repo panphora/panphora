@@ -1,0 +1,11 @@
++++
+date = "2014-10-04"
+title = "terrain of opinions edited"
+
++++
+
+*For clarity, I return to the idea that we all only exist right now.*
+
+**What I worked on today:**
+
+I edited and improved my newest post on Thinklens, <a href="http://thinklens.com/">"The Terrain of Points and Opinions"</a>. I think I may have posted it a bit prematurely.

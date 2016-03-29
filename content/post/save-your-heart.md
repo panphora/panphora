@@ -1,0 +1,12 @@
++++
+date = "2014-12-22"
+draft = true
+title = "save your heart"
+
++++
+
+*Drop the search. The journey will unfold naturally.*
+
+**What I've been working on:**
+
+I completely redesigned the front page of <a href="http://lovenicely.com/">Love nicely</a> over the past two weeks. I also added a new story called <a href="http://lovenicely.com/save-your-heart/">Save Your Heart</a>. I'm very proud of both these things, especially because I also did the artwork and audio recording for the new story.

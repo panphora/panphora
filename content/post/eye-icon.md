@@ -1,0 +1,11 @@
++++
+date = "2014-09-24"
+title = "eye icon"
+
++++
+
+*I thought of a new name for one of the main characters of my novel: Rish, the outlawed princess. Her name was already Rish, the title is the new part.*
+
+**What I worked on today:** 
+
+I made the eye icon at the top of this website.
