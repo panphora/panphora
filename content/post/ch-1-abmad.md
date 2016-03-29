@@ -4,7 +4,7 @@ title = "ch 1 abmad"
 
 +++
 
-*When the sky falls, don't try to pick it up, just keep walking*
+*When the sky falls, don't try to pick it up, just keep walking.*
 
 **What I worked on today:**
 
