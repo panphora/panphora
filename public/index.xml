@@ -6,15 +6,99 @@
     <description>Recent content on panphora</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://panphora.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>ch 1 abmad</title>
-      <link>http://panphora.com/post/ch-1-abmad/</link>
+      <title></title>
+      <link>http://panphora.com/post/transferring-to-github-pages/</link>
+      <pubDate>Wed, 06 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/transferring-to-github-pages/</guid>
+      <description>&lt;p&gt;&lt;em&gt;If you want to hear your inner voice, it can sometimes help to write.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Transferred two blogs, &lt;a href=&#34;http://ohnote.com/&#34;&gt;oh note!&lt;/a&gt; and &lt;a href=&#34;http://smashingthingstogether.com/&#34;&gt;Smashing Things Together&lt;/a&gt;, to &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; from &lt;a href=&#34;https://www.runkite.com/&#34;&gt;Runkite&lt;/a&gt;. Saves me $10/month and I finished the transfer just two days before the subscription was set to renew!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/00016/</link>
+      <pubDate>Sat, 20 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/00016/</guid>
+      <description>&lt;p&gt;&lt;em&gt;When you are terrified, wait. Terror turns into something new when you give it enough room.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Gave a presentation at a Meteor.js meetup and wrote a followup blog post for smashingthingstogether.com, &lt;a href=&#34;http://smashingthingstogether.com/the-javascript-runtime-fibers-and-meteor-wrapasync/&#34;&gt;The JavaScript Runtime, Fibers, and Meteor.wrapAsync (Meteor.js)&lt;/a&gt;. It&amp;rsquo;s a pretty deep look at how JavaScript works and what makes Meteor.js so cool.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/00015/</link>
+      <pubDate>Wed, 03 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/00015/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Forgetting is the biggest favor you can do for reality. It too makes mistakes.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Wrote a blog post for smashingthingstogether.com, &amp;ldquo;&lt;a href=&#34;http://smashingthingstogether.com/make-your-first-meteor-js-package/&#34;&gt;Make Your First Meteor.js Package&lt;/a&gt;&amp;rdquo;, which explains the basics of creating a reusable package for Meteor.js and sharing it with other developers&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/00014/</link>
+      <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/00014/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Things happen. Mostly, that&amp;rsquo;s all you need to know.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Wrote a blog post for smashingthingstogether.com, &amp;ldquo;&lt;a href=&#34;http://smashingthingstogether.com/deploying-your-app-to-scalingo-meteor-js/&#34;&gt;Deploying Your App to Scalingo (Meteor.js)&lt;/a&gt;&amp;rdquo;, which aims to show a quick and easy way to deploy a Meteor.js application&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/00013/</link>
+      <pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/00013/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Whatever you share of yourself becomes more real than it was before.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Wrote a blog post for smashingthingstogether.com, &amp;ldquo;&lt;a href=&#34;http://smashingthingstogether.com/how-to-make-a-custom-sign-up-form-meteor-js/&#34;&gt;How to Make Custom Sign Up and Login Forms (Meteor.js)&lt;/a&gt;&amp;rdquo;, which helps teach Meteor.js developers to customize the look of their authentication forms&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/00012/</link>
+      <pubDate>Mon, 25 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/00012/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Let go, let it all in, and watch fear evaporate. Fear is nothing more than trying to push back what you already know.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Wrote a blog post for smashingthingstogether.com: &amp;ldquo;&lt;a href=&#34;http://smashingthingstogether.com/scoped-reactive-var-meteor-js/&#34;&gt;Using Scoped ReactiveVars to Control Tab Visibility (Meteor.js)&lt;/a&gt;&amp;rdquo;, which gives some advice about how to keep code clean in Meteor.js apps&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/00011/</link>
       <pubDate>Fri, 17 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/ch-1-abmad/</guid>
+      <guid>http://panphora.com/post/00011/</guid>
       <description>&lt;p&gt;&lt;em&gt;When the sky falls, don&amp;rsquo;t try to pick it up, just keep walking.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -24,11 +108,25 @@
     </item>
     
     <item>
-      <title>kibin new story update</title>
-      <link>http://panphora.com/post/kibin-new-story-update/</link>
+      <title></title>
+      <link>http://panphora.com/post/00010/</link>
+      <pubDate>Mon, 22 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/00010/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Drop the search. The journey will unfold naturally.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I&amp;rsquo;ve been working on:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I completely redesigned the front page of &lt;a href=&#34;http://lovenicely.com/&#34;&gt;Love nicely&lt;/a&gt; over the past two weeks. I also added a new story called &lt;a href=&#34;http://lovenicely.com/save-your-heart/&#34;&gt;Save Your Heart&lt;/a&gt;. I&amp;rsquo;m very proud of both these things, especially because I also did the artwork and audio recording for the new story.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/00009/</link>
       <pubDate>Fri, 24 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/kibin-new-story-update/</guid>
+      <guid>http://panphora.com/post/00009/</guid>
       <description>&lt;p&gt;&lt;em&gt;We are forged by suffering.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -38,11 +136,11 @@
     </item>
     
     <item>
-      <title>kibin new story</title>
-      <link>http://panphora.com/post/kibin-new-story/</link>
+      <title></title>
+      <link>http://panphora.com/post/00008/</link>
       <pubDate>Sun, 19 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/kibin-new-story/</guid>
+      <guid>http://panphora.com/post/00008/</guid>
       <description>&lt;p&gt;&lt;em&gt;Dear children, they are children too, just been around the sun more times.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -52,11 +150,11 @@
     </item>
     
     <item>
-      <title>dream about gems</title>
-      <link>http://panphora.com/post/dream-about-gems/</link>
+      <title></title>
+      <link>http://panphora.com/post/00007/</link>
       <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/dream-about-gems/</guid>
+      <guid>http://panphora.com/post/00007/</guid>
       <description>&lt;p&gt;&lt;em&gt;Sometimes it&amp;rsquo;s a long journey to find my way back to peace and self-acceptance.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -66,11 +164,11 @@
     </item>
     
     <item>
-      <title>terrain of opinions edited</title>
-      <link>http://panphora.com/post/terrain-of-opinions-edited/</link>
+      <title></title>
+      <link>http://panphora.com/post/00006/</link>
       <pubDate>Sat, 04 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/terrain-of-opinions-edited/</guid>
+      <guid>http://panphora.com/post/00006/</guid>
       <description>&lt;p&gt;&lt;em&gt;For clarity, I return to the idea that we all only exist right now.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -80,11 +178,11 @@
     </item>
     
     <item>
-      <title>terrain of opinions</title>
-      <link>http://panphora.com/post/terrain-of-opinions/</link>
+      <title></title>
+      <link>http://panphora.com/post/00005/</link>
       <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/terrain-of-opinions/</guid>
+      <guid>http://panphora.com/post/00005/</guid>
       <description>&lt;p&gt;&lt;em&gt;Often there is nothing standing in my way, even when I feel there is.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -94,11 +192,11 @@
     </item>
     
     <item>
-      <title>contact form</title>
-      <link>http://panphora.com/post/contact-form/</link>
+      <title></title>
+      <link>http://panphora.com/post/00004/</link>
       <pubDate>Mon, 29 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/contact-form/</guid>
+      <guid>http://panphora.com/post/00004/</guid>
       <description>&lt;p&gt;&lt;em&gt;The time I lose chasing paths that are not mine&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -108,44 +206,16 @@
     </item>
     
     <item>
-      <title>delirium and death</title>
-      <link>http://panphora.com/post/delirium-and-death/</link>
+      <title></title>
+      <link>http://panphora.com/post/00003/</link>
       <pubDate>Fri, 26 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/delirium-and-death/</guid>
+      <guid>http://panphora.com/post/00003/</guid>
       <description>&lt;p&gt;&lt;em&gt;I don&amp;rsquo;t think you can ever know for sure where you stand in relation to other people.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;The image of the girl with the crazy hair in the footer of the &lt;a href=&#34;http://lovenicely.com&#34;&gt;Lovenicely&lt;/a&gt; website &amp;mdash; inspired by &lt;a href=&#34;http://en.wikipedia.org/wiki/Endless_(comics)&#34;&gt;Delirium and Death&lt;/a&gt; from the Sandman comics.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>eye icon</title>
-      <link>http://panphora.com/post/eye-icon/</link>
-      <pubDate>Wed, 24 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://panphora.com/post/eye-icon/</guid>
-      <description>&lt;p&gt;&lt;em&gt;I thought of a new name for one of the main characters of my novel: Rish, the outlawed princess. Her name was already Rish, the title is the new part.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I made the eye icon at the top of this website.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>fairy tails</title>
-      <link>http://panphora.com/post/fairy-tails/</link>
-      <pubDate>Mon, 22 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://panphora.com/post/fairy-tails/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Behaviorists might claim that fairy tales are told to keep children in line. I think they&amp;rsquo;re told because they communicate something that cannot be said otherwise.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I made &lt;a href=&#34;http://www.redbubble.com/people/panphora/works/12709879-in-the-dust-of-this-planet-shirt&#34;&gt;a shirt&lt;/a&gt; inspired by the &lt;a href=&#34;http://www.radiolab.org/story/dust-planet/&#34;&gt;In the Dust of this Planet episode&lt;/a&gt; of Radiolab.&lt;/p&gt;
 </description>
     </item>
     
