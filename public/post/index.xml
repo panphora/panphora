@@ -6,29 +6,99 @@
     <description>Recent content in Posts on panphora</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Mar 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://panphora.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>http://panphora.com/post/transferring-to-github-pages/</link>
-      <pubDate>Wed, 06 Apr 2016 00:00:00 +0000</pubDate>
+      <link>http://panphora.com/post/2016-04-05/</link>
+      <pubDate>Sat, 26 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/transferring-to-github-pages/</guid>
+      <guid>http://panphora.com/post/2016-04-05/</guid>
       <description>&lt;p&gt;&lt;em&gt;If you want to hear your inner voice, it can sometimes help to write.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Transferred two blogs, &lt;a href=&#34;http://ohnote.com/&#34;&gt;oh note!&lt;/a&gt; and &lt;a href=&#34;http://smashingthingstogether.com/&#34;&gt;Smashing Things Together&lt;/a&gt;, to &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; from &lt;a href=&#34;https://www.runkite.com/&#34;&gt;Runkite&lt;/a&gt;. Saves me $10/month and I finished the transfer just two days before the subscription was set to renew!&lt;/p&gt;
+&lt;p&gt;Over the past week I&amp;rsquo;ve been learning about some blogging software called &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. I used it to convert this website, &lt;a href=&#34;http://ohnote.com/&#34;&gt;ohnote.com&lt;/a&gt;, and &lt;a href=&#34;http://smashingthingstogether.com/&#34;&gt;smashingthingstogether.com&lt;/a&gt; into static websites. Since hosting static wesbites is free and fast on GitHub pages, this is saving me $10/month. I&amp;rsquo;m also working on a blog post to help guide other people who want to do this. It&amp;rsquo;s going to be called something like &amp;ldquo;Make a simple static blog with Hugo and deploy it to GitHub Pages: An easy, step-by-step tutorial&amp;rdquo;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://panphora.com/post/00028/</link>
+      <link>http://panphora.com/post/2016-03-17/</link>
+      <pubDate>Thu, 17 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/2016-03-17/</guid>
+      <description>&lt;p&gt;&lt;em&gt;When I feel ill or stressed, I know I haven&amp;rsquo;t been paying attention to my body lately.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I added a new chapter of &lt;a href=&#34;http://lovenicely.com/a-boy-meets-a-dragon-7/&#34;&gt;&amp;ldquo;A Boy Meets a Dragon&amp;rdquo;&lt;/a&gt; to lovenicely.com. Usually, this includes text written by me, an audio recording recorded by me, and a simple illustration drawn by me. However, this time I hired a brilliant artist to do the illustration and it looks wonderful! The artist&amp;rsquo;s name is Choo and she has a wonderful &lt;a href=&#34;http://choodraws.tumblr.com/&#34;&gt;blog&lt;/a&gt; where she posts a lot of her artwork.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/2016-03-02/</link>
+      <pubDate>Wed, 02 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/2016-03-02/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Taking time for yourself is the single healthiest thing you can do.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Continuing to work on &lt;a href=&#34;https://artisfy.com/&#34;&gt;Artisfy&lt;/a&gt;, improving it step by step. Worked on the User model today, so developing features that interact with users (i.e. all of them) will be easier now.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/2016-01-31/</link>
+      <pubDate>Sun, 31 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/2016-01-31/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Stop pretending.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I moved back to Somerville! I live 5 minutes from Davis Square! It was a long, hard move, but totally worth it! Ok, gonna sleep for 10 hours now, bye.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/2016-01-29/</link>
+      <pubDate>Fri, 29 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/2016-01-29/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Leave people behind. Most of the time they&amp;rsquo;ll catch up to you later. Sometimes you&amp;rsquo;ll realize they were moving so slowly just to help you along.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Started implementing payment processing on &lt;a href=&#34;https://artisfy.com/&#34;&gt;Artisfy&lt;/a&gt;. Improved the payment form dramatically with the &lt;a href=&#34;https://github.com/stripe/jquery.payment&#34;&gt;jquery.payments.js library&lt;/a&gt; from &lt;a href=&#34;https://stripe.com/&#34;&gt;Stripe&lt;/a&gt;. I also made a &lt;a href=&#34;http://www.redbubble.com/people/panphora/works/20755922-my-thai-vegan-cafe&#34;&gt;t-shirt for my girlfriend&lt;/a&gt; of the logo of her favorite restaurant, &lt;a href=&#34;http://www.yelp.com/biz/my-thai-vegan-cafe-boston-3&#34;&gt;My Thai Vegan Cafe&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/2016-01-21/</link>
+      <pubDate>Thu, 21 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/2016-01-21/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Things look and feel much different if you just let them be, as opposed to turning them over in your mind. Stop trying to figure out your experience and just let it happen.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Deployed a new version of &lt;a href=&#34;https://artisfy.com/&#34;&gt;Artisfy&lt;/a&gt;, fixed some bugs, added analytics, and got the contact form on the &lt;a href=&#34;https://artisfy.com/contact&#34;&gt;contact page&lt;/a&gt; working.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/2016-01-20/</link>
       <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/00028/</guid>
+      <guid>http://panphora.com/post/2016-01-20/</guid>
       <description>&lt;p&gt;&lt;em&gt;Many thoughts throughout the day occur automatically. Make sure you take the time to create your own thoughts.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -39,10 +109,10 @@
     
     <item>
       <title></title>
-      <link>http://panphora.com/post/00027/</link>
+      <link>http://panphora.com/post/2015-12-14/</link>
       <pubDate>Mon, 14 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/00027/</guid>
+      <guid>http://panphora.com/post/2015-12-14/</guid>
       <description>&lt;p&gt;&lt;em&gt;Creativity bends the world around you, opening the space around you into something you didn&amp;rsquo;t see before.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -53,10 +123,10 @@
     
     <item>
       <title></title>
-      <link>http://panphora.com/post/00026/</link>
+      <link>http://panphora.com/post/2015-12-10/</link>
       <pubDate>Thu, 10 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/00026/</guid>
+      <guid>http://panphora.com/post/2015-12-10/</guid>
       <description>&lt;p&gt;&lt;em&gt;Patience is generosity with time.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -67,10 +137,10 @@
     
     <item>
       <title></title>
-      <link>http://panphora.com/post/00025/</link>
+      <link>http://panphora.com/post/2015-12-02/</link>
       <pubDate>Wed, 02 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/00025/</guid>
+      <guid>http://panphora.com/post/2015-12-02/</guid>
       <description>&lt;p&gt;&lt;em&gt;I love my dreams.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -81,10 +151,10 @@
     
     <item>
       <title></title>
-      <link>http://panphora.com/post/00024/</link>
+      <link>http://panphora.com/post/2015-12-01/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/00024/</guid>
+      <guid>http://panphora.com/post/2015-12-01/</guid>
       <description>&lt;p&gt;&lt;em&gt;I like to take a few seconds every day feel instead of think. It feels better every day.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -95,10 +165,10 @@
     
     <item>
       <title></title>
-      <link>http://panphora.com/post/00023/</link>
+      <link>http://panphora.com/post/2015-11-30/</link>
       <pubDate>Mon, 30 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/00023/</guid>
+      <guid>http://panphora.com/post/2015-11-30/</guid>
       <description>&lt;p&gt;&lt;em&gt;Most of your enemies are your own fears in disguise.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -109,10 +179,10 @@
     
     <item>
       <title></title>
-      <link>http://panphora.com/post/00022/</link>
+      <link>http://panphora.com/post/2015-09-17/</link>
       <pubDate>Thu, 17 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/00022/</guid>
+      <guid>http://panphora.com/post/2015-09-17/</guid>
       <description>&lt;p&gt;&lt;em&gt;There are many problems in life, but most of them aren&amp;rsquo;t actually problems.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -123,10 +193,10 @@
     
     <item>
       <title></title>
-      <link>http://panphora.com/post/00021/</link>
+      <link>http://panphora.com/post/2015-09-15/</link>
       <pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/00021/</guid>
+      <guid>http://panphora.com/post/2015-09-15/</guid>
       <description>&lt;p&gt;&lt;em&gt;If you want to be something you&amp;rsquo;re not, try practicing acting like that thing.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
@@ -137,85 +207,15 @@
     
     <item>
       <title></title>
-      <link>http://panphora.com/post/00020/</link>
+      <link>http://panphora.com/post/2015-09-03/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://panphora.com/post/00020/</guid>
+      <guid>http://panphora.com/post/2015-09-03/</guid>
       <description>&lt;p&gt;&lt;em&gt;Advice is mostly given by people who didn&amp;rsquo;t achieve their dreams.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;I wrote a blog post for other people who have trouble figuring out how to handle errors that occur in the Meteor.js methods: &lt;a href=&#34;http://smashingthingstogether.com/handling-errors-in-meteor-methods/&#34;&gt;How to Handle Errors in Meteor Methods&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://panphora.com/post/00019/</link>
-      <pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://panphora.com/post/00019/</guid>
-      <description>&lt;p&gt;&lt;em&gt;In the process of becoming who you want to be, you will pass into and through identities you don&amp;rsquo;t want to be. The fun part is not becoming what you want to be, but in slowly realizing that it may not be exactly what you thought it was.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I put three of my favorite domains up for sale: riotpost.com, jetplot.com, and ohnote.com. I spent a lot of money doing this. Unfortunately, none of them sold.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://panphora.com/post/00018/</link>
-      <pubDate>Mon, 17 Aug 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://panphora.com/post/00018/</guid>
-      <description>&lt;p&gt;&lt;em&gt;The quickest way back to peace is to wait for it to come back to you.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I wrote a blog post about how I added pagination to my own Meteor.js project: &lt;a href=&#34;http://smashingthingstogether.com/pagination-in-meteor-js-with-iron-router-support/&#34;&gt;Pagination in Meteor.js (with Iron Router support)&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://panphora.com/post/00017/</link>
-      <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://panphora.com/post/00017/</guid>
-      <description>&lt;p&gt;&lt;em&gt;If you want to bring your fantasy life and your real life closer together, try doing something just because it pops into your head.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Made a website mockup of my mother&amp;rsquo;s Plated cookbook idea and &lt;a href=&#34;https://twitter.com/panphora/status/616620023138881536&#34;&gt;sent it to Plated&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://panphora.com/post/00016/</link>
-      <pubDate>Sat, 20 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://panphora.com/post/00016/</guid>
-      <description>&lt;p&gt;&lt;em&gt;When you are terrified, wait. Terror turns into something new when you give it enough room.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Gave a presentation at a Meteor.js meetup and wrote a followup blog post for smashingthingstogether.com, &lt;a href=&#34;http://smashingthingstogether.com/the-javascript-runtime-fibers-and-meteor-wrapasync/&#34;&gt;The JavaScript Runtime, Fibers, and Meteor.wrapAsync (Meteor.js)&lt;/a&gt;. It&amp;rsquo;s a pretty deep look at how JavaScript works and what makes Meteor.js so cool.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://panphora.com/post/00015/</link>
-      <pubDate>Wed, 03 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://panphora.com/post/00015/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Forgetting is the biggest favor you can do for reality. It too makes mistakes.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Wrote a blog post for smashingthingstogether.com, &amp;ldquo;&lt;a href=&#34;http://smashingthingstogether.com/make-your-first-meteor-js-package/&#34;&gt;Make Your First Meteor.js Package&lt;/a&gt;&amp;rdquo;, which explains the basics of creating a reusable package for Meteor.js and sharing it with other developers&lt;/p&gt;
 </description>
     </item>
     

@@ -1,0 +1,9 @@
++++
+date = "2016-03-26"
++++
+
+*As far as I understand it, this is the complete struggle of being human: Being confined to a room that is what you feel, and, while being curious about what happens outside of this room, being content with the knowledge that it is beyond what you are...*
+
+**What I worked on today:**
+
+I wrote a blog post called ["I want to be sane again"](http://ohnote.com/i-want-to-feel-sane-again/) for my random thoughts blog ohnote.com.
