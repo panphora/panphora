@@ -6,8 +6,22 @@
     <description>Recent content in Posts on panphora</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://panphora.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>http://panphora.com/post/2016-04-22/</link>
+      <pubDate>Fri, 22 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://panphora.com/post/2016-04-22/</guid>
+      <description>&lt;p&gt;&lt;em&gt;One wrong turn can be literally three right turns in disguise&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I deployed my new personal website/portfolio to &lt;a href=&#34;http://davidmiranda.info/&#34;&gt;davidmiranda.info&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title></title>
@@ -202,20 +216,6 @@
 &lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;I received my offer letters from &lt;a href=&#34;https://angel.co/windshield&#34;&gt;Windshield Inc.&lt;/a&gt;, a startup that uses Meteor.js and has a really cool mission!!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://panphora.com/post/2015-09-15/</link>
-      <pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://panphora.com/post/2015-09-15/</guid>
-      <description>&lt;p&gt;&lt;em&gt;If you want to be something you&amp;rsquo;re not, try practicing acting like that thing.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;What I worked on today:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Over the weekend I read through an entire &lt;a href=&#34;http://amzn.com/B00PVDODGI&#34;&gt;book about Gulp.js&lt;/a&gt; and used what I learned to get &lt;a href=&#34;http://girlfridaylifemanagement.com/&#34;&gt;a client&amp;rsquo;s website&lt;/a&gt; back online.&lt;/p&gt;
 </description>
     </item>
     
