@@ -1,3 +1,1 @@
-## to deploy
-
-bash deploy.sh "commit msg"
+hello world
