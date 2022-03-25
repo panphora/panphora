@@ -1,6 +1,0 @@
-baseurl = "http://panphora.com/"
-languageCode = "en-us"
-title = "panphora"
-
-[Params]
-  Author = "David Miranda"
