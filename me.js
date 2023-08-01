@@ -15,7 +15,7 @@ document.body.insertAdjacentHTML("beforeend", `
     bottom: 0;
     position: fixed;
     z-index: 100;
-    padding: 5px 8px 7px 8px;
+    padding: 6px 8px 7px 6px;
     border-top: 1px solid transparent;
     border-left: 1px solid transparent;
     border-top-left-radius: 14px;
