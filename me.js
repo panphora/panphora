@@ -9,13 +9,18 @@ function domReady(fn) {
 domReady(() => {
 document.body.insertAdjacentHTML("beforeend", `
 <style>
+  .me-pop, .me-pop * {
+    box-sizing: border-box;
+  }
+
   .me-pop {
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;;
     right: 0;
     bottom: 0;
     position: fixed;
     z-index: 100;
-    padding: 6px 8px 7px 6px;
+    padding: 6px 8px 9px 8px;
+    line-height: 1;
     border-top: 1px solid transparent;
     border-left: 1px solid transparent;
     border-top-left-radius: 14px;
