@@ -1,0 +1,603 @@
+/*
+
+  panphora.css
+
+  make html look nice by default
+
+  rules:
+  - no layout styles
+  - nice buttons! (most important)
+  - headings resize for tablet/mobile
+  - use a nice font :)
+  - no dark mode (for now)
+
+*/
+
+/* GENERAL CSS RESET */
+
+.panphora {
+  font-size: 18px;
+  line-height: 1.65;
+  font-family: "Space Grotesk", sans-serif;
+  color: #111827;
+}
+
+.panphora *, .panphora *::before, .panphora *::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.panphora dl,
+.panphora dt,
+.panphora dd,
+.panphora blockquote,
+.panphora figure,
+.panphora fieldset,
+.panphora legend,
+.panphora textarea,
+.panphora pre,
+.panphora iframe,
+.panphora hr,
+.panphora h1,
+.panphora h2,
+.panphora h3,
+.panphora h4,
+.panphora h5,
+.panphora h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.panphora form {
+  width: 100%;
+}
+
+.panphora fieldset {
+  border: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.panphora b,
+.panphora strong {
+  font-weight: bolder;
+}
+
+.panphora h1,
+.panphora h2,
+.panphora h3,
+.panphora h4,
+.panphora h5,
+.panphora h6 {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.panphora button,
+.panphora input,
+.panphora select,
+.panphora textarea {
+  margin: 0;
+  font: inherit;
+}
+
+.panphora img,
+.panphora svg,
+.panphora video,
+.panphora canvas,
+.panphora audio,
+.panphora iframe,
+.panphora embed,
+.panphora object {
+  display: block;
+  vertical-align: middle;
+}
+
+.panphora img,
+.panphora video {
+  height: auto;
+  width: 100%;
+}
+
+.panphora iframe {
+  border: 0;
+}
+
+.panphora table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+.panphora td,
+.panphora th {
+  padding: 0;
+}
+
+.panphora hr {
+  margin: 1rem 0;
+  height: 0;
+  color: inherit;
+  border-width: 0;
+  border-top-width: 1px;
+  border-style: solid;
+}
+
+.panphora blockquote {
+  padding-left: 2rem;
+  border-left: 10px solid #cbd5e1;
+}
+
+.panphora code,
+.panphora kbd,
+.panphora samp,
+.panphora pre {
+  font-family: 'Space Mono', monospace;
+}
+
+.panphora code {
+  display: inline-block;
+  padding: 1px 4px 2px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  line-height: 1.3;
+}
+
+.panphora mark {
+  display: inline-block;
+  padding: 1px 4px 2px;
+  border: 1px solid #111827;
+  border-radius: 4px;
+  line-height: 1.3;
+}
+
+.panphora small {
+  font-size: 80%;
+}
+
+.panphora sub,
+.panphora sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.panphora sub {
+  bottom: -0.25em;
+}
+
+.panphora sup {
+  top: -0.5em;
+}
+
+.panphora *:-moz-focusring {
+  outline: auto;
+}
+
+.panphora progress {
+  vertical-align: baseline;
+}
+
+/*
+
+  BUTTON RESET
+
+*/
+
+.panphora button,
+.panphora [type='button'],
+.panphora [type='reset'],
+.panphora [type='submit'] {
+  display: inline-block;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  cursor: pointer;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  display: inline-block;
+  overflow: visible;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  white-space: nowrap;
+  margin-right: 11px;
+  padding: 17px 2rem 19px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  background: #ed3488;
+  background: linear-gradient(12deg, #ed3488 85%, #f37ab1 100%);
+  border-radius: 9999px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,.2);
+  text-shadow: 0 1px 2px rgba(0,0,0,.20);
+}
+
+.panphora button::-moz-focus-inner,
+.panphora [type='button']::-moz-focus-inner,
+.panphora [type='reset']::-moz-focus-inner,
+.panphora [type='submit']::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* 
+ 
+  ANCHORS / LINKS
+
+*/
+
+.panphora a {
+  color: #111827;
+}
+
+.panphora a:hover {
+  color: #6B7280;
+}
+
+/*
+  
+  Spacing between LARGE headings and the next element is LARGE
+
+*/
+
+.panphora .h1 + *,
+.panphora h1 + * {
+  margin-top: 1.35rem;
+}
+
+.panphora .h2 + *,
+.panphora h2 + * {
+  margin-top: 1.25rem;
+}
+
+.panphora .h3 + *,
+.panphora h3 + * {
+  margin-top: 1.15rem;
+}
+
+.panphora .h4 + *,
+.panphora h4 + * {
+  margin-top: 1.15rem;
+}
+
+.panphora .h5 + *,
+.panphora h5 + * {
+  margin-top: 1.15rem;
+}
+
+.panphora .h6 + *,
+.panphora h6 + * {
+  margin-top: 1.15rem;
+}
+
+/* TYPOGRAPHY */
+
+/* 
+
+   headings 
+
+   have default font size and line height, but they can be
+   overwritten by using heading classes like .h1, .h2, .h3
+
+*/
+
+.panphora h1 {
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+.panphora h2 {
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+.panphora h3 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.panphora h4 {
+  font-size: 30px;
+  line-height: 1.25;
+}
+
+.panphora h5 {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.panphora h6 {
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.panphora .h1 {
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+.panphora .h2 {
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+.panphora .h3 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.panphora .h4 {
+  font-size: 30px;
+  line-height: 1.25;
+}
+
+.panphora .h5 {
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.panphora .h6 {
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+
+/* form inputs */
+
+input:not([type]), 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="text"], 
+input[type="url"] {
+  display: block;
+  width: 100%;
+  padding: 14px 16px 15px;
+  border: 1px solid rgba(20, 20, 20, .75);
+  border-radius: 3px;
+}
+
+input[disabled] {
+
+}
+
+textarea {
+  display: block;
+  width: 100%;
+}
+
+/* 
+
+  FLOATING LABEL TECHNIQUE 
+
+  from: https://csslayout.io/floating-label/ 
+
+*/
+
+fieldset {
+  position: relative;
+}
+
+fieldset input:not([type]):not(:placeholder-shown),
+fieldset input[type="email"]:not(:placeholder-shown),
+fieldset input[type="number"]:not(:placeholder-shown),
+fieldset input[type="password"]:not(:placeholder-shown),
+fieldset input[type="search"]:not(:placeholder-shown),
+fieldset input[type="tel"]:not(:placeholder-shown),
+fieldset input[type="text"]:not(:placeholder-shown),
+fieldset input[type="url"]:not(:placeholder-shown) {
+  padding: 22px 16px 7px;
+}
+
+fieldset input:not([type]):not(:placeholder-shown) + label,
+fieldset input[type="email"]:not(:placeholder-shown) + label,
+fieldset input[type="number"]:not(:placeholder-shown) + label,
+fieldset input[type="password"]:not(:placeholder-shown) + label,
+fieldset input[type="search"]:not(:placeholder-shown) + label,
+fieldset input[type="tel"]:not(:placeholder-shown) + label,
+fieldset input[type="text"]:not(:placeholder-shown) + label,
+fieldset input[type="url"]:not(:placeholder-shown) + label {
+  pointer-events: none;
+  opacity: .75;
+  transform: translate(0, -50%);
+  font-size: 14px;
+}
+
+fieldset input:not([type]):not(:placeholder-shown) + label::after,
+fieldset input[type="email"]:not(:placeholder-shown) + label::after,
+fieldset input[type="number"]:not(:placeholder-shown) + label::after,
+fieldset input[type="password"]:not(:placeholder-shown) + label::after,
+fieldset input[type="search"]:not(:placeholder-shown) + label::after,
+fieldset input[type="tel"]:not(:placeholder-shown) + label::after,
+fieldset input[type="text"]:not(:placeholder-shown) + label::after,
+fieldset input[type="url"]:not(:placeholder-shown) + label::after {
+  content: ":";
+}
+
+fieldset label {
+  position: absolute;
+  left: 17px;
+  top: 0;
+  opacity: 0;
+  transition: transform 200ms;
+}
+
+
+/* 
+
+  breakpoint for heading sizes:
+
+  mobile devices 
+  320px (smallest) up to 549.98px
+
+  difficult spot because top-level boxes get down to a minimum of 
+  320px width here, the smallest that top-level boxes can get
+
+  this doesn't leave a lot of room for content — especially for 
+  long words
+
+*/
+
+@media (max-width: 549.98px) {
+  h1 {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  h4 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  h5 {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+
+  h6 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .h1 {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  .h2 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .h3 {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .h4 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .h5 {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+
+  .h6 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+/* 
+
+  breakpoint:
+
+  small desktop devices (1100px - 1199.9999px)
+
+  difficult spot because it's the only place where a boxes with text in them
+  shrink AND can't expand vertically (like they can on mobile)
+
+  top-level boxes get to a minumum of 550px width
+
+  second-level boxes get to a minimum of 275px width (smallest possible box)
+
+*/
+
+@media (min-width: 640px) and (max-width: 1199.98px) {
+
+  h1 {
+    font-size: 54px;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  h5 {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+
+  h6 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .h1 {
+    font-size: 54px;
+    line-height: 1.1;
+  }
+
+  .h2 {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  .h3 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .h4 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .h5 {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+
+  .h6 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+}
+
+
+
+
+
+
+
+

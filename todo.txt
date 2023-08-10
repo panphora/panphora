@@ -1,0 +1,13 @@
+headings
+code and pre code
+inputs smaller
+inputs automatically contain labels
+disabled input
+dropdown
+buttons
+tables
+blockquote
+
+x multiple select
+
+
