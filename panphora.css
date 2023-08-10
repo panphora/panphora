@@ -144,6 +144,32 @@
   line-height: 1.3;
 }
 
+.panphora pre {
+  display: block;
+  margin-bottom: 1.5em;
+  padding: 8px 16px 10px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  line-height: 1.6;
+  white-space: pre;
+  overflow-x: scroll;
+}
+
+.panphora pre::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.panphora pre::-webkit-scrollbar-track {
+  background-color: #f1f5f9;
+  opacity: 0.8;
+  background-image: linear-gradient(to right, #cbd5e1, #cbd5e1 5px, #f1f5f9 5px, #f1f5f9 );
+  background-size: 10px 100%;
+}
+ 
+.panphora pre::-webkit-scrollbar-thumb {
+  background-color: #94a3b8;
+}
+
 .panphora mark {
   display: inline-block;
   padding: 1px 4px 2px;
@@ -357,14 +383,14 @@
 
 /* form inputs */
 
-input:not([type]), 
-input[type="email"], 
-input[type="number"], 
-input[type="password"], 
-input[type="search"], 
-input[type="tel"], 
-input[type="text"], 
-input[type="url"] {
+.panphora input:not([type]), 
+.panphora input[type="email"], 
+.panphora input[type="number"], 
+.panphora input[type="password"], 
+.panphora input[type="search"], 
+.panphora input[type="tel"], 
+.panphora input[type="text"], 
+.panphora input[type="url"] {
   display: block;
   width: 100%;
   padding: 14px 16px 15px;
@@ -372,18 +398,24 @@ input[type="url"] {
   border-radius: 3px;
 }
 
-input[disabled] {
+.panphora input[disabled] {
 
 }
 
-textarea {
+.panphora textarea {
   display: block;
   width: 100%;
+  resize: vertical;
 }
 
 /* 
 
   FLOATING LABEL TECHNIQUE 
+
+  <fieldset>
+    <input id="email" type="email" name="email" placeholder="Enter your email address">
+    <label for="email">Enter your email address</label>
+  </fieldset>
 
   from: https://csslayout.io/floating-label/ 
 
