@@ -2,12 +2,13 @@
 √ code and pre code
 √ blockquote
 √ buttons
+√ tables
 
 inputs smaller
 inputs automatically contain labels
 disabled input
 dropdown
-tables
+file input
 
 x multiple select
 

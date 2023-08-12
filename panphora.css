@@ -148,7 +148,7 @@
 
 .panphora code {
   display: inline-block;
-  padding: 1px 4px 2px;
+  padding: 0px 4px 3px;
   background-color: #E4E8EE;
   border-radius: 4px;
   line-height: 1.3;
@@ -311,34 +311,34 @@
 
 */
 
-.panphora .h1 + *,
-.panphora h1 + * {
-  margin-top: 1.35rem;
+.panphora .h1,
+.panphora h1 {
+  margin-bottom: 1.35rem;
 }
 
-.panphora .h2 + *,
-.panphora h2 + * {
-  margin-top: 1.25rem;
+.panphora .h2,
+.panphora h2 {
+  margin-bottom: 1.25rem;
 }
 
-.panphora .h3 + *,
-.panphora h3 + * {
-  margin-top: 1.15rem;
+.panphora .h3,
+.panphora h3 {
+  margin-bottom: 1.15rem;
 }
 
-.panphora .h4 + *,
-.panphora h4 + * {
-  margin-top: 1.15rem;
+.panphora .h4,
+.panphora h4 {
+  margin-bottom: 1.15rem;
 }
 
-.panphora .h5 + *,
-.panphora h5 + * {
-  margin-top: 1.15rem;
+.panphora .h5,
+.panphora h5 {
+  margin-bottom: 1.15rem;
 }
 
-.panphora .h6 + *,
-.panphora h6 + * {
-  margin-top: 1.15rem;
+.panphora .h6,
+.panphora h6 {
+  margin-bottom: 1.15rem;
 }
 
 /* TYPOGRAPHY */
