@@ -181,6 +181,77 @@
       <h4 id="forms"><a href="#forms">#</a> Forms</h4>
         <hr>
       <form>
+        <div style="margin: 320px 100px;">
+
+
+          <div class="e">
+            <label class="e__label">Name &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+          <div class="e">
+            <label class="e__label">Email &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+          <div class="e">
+            <label class="e__label">Password &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+          <div class="e">
+            <label class="e__label">Message &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+
+          <div class="e e--pill">
+            <label class="e__label">Name &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+          <div class="e e--pill">
+            <label class="e__label">Email &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+          <div class="e e--pill">
+            <label class="e__label">Password &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+          <div class="e e--pill">
+            <label class="e__label">Message &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+
+
+          <div class="e e--expandable-pill">
+            <label class="e__label">Name &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+          <div class="e e--expandable-pill">
+            <label class="e__label">Email &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+          <div class="e e--expandable-pill">
+            <label class="e__label">Password &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+          <div class="e e--expandable-pill">
+            <label class="e__label">Message &rarr;</label>
+            <input class="e__input" type="text">
+          </div>
+
+
+          <script>
+            let eElems = document.querySelectorAll(".e");
+            let eLabel = document.querySelectorAll(".e__label");
+            let eInputElems = document.querySelectorAll(".e__input");
+
+            eInputElems.forEach(el => {
+              el.addEventListener("focus", event => {
+                event.target.closest(".e").classList.add("e--expanded");
+              });
+              el.addEventListener("blur", event => {
+                event.target.closest(".e").classList.remove("e--expanded");
+              });
+            });
+          </script>
+        </div>
         <p>
           <fieldset>
             <input id="email" type="email" name="email" placeholder="Email address">
