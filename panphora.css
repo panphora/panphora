@@ -722,14 +722,18 @@ fieldset label {
   display: flex;
 }
 .e--pill .e__label, .e--expandable-pill .e__label {
-  padding: 0 8px 0 12px;
+  padding: 10px 8px 10px 12px;
   font-size: 17px;
   font-weight: bold;
 }
+.e--pill .e__label::after, .e--expandable-pill .e__label::after {
+  content: " \2192";
+}
 .e--pill .e__input, .e--expandable-pill .e__input {
   flex-grow: 1;
+  align-self: stretch;
   width: auto;
-  padding: 2px 8px 3px;
+  padding: 0px 8px 0px 8px;
   border: none;
   border-left: 1px solid #EBEBEB;
   outline: none;
@@ -737,6 +741,37 @@ fieldset label {
 }
 .e--pill:focus-within .e__input, .e--expandable-pill:focus-within .e__input {
   border-top: none;
+}
+
+
+
+.e--expandable-pill {
+  position: relative;
+  height: 39px;
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.e--expandable-pill .e__label--hidden {
+  visibility: hidden;
+}
+
+.e--expandable-pill .e__label:not(.e__label--hidden) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.e--expandable-pill .e__input {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 100%;
+}
+
+.e--expandable-pill:focus-within {
+  height: 59px;
+  transform-origin: bottom;
+  transform: translateY(-20px);
 }
 
 
