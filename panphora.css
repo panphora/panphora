@@ -676,9 +676,6 @@ fieldset label {
 } */
 
 .e {
-  margin-bottom: 32px;
-  /* remove ↑ */
-
   display: block;
   align-items: center;
   border: 1px solid #000;
@@ -735,7 +732,7 @@ fieldset label {
   width: auto;
   padding: 0px 8px 0px 8px;
   border: none;
-  border-left: 1px solid #EBEBEB;
+  border-left: 1px solid #dbeafe;
   outline: none;
   border-radius: 0 5px 5px 0;
 }
@@ -762,9 +759,8 @@ fieldset label {
   width: 100%;
   padding: 2px 9px 3px;
   border: none;
-  border-top: 1px solid #EBEBEB;
   border-left: none;
-  border-top: 1px solid #EBEBEB;
+  border-top: 1px solid #dbeafe;
   border-radius: 0px 0px 5px 5px;
 }
 
