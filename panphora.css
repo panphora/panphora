@@ -739,7 +739,7 @@ fieldset label {
   outline: none;
   border-radius: 0 5px 5px 0;
 }
-.e--pill:focus-within .e__input, .e--expandable-pill:focus-within .e__input {
+.e--pill:focus-within .e__input {
   border-top: none;
 }
 
@@ -747,32 +747,48 @@ fieldset label {
 
 .e--expandable-pill {
   position: relative;
-  height: 39px;
   transition: height 0.3s ease, transform 0.3s ease;
 }
 
+.e--expandable-pill:focus-within {
+  height: 60px !important;
+}
+
 .e--expandable-pill .e__label--hidden {
+  display: none;
+}
+
+.e--expandable-pill:focus-within .e__label--hidden {
   visibility: hidden;
 }
 
-.e--expandable-pill .e__label:not(.e__label--hidden) {
+.e--expandable-pill:focus-within .e__label:not(.e__label--hidden) {
   position: absolute;
   top: 0px;
   left: 0px;
+  padding: 5px 0 5px 9px;
+  font-size: 15px;
 }
 
-.e--expandable-pill .e__input {
+.e--expandable-pill:focus-within .e__label:not(.e__label--hidden)::after {
+  content: "";
+}
+
+.e--expandable-pill:focus-within .e__input {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  height: 100%;
+  border-left: none;
+  border-top: 1px solid #EBEBEB;
+  width: 100% !important;
+  border-radius: 0px 0px 5px 5px;
 }
 
-.e--expandable-pill:focus-within {
+/* .e--expandable-pill:focus-within {
   height: 59px;
   transform-origin: bottom;
   transform: translateY(-20px);
-}
+} */
 
 
 

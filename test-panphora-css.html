@@ -199,46 +199,12 @@
           <br>
 
           <label class="e e--expandable-pill">
-            <span class="e__label e__label--hidden">Email</span>
             <span class="e__label">Email</span>
             <input class="e__input" type="email">
           </label>
 
 
-          <script>
-            let eElems = document.querySelectorAll(".e");
-            let eInputElems = document.querySelectorAll(".e__input");
 
-            eInputElems.forEach(el => {
-              el.addEventListener("focus", event => {
-                event.target.closest(".e").classList.add("e--expanded");
-              });
-              el.addEventListener("blur", event => {
-                event.target.closest(".e").classList.remove("e--expanded");
-              });
-            });
-
-            function setupExpandableAreas () {
-              eElems.forEach(el => {
-                let isExpandable = el.classList.contains("e--expandable-pill");
-
-                if (isExpandable) {
-                  let labelElem = el.querySelector(".e__label");
-                  let inputElem = el.querySelector(".e__input");
-                  let labelWidth = labelElem.getBoundingClientRect().width;
-                  let elWidth = el.getBoundingClientRect().width;
-                  let remainingWidthForInput = elWidth - 2 - labelWidth;
-                  inputElem.style.width = remainingWidthForInput + "px";
-                }
-              });
-            }
-
-            setupExpandableAreas();
-            document.fonts && document.fonts.ready.then(() => {
-              setupExpandableAreas();
-            });
-
-          </script>
         </div>
         <p>
           <fieldset>
