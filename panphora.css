@@ -704,8 +704,8 @@ fieldset label {
 .e__label {
   display: block;
   padding: 5px 0 5px 9px;
-  line-height: 1;
   font-size: 15px;
+  line-height: 1;
   font-weight: bold;
 }
 .e__input {
@@ -718,13 +718,13 @@ fieldset label {
   border-radius: 0 0 5px 5px;
 }
 
+
 .e--pill, .e--expandable-pill {
   display: flex;
 }
 .e--pill .e__label, .e--expandable-pill .e__label {
   padding: 10px 8px 10px 12px;
   font-size: 17px;
-  font-weight: bold;
 }
 .e--pill .e__label::after, .e--expandable-pill .e__label::after {
   content: " \2192";
@@ -745,50 +745,28 @@ fieldset label {
 
 
 
-.e--expandable-pill {
-  position: relative;
-  transition: height 0.3s ease, transform 0.3s ease;
-}
-
 .e--expandable-pill:focus-within {
-  height: 60px !important;
+  display: block;
 }
 
-.e--expandable-pill .e__label--hidden {
-  display: none;
-}
-
-.e--expandable-pill:focus-within .e__label--hidden {
-  visibility: hidden;
-}
-
-.e--expandable-pill:focus-within .e__label:not(.e__label--hidden) {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+.e--expandable-pill:focus-within .e__label {
   padding: 5px 0 5px 9px;
   font-size: 15px;
 }
 
-.e--expandable-pill:focus-within .e__label:not(.e__label--hidden)::after {
+.e--expandable-pill:focus-within .e__label::after {
   content: "";
 }
 
 .e--expandable-pill:focus-within .e__input {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
+  width: 100%;
+  padding: 2px 9px 3px;
+  border: none;
+  border-top: 1px solid #EBEBEB;
   border-left: none;
   border-top: 1px solid #EBEBEB;
-  width: 100% !important;
   border-radius: 0px 0px 5px 5px;
 }
-
-/* .e--expandable-pill:focus-within {
-  height: 59px;
-  transform-origin: bottom;
-  transform: translateY(-20px);
-} */
 
 
 
