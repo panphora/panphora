@@ -207,7 +207,7 @@
           <div style="min-height: 66px; margin-bottom: 1rem;">
             <label class="e e--expandable-pill">
               <span class="e__label">Name</span>
-              <input class="e__input" type="text">
+              <input class="e__input" type="text" oninput="this.parentNode.classList.toggle('e--has-content', this.value)">
             </label>
           </div>
 

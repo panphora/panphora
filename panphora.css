@@ -671,9 +671,7 @@ fieldset label {
 
 
 
-/* .e, .e * {
-  transition: all 2s;
-} */
+/*  nice form input */
 
 .e {
   display: block;
@@ -715,6 +713,7 @@ fieldset label {
   border-radius: 0 0 5px 5px;
 }
 
+/* pill and expandable pill  form inputs */
 
 .e--pill, .e--expandable-pill {
   display: flex;
@@ -740,22 +739,22 @@ fieldset label {
   border-top: none;
 }
 
+/* expandable pill form input */
 
-
-.e--expandable-pill:focus-within {
+.e--expandable-pill:focus-within, .e--expandable-pill.e--has-content {
   display: block;
 }
 
-.e--expandable-pill:focus-within .e__label {
+.e--expandable-pill:focus-within .e__label, .e--expandable-pill.e--has-content .e__label {
   padding: 5px 0 5px 9px;
   font-size: 15px;
 }
 
-.e--expandable-pill:focus-within .e__label::after {
+.e--expandable-pill:focus-within .e__label::after, .e--expandable-pill.e--has-content .e__label::after {
   content: "";
 }
 
-.e--expandable-pill:focus-within .e__input {
+.e--expandable-pill:focus-within .e__input, .e--expandable-pill.e--has-content .e__input {
   width: 100%;
   padding: 2px 9px 3px;
   border: none;
