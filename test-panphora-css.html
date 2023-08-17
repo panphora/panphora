@@ -384,23 +384,23 @@
           <textarea id="example-textarea" rows="3"></textarea>
         </p>
           <div>
-            <input type="radio" name="option-radio" id="option-radio1" value="option1" checked>
-            <label for="option-radio1">Option one is this and that&mdash;be
-                  sure to include why it's great</label>
+            <label class="choice-label"><input type="radio" name="option-radio" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great</label>
           </div>
           <div>
-            <input type="radio" name="option-radio" id="option-radio2" value="option2">
-            <label>Option two can be something else and selecting it will
-                  deselect option one</label>
+            <label class="choice-label"><input type="radio" name="option-radio" value="option2"> Option two can be something else and selecting it will deselect option one</label>
           </div>
           <div>
-            <input type="radio" name="option-radio" id="option-radio3" value="option3" disabled>
-            <label>Option three is disabled</label>
+            <label class="choice-label"><input type="radio" name="option-radio" value="option2" disabled> Option three is disabled</label>
           </div>
-          <input type="checkbox" id="checkbox1">
-          <label for="checkbox1">Check me out</label>
-          <input type="checkbox" id="checkbox2">
-          <label for="checkbox2">and/or check me out</label>
+          <div>
+            <label class="choice-label"><input type="checkbox"> Check me out</label>
+          </div>
+          <div>
+            <label class="choice-label"><input type="checkbox"> and/or check me out</label>
+          </div>
+          <div>
+            <label class="choice-label"><input type="checkbox" checked disabled> don't uncheck me</label>
+          </div>
       </form>
       <p style="margin: 10rem 0;">
         <button type="button" name="button">Button</button>
