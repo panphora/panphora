@@ -1,1 +1,2 @@
 fix headings responsiveness
+buttons smaller by default, but have optional large class

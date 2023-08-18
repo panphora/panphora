@@ -22,10 +22,16 @@
   color: #111827;
 }
 
-.panphora *, .panphora *::before, .panphora *::after {
+.panphora, .panphora *, .panphora *::before, .panphora *::after {
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.panphora.container, .panphora .container {
+  max-width: 690px;
+  margin: 100px auto;
+  padding: 1.5rem;
 }
 
 .panphora dl,
@@ -322,32 +328,32 @@
 
 .panphora .h1,
 .panphora h1 {
-  margin-bottom: 1.35rem;
+  margin-bottom: .5em;
 }
 
 .panphora .h2,
 .panphora h2 {
-  margin-bottom: 1.25rem;
+  margin-bottom: .5em;
 }
 
 .panphora .h3,
 .panphora h3 {
-  margin-bottom: 1.15rem;
+  margin-bottom: .5em;
 }
 
 .panphora .h4,
 .panphora h4 {
-  margin-bottom: 1.15rem;
+  margin-bottom: .5em;
 }
 
 .panphora .h5,
 .panphora h5 {
-  margin-bottom: 1.15rem;
+  margin-bottom: .5em;
 }
 
 .panphora .h6,
 .panphora h6 {
-  margin-bottom: 1.15rem;
+  margin-bottom: .5em;
 }
 
 /* TYPOGRAPHY */
@@ -356,70 +362,138 @@
 
    headings 
 
-   have default font size and line height, but they can be
+   they have default font size and line height, but they can be
    overwritten by using heading classes like .h1, .h2, .h3
 
 */
 
 .panphora h1 {
-  font-size: 60px;
-  line-height: 1.1;
+  font-size: 38px;
+  line-height: 1.15;
 }
 
 .panphora h2 {
-  font-size: 48px;
-  line-height: 1.15;
+  font-size: 33px;
+  line-height: 1.18;
 }
 
 .panphora h3 {
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 29px;
+  line-height: 1.22;
 }
 
 .panphora h4 {
-  font-size: 30px;
-  line-height: 1.25;
+  font-size: 25px;
+  line-height: 1.27;
 }
 
 .panphora h5 {
-  font-size: 24px;
-  line-height: 1.3;
+  font-size: 22px;
+  line-height: 1.29;
 }
 
 .panphora h6 {
-  font-size: 21px;
-  line-height: 1.4;
+  font-size: 19px;
+  line-height: 1.35;
 }
 
 .panphora .h1 {
-  font-size: 60px;
-  line-height: 1.1;
-}
-
-.panphora .h2 {
-  font-size: 48px;
+  font-size: 38px;
   line-height: 1.15;
 }
 
+.panphora .h2 {
+  font-size: 33px;
+  line-height: 1.18;
+}
+
 .panphora .h3 {
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 29px;
+  line-height: 1.22;
 }
 
 .panphora .h4 {
-  font-size: 30px;
-  line-height: 1.25;
+  font-size: 25px;
+  line-height: 1.27;
 }
 
 .panphora .h5 {
-  font-size: 24px;
-  line-height: 1.3;
+  font-size: 22px;
+  line-height: 1.29;
 }
 
 .panphora .h6 {
-  font-size: 21px;
-  line-height: 1.4;
+  font-size: 19px;
+  line-height: 1.35;
 }
+
+
+@media (min-width: 640px) {
+
+  .panphora h1 {
+    font-size: 52px;
+    line-height: 1.05;
+  }
+
+  .panphora h2 {
+    font-size: 44px;
+    line-height: 1.1;
+  }
+
+  .panphora h3 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .panphora h4 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .panphora h5 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .panphora h6 {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+
+  .panphora .h1 {
+    font-size: 52px;
+    line-height: 1.05;
+  }
+
+  .panphora .h2 {
+    font-size: 44px;
+    line-height: 1.1;
+  }
+
+  .panphora .h3 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .panphora .h4 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .panphora .h5 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .panphora .h6 {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+
+}
+
+
+
 
 
 /* 
@@ -493,6 +567,23 @@
   border-radius: 3px;
 }
 
+.panphora input:not([type]):not(.e__input):hover,
+.panphora input[type="email"]:not(.e__input):hover,
+.panphora input[type="number"]:not(.e__input):hover,
+.panphora input[type="password"]:not(.e__input):hover,
+.panphora input[type="search"]:not(.e__input):hover,
+.panphora input[type="tel"]:not(.e__input):hover,
+.panphora input[type="text"]:not(.e__input):hover,
+.panphora input[type="url"]:not(.e__input):hover,
+.panphora input[type="date"]:not(.e__input):hover,
+.panphora input[type="datetime"]:not(.e__input):hover,
+.panphora input[type="datetime-local"]:not(.e__input):hover,
+.panphora input[type="month"]:not(.e__input):hover,
+.panphora input[type="week"]:not(.e__input):hover,
+.panphora input[type="time"]:not(.e__input):hover {
+  border-color: #8993a2;
+}
+
 .panphora select {
   padding: 0.5rem 2.5rem 0.5rem 0.75rem;
   border: 1px solid #000;
@@ -536,164 +627,6 @@
   width: 22px;
   height: 22px;
 }
-
-
-/* 
-
-  breakpoint for heading sizes:
-
-  mobile devices 
-  320px (smallest) up to 549.98px
-
-  difficult spot because top-level boxes get down to a minimum of 
-  320px width here, the smallest that top-level boxes can get
-
-  this doesn't leave a lot of room for content — especially for 
-  long words
-
-*/
-
-@media (max-width: 549.98px) {
-  .panphora h1 {
-    font-size: 38px;
-    line-height: 1.15;
-  }
-
-  .panphora h2 {
-    font-size: 34px;
-    line-height: 1.2;
-  }
-
-  .panphora h3 {
-    font-size: 30px;
-    line-height: 1.25;
-  }
-
-  .panphora h4 {
-    font-size: 24px;
-    line-height: 1.3;
-  }
-
-  .panphora h5 {
-    font-size: 21px;
-    line-height: 1.3;
-  }
-
-  .panphora h6 {
-    font-size: 18px;
-    line-height: 1.4;
-  }
-
-  .panphora .h1 {
-    font-size: 38px;
-    line-height: 1.15;
-  }
-
-  .panphora .h2 {
-    font-size: 34px;
-    line-height: 1.2;
-  }
-
-  .panphora .h3 {
-    font-size: 30px;
-    line-height: 1.25;
-  }
-
-  .panphora .h4 {
-    font-size: 24px;
-    line-height: 1.3;
-  }
-
-  .panphora .h5 {
-    font-size: 21px;
-    line-height: 1.3;
-  }
-
-  .panphora .h6 {
-    font-size: 18px;
-    line-height: 1.4;
-  }
-}
-
-/* 
-
-  breakpoint:
-
-  small desktop devices (1100px - 1199.9999px)
-
-  difficult spot because it's the only place where a boxes with text in them
-  shrink AND can't expand vertically (like they can on mobile)
-
-  top-level boxes get to a minumum of 550px width
-
-  second-level boxes get to a minimum of 275px width (smallest possible box)
-
-*/
-
-@media (min-width: 640px) and (max-width: 1199.98px) {
-
-  .panphora h1 {
-    font-size: 54px;
-    line-height: 1.1;
-  }
-
-  .panphora h2 {
-    font-size: 42px;
-    line-height: 1.15;
-  }
-
-  .panphora h3 {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-
-  .panphora h4 {
-    font-size: 26px;
-    line-height: 1.25;
-  }
-
-  .panphora h5 {
-    font-size: 21px;
-    line-height: 1.3;
-  }
-
-  .panphora h6 {
-    font-size: 18px;
-    line-height: 1.4;
-  }
-
-  .panphora .h1 {
-    font-size: 54px;
-    line-height: 1.1;
-  }
-
-  .panphora .h2 {
-    font-size: 42px;
-    line-height: 1.15;
-  }
-
-  .panphora .h3 {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-
-  .panphora .h4 {
-    font-size: 26px;
-    line-height: 1.25;
-  }
-
-  .panphora .h5 {
-    font-size: 21px;
-    line-height: 1.3;
-  }
-
-  .panphora .h6 {
-    font-size: 18px;
-    line-height: 1.4;
-  }
-
-}
-
 
 
 
@@ -806,7 +739,22 @@
 
 
 
-
+.opacity-0 { opacity: 0; }
+.opacity-5 { opacity: 0.05; }
+.opacity-10 { opacity: 0.1; }
+.opacity-20 { opacity: 0.2; }
+.opacity-25 { opacity: 0.25; }
+.opacity-30 { opacity: 0.3; }
+.opacity-40 { opacity: 0.4; }
+.opacity-50 { opacity: 0.5; }
+.opacity-60 { opacity: 0.6; }
+.opacity-65 { opacity: 0.65; }
+.opacity-70 { opacity: 0.7; }
+.opacity-75 { opacity: 0.75; }
+.opacity-80 { opacity: 0.8; }
+.opacity-90 { opacity: 0.9; }
+.opacity-95 { opacity: 0.95; }
+.opacity-100 { opacity: 1; }
 
 
 
