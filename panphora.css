@@ -28,12 +28,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.panphora.container, .panphora .container {
-  max-width: 690px;
-  margin: 100px auto;
-  padding: 1.5rem;
-}
-
 .panphora dl,
 .panphora dt,
 .panphora dd,
@@ -159,7 +153,7 @@
 
 .panphora code {
   display: inline-block;
-  padding: 0px 4px 3px;
+  padding: 1px 4px 3px;
   background-color: #E4E8EE;
   border-radius: 4px;
   line-height: 1.3;
@@ -193,7 +187,7 @@
 
 .panphora mark {
   display: inline-block;
-  padding: 1px 4px 2px;
+  padding: 1px 6px 2px;
   background-color: #fef08a;
   border: 1px solid #422006;
   border-radius: 4px;
@@ -241,7 +235,7 @@
 
 /*
 
-  BUTTON RESET
+  BUTTON RESET & CUSTOM BUTTON
 
 */
 
@@ -503,49 +497,6 @@
 
 
 
-
-
-/* 
-
-  FLOATING LABEL TECHNIQUE 
-
-  <fieldset>
-    <input id="email" type="email" name="email" placeholder="Enter your email address">
-    <label for="email">Enter your email address</label>
-  </fieldset>
-
-  from: https://csslayout.io/floating-label/ 
-
-*/
-
-.panphora fieldset {
-  position: relative;
-}
-
-.panphora fieldset input:not([type]):not(:placeholder-shown) + label,
-.panphora fieldset input[type="email"]:not(:placeholder-shown) + label,
-.panphora fieldset input[type="number"]:not(:placeholder-shown) + label,
-.panphora fieldset input[type="password"]:not(:placeholder-shown) + label,
-.panphora fieldset input[type="search"]:not(:placeholder-shown) + label,
-.panphora fieldset input[type="tel"]:not(:placeholder-shown) + label,
-.panphora fieldset input[type="text"]:not(:placeholder-shown) + label,
-.panphora fieldset input[type="url"]:not(:placeholder-shown) + label,
-.panphora fieldset textarea:not(:placeholder-shown) + label {
-  pointer-events: none;
-  opacity: 1;
-  transform: translate(-9px, -100%);
-  font-size: 17px;
-  font-weight: bold;
-}
-
-.panphora fieldset label {
-  position: absolute;
-  left: 9px;
-  top: 0;
-  opacity: 0;
-  transition: transform 200ms;
-}
-
 /* main input styles */
 
 .panphora textarea {
@@ -614,156 +565,6 @@
 
 
 
-/* .choice-label */
-
-.panphora .choice-label {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: 1.6;
-  cursor: pointer;
-}
-
-.panphora .choice-label input[type="checkbox"], 
-.panphora .choice-label input[type="radio"] {
-  width: 20px;
-  height: 20px;
-  margin-right: 9px;
-}
-
-.panphora .choice-label input[type="radio"] {
-  width: 22px;
-  height: 22px;
-}
-
-
-
-
-
-
-
-
-/*  nice form input */
-
-.panphora .e {
-  display: block;
-  align-items: center;
-  border: 1px solid #000;
-  color: #111827;
-  background-image: linear-gradient(135deg, #ebebeb 12.50%, #ffffff 12.50%, #ffffff 50%, #ebebeb 50%, #ebebeb 62.50%, #ffffff 62.50%, #ffffff 100%);
-  background-size: 5.66px 5.66px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.panphora .e:hover {
-  border: 1px solid #2563eb;
-  color: #1B44C9;
-}
-.panphora .e:focus-within {
-  color: #1B44C9;
-  outline: 1px solid #3b82f6;
-  border: 1px solid #3b82f6;
-  background-image: linear-gradient(135deg, #dbeafe 12.50%, #ffffff 12.50%, #ffffff 50%, #dbeafe 50%, #dbeafe 62.50%, #ffffff 62.50%, #ffffff 100%);
-}
-.panphora .e:focus-within .e__input {
-  border-top: 1px solid #dbeafe;
-}
-.panphora .e__label {
-  display: block;
-  padding: 5px 0 5px 9px;
-  font-size: 17px;
-  line-height: 1;
-  font-weight: bold;
-}
-.panphora .e__input {
-  display: block;
-  width: 100%;
-  padding: 2px 9px 3px;
-  border: none;
-  border-top: 1px solid #EBEBEB;
-  outline: none;
-  border-radius: 0 0 5px 5px;
-}
-
-/* pill and expandable pill  form inputs */
-
-.panphora .e--pill, 
-.panphora .e--expandable-pill {
-  display: flex;
-}
-.panphora .e--pill .e__label, 
-.panphora .e--expandable-pill .e__label {
-  padding: 12px 10px 12px 14px;
-  font-size: 17px;
-}
-.panphora .e--pill .e__label::after, 
-.panphora .e--expandable-pill .e__label::after {
-  content: " \2192";
-}
-.panphora .e--pill .e__input, 
-.panphora .e--expandable-pill .e__input {
-  flex-grow: 1;
-  align-self: stretch;
-  width: auto;
-  padding: 0px 8px 0px 8px;
-  border: none;
-  border-left: 1px solid #EBEBEB;
-  outline: none;
-  border-radius: 0 5px 5px 0;
-}
-.panphora .e--pill:focus-within .e__input {
-  border-top: none;
-  border-left: 1px solid #dbeafe;
-}
-
-/* expandable pill form input */
-
-.panphora .e--expandable-pill:focus-within, 
-.panphora .e--expandable-pill.e--has-content {
-  display: block;
-}
-
-.panphora .e--expandable-pill:focus-within .e__label, 
-.panphora .e--expandable-pill.e--has-content .e__label {
-  padding: 5px 0 5px 9px;
-  font-size: 17px;
-}
-
-.panphora .e--expandable-pill:focus-within .e__label::after, 
-.panphora .e--expandable-pill.e--has-content .e__label::after {
-  content: "";
-}
-
-.panphora .e--expandable-pill:focus-within .e__input, 
-.panphora .e--expandable-pill.e--has-content .e__input {
-  width: 100%;
-  padding: 2px 9px 3px;
-  border: none;
-  border-left: none;
-  border-top: 1px solid #dbeafe;
-  border-radius: 0px 0px 5px 5px;
-}
-
-
-
-
-.opacity-0 { opacity: 0; }
-.opacity-5 { opacity: 0.05; }
-.opacity-10 { opacity: 0.1; }
-.opacity-20 { opacity: 0.2; }
-.opacity-25 { opacity: 0.25; }
-.opacity-30 { opacity: 0.3; }
-.opacity-40 { opacity: 0.4; }
-.opacity-50 { opacity: 0.5; }
-.opacity-60 { opacity: 0.6; }
-.opacity-65 { opacity: 0.65; }
-.opacity-70 { opacity: 0.7; }
-.opacity-75 { opacity: 0.75; }
-.opacity-80 { opacity: 0.8; }
-.opacity-90 { opacity: 0.9; }
-.opacity-95 { opacity: 0.95; }
-.opacity-100 { opacity: 1; }
 
 
 
