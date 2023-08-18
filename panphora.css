@@ -725,7 +725,7 @@
 .panphora .e__label {
   display: block;
   padding: 5px 0 5px 9px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1;
   font-weight: bold;
 }
@@ -747,7 +747,7 @@
 }
 .panphora .e--pill .e__label, 
 .panphora .e--expandable-pill .e__label {
-  padding: 10px 8px 10px 12px;
+  padding: 12px 10px 12px 14px;
   font-size: 17px;
 }
 .panphora .e--pill .e__label::after, 
@@ -780,7 +780,7 @@
 .panphora .e--expandable-pill:focus-within .e__label, 
 .panphora .e--expandable-pill.e--has-content .e__label {
   padding: 5px 0 5px 9px;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .panphora .e--expandable-pill:focus-within .e__label::after, 
