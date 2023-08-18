@@ -181,7 +181,9 @@
       <h4 id="forms"><a href="#forms">#</a> Forms</h4>
         <hr>
       <form>
-        <div style="margin: 320px 100px;">
+        <div>
+
+          <br>
 
           <div style="display: inline-block; padding: 3px 8px 4px 6px; line-height: 1; font-style: italic; font-size: 15px; font-weight: bold; margin-bottom: .85rem; background-color: #64748b; color: #fff;">Default form input</div>
           <div style="margin-bottom: 1rem;">
@@ -210,6 +212,8 @@
               <input class="e__input" type="text" oninput="this.parentNode.classList.toggle('e--has-content', this.value)">
             </label>
           </div>
+
+          <br>
 
 
 
@@ -380,8 +384,10 @@
               </select>
         </p>
         <p>
-          <label for="example-textarea">Textarea</label>
-          <textarea id="example-textarea" rows="3"></textarea>
+          <fieldset>
+            <textarea id="example-textarea" rows="3" placeholder="A new journal entry" oninput="this.style.height = 'auto'; this.style.height = this.scrollHeight + 10 + 'px';"></textarea>
+            <label for="example-textarea">A new journal entry</label>
+          </fieldset>
         </p>
           <div>
             <label class="choice-label"><input type="radio" name="option-radio" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great</label>
@@ -402,7 +408,7 @@
             <label class="choice-label"><input type="checkbox" checked disabled> don't uncheck me</label>
           </div>
       </form>
-      <p style="margin: 10rem 0;">
+      <p style="margin: 3rem 0;">
         <button type="button" name="button">Button</button>
         <input type="button" name="input" value="Input Button">
         <input type="submit" name="button" value="Input Submit">

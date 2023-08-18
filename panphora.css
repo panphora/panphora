@@ -17,7 +17,7 @@
 
 .panphora {
   font-size: 19px;
-  line-height: 1.66;
+  line-height: 1.84;
   font-family: "Space Grotesk", sans-serif;
   color: #111827;
 }
@@ -242,7 +242,8 @@
 .panphora button,
 .panphora [type='button'],
 .panphora [type='reset'],
-.panphora [type='submit'] {
+.panphora [type='submit'],
+.panphora input[type="file"]::file-selector-button {
   white-space: nowrap;
   display: inline-block;
   flex: 0 0 auto;
@@ -276,14 +277,16 @@
 .panphora button:hover,
 .panphora [type='button']:hover,
 .panphora [type='reset']:hover,
-.panphora [type='submit']:hover {
+.panphora [type='submit']:hover,
+.panphora input[type="file"]::file-selector-button:hover {
   background: #EEABFE;
 }
 
 .panphora button:active,
 .panphora [type='button']:active,
 .panphora [type='reset']:active,
-.panphora [type='submit']:active  {
+.panphora [type='submit']:active,
+.panphora input[type="file"]::file-selector-button:active {
   transform: translate(0.05em, 0.05em);
   box-shadow: 0.05em 0.05em;
 }
@@ -291,7 +294,8 @@
 .panphora button::-moz-focus-inner,
 .panphora [type='button']::-moz-focus-inner,
 .panphora [type='reset']::-moz-focus-inner,
-.panphora [type='submit']::-moz-focus-inner {
+.panphora [type='submit']::-moz-focus-inner,
+.panphora input[type="file"]::file-selector-button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -418,34 +422,6 @@
 }
 
 
-/* form inputs */
-
-/* .panphora input:not([type]), 
-.panphora input[type="email"], 
-.panphora input[type="number"], 
-.panphora input[type="password"], 
-.panphora input[type="search"], 
-.panphora input[type="tel"], 
-.panphora input[type="text"], 
-.panphora input[type="url"] {
-  display: block;
-  width: 100%;
-  padding: 14px 16px 15px;
-  border: 1px solid rgba(20, 20, 20, .75);
-  border-radius: 3px;
-} */
-
-.panphora input[disabled] {
-
-}
-
-.panphora textarea {
-  display: block;
-  width: 100%;
-  padding: 1px 8px;
-  resize: vertical;
-}
-
 /* 
 
   FLOATING LABEL TECHNIQUE 
@@ -459,26 +435,27 @@
 
 */
 
-fieldset {
+.panphora fieldset {
   position: relative;
 }
 
-fieldset input:not([type]):not(:placeholder-shown) + label,
-fieldset input[type="email"]:not(:placeholder-shown) + label,
-fieldset input[type="number"]:not(:placeholder-shown) + label,
-fieldset input[type="password"]:not(:placeholder-shown) + label,
-fieldset input[type="search"]:not(:placeholder-shown) + label,
-fieldset input[type="tel"]:not(:placeholder-shown) + label,
-fieldset input[type="text"]:not(:placeholder-shown) + label,
-fieldset input[type="url"]:not(:placeholder-shown) + label {
+.panphora fieldset input:not([type]):not(:placeholder-shown) + label,
+.panphora fieldset input[type="email"]:not(:placeholder-shown) + label,
+.panphora fieldset input[type="number"]:not(:placeholder-shown) + label,
+.panphora fieldset input[type="password"]:not(:placeholder-shown) + label,
+.panphora fieldset input[type="search"]:not(:placeholder-shown) + label,
+.panphora fieldset input[type="tel"]:not(:placeholder-shown) + label,
+.panphora fieldset input[type="text"]:not(:placeholder-shown) + label,
+.panphora fieldset input[type="url"]:not(:placeholder-shown) + label,
+.panphora fieldset textarea:not(:placeholder-shown) + label {
   pointer-events: none;
-  opacity: .75;
+  opacity: 1;
   transform: translate(-9px, -100%);
-  font-size: 14px;
+  font-size: 17px;
   font-weight: bold;
 }
 
-fieldset label {
+.panphora fieldset label {
   position: absolute;
   left: 9px;
   top: 0;
@@ -488,40 +465,68 @@ fieldset label {
 
 /* main input styles */
 
-input:not([type]),
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="url"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="time"] {
-  padding: 1px 8px;
+.panphora textarea {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  resize: vertical;
+  border: 1px solid #000;
+  border-radius: 3px;
 }
 
-select {
-  padding: 1px 8px;
+.panphora input:not([type]):not(.e__input),
+.panphora input[type="email"]:not(.e__input),
+.panphora input[type="number"]:not(.e__input),
+.panphora input[type="password"]:not(.e__input),
+.panphora input[type="search"]:not(.e__input),
+.panphora input[type="tel"]:not(.e__input),
+.panphora input[type="text"]:not(.e__input),
+.panphora input[type="url"]:not(.e__input),
+.panphora input[type="date"]:not(.e__input),
+.panphora input[type="datetime"]:not(.e__input),
+.panphora input[type="datetime-local"]:not(.e__input),
+.panphora input[type="month"]:not(.e__input),
+.panphora input[type="week"]:not(.e__input),
+.panphora input[type="time"]:not(.e__input) {
+  padding: 4px 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
 }
+
+.panphora select {
+  padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.panphora select:not([multiple]):not([size]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  line-height: 1.5rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+}
+
+
+
 
 /* .choice-label */
 
-.choice-label {
+.panphora .choice-label {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  font-size: 19px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.6;
   cursor: pointer;
 }
 
-.choice-label input[type="checkbox"], .choice-label input[type="radio"] {
+.panphora .choice-label input[type="checkbox"], 
+.panphora .choice-label input[type="radio"] {
   width: 18px;
   height: 18px;
   margin-right: 8px;
@@ -544,62 +549,62 @@ select {
 */
 
 @media (max-width: 549.98px) {
-  h1 {
+  .panphora h1 {
     font-size: 38px;
     line-height: 1.15;
   }
 
-  h2 {
+  .panphora h2 {
     font-size: 34px;
     line-height: 1.2;
   }
 
-  h3 {
+  .panphora h3 {
     font-size: 30px;
     line-height: 1.25;
   }
 
-  h4 {
+  .panphora h4 {
     font-size: 24px;
     line-height: 1.3;
   }
 
-  h5 {
+  .panphora h5 {
     font-size: 21px;
     line-height: 1.3;
   }
 
-  h6 {
+  .panphora h6 {
     font-size: 18px;
     line-height: 1.4;
   }
 
-  .h1 {
+  .panphora .h1 {
     font-size: 38px;
     line-height: 1.15;
   }
 
-  .h2 {
+  .panphora .h2 {
     font-size: 34px;
     line-height: 1.2;
   }
 
-  .h3 {
+  .panphora .h3 {
     font-size: 30px;
     line-height: 1.25;
   }
 
-  .h4 {
+  .panphora .h4 {
     font-size: 24px;
     line-height: 1.3;
   }
 
-  .h5 {
+  .panphora .h5 {
     font-size: 21px;
     line-height: 1.3;
   }
 
-  .h6 {
+  .panphora .h6 {
     font-size: 18px;
     line-height: 1.4;
   }
@@ -622,62 +627,62 @@ select {
 
 @media (min-width: 640px) and (max-width: 1199.98px) {
 
-  h1 {
+  .panphora h1 {
     font-size: 54px;
     line-height: 1.1;
   }
 
-  h2 {
+  .panphora h2 {
     font-size: 42px;
     line-height: 1.15;
   }
 
-  h3 {
+  .panphora h3 {
     font-size: 32px;
     line-height: 1.2;
   }
 
-  h4 {
+  .panphora h4 {
     font-size: 26px;
     line-height: 1.25;
   }
 
-  h5 {
+  .panphora h5 {
     font-size: 21px;
     line-height: 1.3;
   }
 
-  h6 {
+  .panphora h6 {
     font-size: 18px;
     line-height: 1.4;
   }
 
-  .h1 {
+  .panphora .h1 {
     font-size: 54px;
     line-height: 1.1;
   }
 
-  .h2 {
+  .panphora .h2 {
     font-size: 42px;
     line-height: 1.15;
   }
 
-  .h3 {
+  .panphora .h3 {
     font-size: 32px;
     line-height: 1.2;
   }
 
-  .h4 {
+  .panphora .h4 {
     font-size: 26px;
     line-height: 1.25;
   }
 
-  .h5 {
+  .panphora .h5 {
     font-size: 21px;
     line-height: 1.3;
   }
 
-  .h6 {
+  .panphora .h6 {
     font-size: 18px;
     line-height: 1.4;
   }
@@ -694,7 +699,7 @@ select {
 
 /*  nice form input */
 
-.e {
+.panphora .e {
   display: block;
   align-items: center;
   border: 1px solid #000;
@@ -704,27 +709,27 @@ select {
   border-radius: 5px;
   cursor: pointer;
 }
-.e:hover {
+.panphora .e:hover {
   border: 1px solid #2563eb;
   color: #1B44C9;
 }
-.e:focus-within {
+.panphora .e:focus-within {
   color: #1B44C9;
   outline: 1px solid #3b82f6;
   border: 1px solid #3b82f6;
   background-image: linear-gradient(135deg, #dbeafe 12.50%, #ffffff 12.50%, #ffffff 50%, #dbeafe 50%, #dbeafe 62.50%, #ffffff 62.50%, #ffffff 100%);
 }
-.e:focus-within .e__input {
+.panphora .e:focus-within .e__input {
   border-top: 1px solid #dbeafe;
 }
-.e__label {
+.panphora .e__label {
   display: block;
   padding: 5px 0 5px 9px;
   font-size: 15px;
   line-height: 1;
   font-weight: bold;
 }
-.e__input {
+.panphora .e__input {
   display: block;
   width: 100%;
   padding: 2px 9px 3px;
@@ -736,17 +741,21 @@ select {
 
 /* pill and expandable pill  form inputs */
 
-.e--pill, .e--expandable-pill {
+.panphora .e--pill, 
+.panphora .e--expandable-pill {
   display: flex;
 }
-.e--pill .e__label, .e--expandable-pill .e__label {
+.panphora .e--pill .e__label, 
+.panphora .e--expandable-pill .e__label {
   padding: 10px 8px 10px 12px;
   font-size: 17px;
 }
-.e--pill .e__label::after, .e--expandable-pill .e__label::after {
+.panphora .e--pill .e__label::after, 
+.panphora .e--expandable-pill .e__label::after {
   content: " \2192";
 }
-.e--pill .e__input, .e--expandable-pill .e__input {
+.panphora .e--pill .e__input, 
+.panphora .e--expandable-pill .e__input {
   flex-grow: 1;
   align-self: stretch;
   width: auto;
@@ -756,26 +765,30 @@ select {
   outline: none;
   border-radius: 0 5px 5px 0;
 }
-.e--pill:focus-within .e__input {
+.panphora .e--pill:focus-within .e__input {
   border-top: none;
 }
 
 /* expandable pill form input */
 
-.e--expandable-pill:focus-within, .e--expandable-pill.e--has-content {
+.panphora .e--expandable-pill:focus-within, 
+.panphora .e--expandable-pill.e--has-content {
   display: block;
 }
 
-.e--expandable-pill:focus-within .e__label, .e--expandable-pill.e--has-content .e__label {
+.panphora .e--expandable-pill:focus-within .e__label, 
+.panphora .e--expandable-pill.e--has-content .e__label {
   padding: 5px 0 5px 9px;
   font-size: 15px;
 }
 
-.e--expandable-pill:focus-within .e__label::after, .e--expandable-pill.e--has-content .e__label::after {
+.panphora .e--expandable-pill:focus-within .e__label::after, 
+.panphora .e--expandable-pill.e--has-content .e__label::after {
   content: "";
 }
 
-.e--expandable-pill:focus-within .e__input, .e--expandable-pill.e--has-content .e__input {
+.panphora .e--expandable-pill:focus-within .e__input, 
+.panphora .e--expandable-pill.e--has-content .e__input {
   width: 100%;
   padding: 2px 9px 3px;
   border: none;
