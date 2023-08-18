@@ -761,12 +761,13 @@
   width: auto;
   padding: 0px 8px 0px 8px;
   border: none;
-  border-left: 1px solid #dbeafe;
+  border-left: 1px solid #EBEBEB;
   outline: none;
   border-radius: 0 5px 5px 0;
 }
 .panphora .e--pill:focus-within .e__input {
   border-top: none;
+  border-left: 1px solid #dbeafe;
 }
 
 /* expandable pill form input */
