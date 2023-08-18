@@ -271,13 +271,22 @@
   text-decoration: none;
   background: #F3C1FF;
   font-family: inherit;
-  padding: 0.6em 1.2em 0.65em;
+  padding: 6px 16px 7px;
   font-weight: 900;
   font-size: 18px;
   border: 3px solid black;
   border-radius: 0.4em;
   box-shadow: 0.15em 0.15em;
   cursor: pointer;
+}
+
+.panphora button.large-button,
+.panphora [type='button'].large-button,
+.panphora [type='reset'].large-button,
+.panphora [type='submit'].large-button,
+.panphora input[type="file"].large-button::file-selector-button {
+  padding: 10px 23px 11px;
+  font-size: 19px;
 }
 
 .panphora button:hover,
