@@ -8,6 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="panphora.css">
+  <style type="text/css">
+    .more-space > p {
+      margin: 2.5em 0;
+    }
+  </style>
 </head>
 <body class="panphora" style="max-width: 690px; margin: 100px auto;">
   <main>
@@ -180,44 +185,30 @@
         <br><br>
       <h4 id="forms"><a href="#forms">#</a> Forms</h4>
         <hr>
-      <form>
-        <div>
+      <form class="more-space">
 
-          <br>
+        <p>
+          <label class="e">
+            <span class="e__label">Name</span>
+            <input class="e__input" type="text">
+          </label>
+        </p>
 
-          <div style="display: inline-block; padding: 3px 8px 4px 6px; line-height: 1; font-style: italic; font-size: 15px; font-weight: bold; margin-bottom: .85rem; background-color: #64748b; color: #fff;">Default form input</div>
-          <div style="margin-bottom: 1rem;">
-            <label class="e">
-              <span class="e__label">Name</span>
-              <input class="e__input" type="text">
-            </label>
-          </div>
+        <p>
+          <label class="e e--pill">
+            <span class="e__label">Name</span>
+            <input class="e__input" type="text">
+          </label>
+        </p>
 
-          <br>
-
-          <div style="display: inline-block; padding: 3px 8px 4px 6px; line-height: 1; font-style: italic; font-size: 15px; font-weight: bold; margin-bottom: .85rem; background-color: #64748b; color: #fff;">Small form input</div>
-          <div style="margin-bottom: 1rem;">
-            <label class="e e--pill">
-              <span class="e__label">Name</span>
-              <input class="e__input" type="text">
-            </label>
-          </div>
-
-          <br>
-
-          <div style="display: inline-block; padding: 3px 8px 4px 6px; line-height: 1; font-style: italic; font-size: 15px; font-weight: bold; margin-bottom: .85rem; background-color: #64748b; color: #fff;">Expandable form input</div>
-          <div style="min-height: 66px; margin-bottom: 1rem;">
-            <label class="e e--expandable-pill">
-              <span class="e__label">Name</span>
-              <input class="e__input" type="text" oninput="this.parentNode.classList.toggle('e--has-content', this.value)">
-            </label>
-          </div>
-
-          <br>
+        <p style="min-height: 66px;">
+          <label class="e e--expandable-pill">
+            <span class="e__label">Name</span>
+            <input class="e__input" type="text" oninput="this.parentNode.classList.toggle('e--has-content', this.value)">
+          </label>
+        </p>
 
 
-
-        </div>
         <p>
           <fieldset>
             <input id="email" type="email" name="email" placeholder="Email address">
@@ -389,24 +380,24 @@
             <label for="example-textarea">A new journal entry</label>
           </fieldset>
         </p>
-          <div>
-            <label class="choice-label"><input type="radio" name="option-radio" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great</label>
-          </div>
-          <div>
-            <label class="choice-label"><input type="radio" name="option-radio" value="option2"> Option two can be something else and selecting it will deselect option one</label>
-          </div>
-          <div>
-            <label class="choice-label"><input type="radio" name="option-radio" value="option2" disabled> Option three is disabled</label>
-          </div>
-          <div>
-            <label class="choice-label"><input type="checkbox"> Check me out</label>
-          </div>
-          <div>
-            <label class="choice-label"><input type="checkbox"> and/or check me out</label>
-          </div>
-          <div>
-            <label class="choice-label"><input type="checkbox" checked disabled> don't uncheck me</label>
-          </div>
+        <p>
+          <label class="choice-label"><input type="radio" name="option-radio" value="option1" checked> Option one is this and that&mdash;be sure to include why it's great</label>
+        </p>
+        <p>
+          <label class="choice-label"><input type="radio" name="option-radio" value="option2"> Option two can be something else and selecting it will deselect option one</label>
+        </p>
+        <p>
+          <label class="choice-label"><input type="radio" name="option-radio" value="option2" disabled> Option three is disabled</label>
+        </p>
+        <p>
+          <label class="choice-label"><input type="checkbox"> Check me out</label>
+        </p>
+        <p>
+          <label class="choice-label"><input type="checkbox"> and/or check me out</label>
+        </p>
+        <p>
+          <label class="choice-label"><input type="checkbox" checked disabled> don't uncheck me</label>
+        </p>
       </form>
       <p style="margin: 3rem 0;">
         <button type="button" name="button">Button</button>
