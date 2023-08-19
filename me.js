@@ -25,7 +25,7 @@ document.body.insertAdjacentHTML("beforeend", `
     border-left: 1px solid transparent;
     border-top-left-radius: 14px;
     background: #000;
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
     transition: none;
   }
@@ -37,6 +37,7 @@ document.body.insertAdjacentHTML("beforeend", `
     transition: none;
   }
   .me-pop img {
+    display: inline;
     border-radius: 100%;
     width: 22px;
     vertical-align: middle;
