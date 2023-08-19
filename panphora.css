@@ -239,6 +239,7 @@
 
 */
 
+.panphora .button,
 .panphora button,
 .panphora [type='button'],
 .panphora [type='reset'],
@@ -274,6 +275,7 @@
   cursor: pointer;
 }
 
+.panphora .button.large-button,
 .panphora button.large-button,
 .panphora [type='button'].large-button,
 .panphora [type='reset'].large-button,
@@ -283,6 +285,7 @@
   font-size: 19px;
 }
 
+.panphora .button.secondary-button,
 .panphora button.secondary-button,
 .panphora [type='button'].secondary-button,
 .panphora [type='reset'].secondary-button,
@@ -291,6 +294,7 @@
   background-color: #D6EBF7;
 }
 
+.panphora .button:hover,
 .panphora button:hover,
 .panphora [type='button']:hover,
 .panphora [type='reset']:hover,
@@ -299,6 +303,7 @@
   background: #EEABFE;
 }
 
+.panphora .button:active,
 .panphora button:active,
 .panphora [type='button']:active,
 .panphora [type='reset']:active,
@@ -308,6 +313,7 @@
   box-shadow: 0.05em 0.05em;
 }
 
+.panphora .button::-moz-focus-inner,
 .panphora button::-moz-focus-inner,
 .panphora [type='button']::-moz-focus-inner,
 .panphora [type='reset']::-moz-focus-inner,
