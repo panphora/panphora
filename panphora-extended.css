@@ -1,6 +1,6 @@
-/* utils */
+/* area */
 
-.area {
+.panphora .area {
   padding: 1rem 1.5rem 1.2rem;
   border: 1px solid black;
   border-radius: 15px;
@@ -8,7 +8,7 @@
   margin-bottom: 1.5rem;
 }
 
-.secondary-area {
+.panphora .secondary-area {
   padding: 1rem 1.5rem 1.2rem;
   border: 1px solid black;
   border-radius: 15px;
@@ -210,6 +210,18 @@
 .panphora .opacity-90 { opacity: 0.9; }
 .panphora .opacity-95 { opacity: 0.95; }
 .panphora .opacity-100 { opacity: 1; }
+
+
+.panphora .line-height-1 {line-height: 1;}
+.panphora .line-height-1\.1 {line-height: 1.1;}
+.panphora .line-height-1\.2 {line-height: 1.2;}
+.panphora .line-height-1\.3 {line-height: 1.3;}
+.panphora .line-height-1\.4 {line-height: 1.4;}
+.panphora .line-height-1\.5 {line-height: 1.5;}
+.panphora .line-height-1\.6 {line-height: 1.6;}
+.panphora .line-height-1\.7 {line-height: 1.7;}
+.panphora .line-height-1\.8 {line-height: 1.8;}
+.panphora .line-height-1\.9 {line-height: 1.9;}
 
 
 .panphora .mb-0 {
