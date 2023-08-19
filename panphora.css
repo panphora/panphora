@@ -240,6 +240,7 @@
 */
 
 .panphora .button,
+.panphora .secondary-button,
 .panphora button,
 .panphora [type='button'],
 .panphora [type='reset'],
@@ -276,6 +277,7 @@
 }
 
 .panphora .button.large-button,
+.panphora .secondary-button.large-button,
 .panphora button.large-button,
 .panphora [type='button'].large-button,
 .panphora [type='reset'].large-button,
@@ -283,15 +285,6 @@
 .panphora input[type="file"].large-button::file-selector-button {
   padding: 10px 23px 11px;
   font-size: 19px;
-}
-
-.panphora .button.secondary-button,
-.panphora button.secondary-button,
-.panphora [type='button'].secondary-button,
-.panphora [type='reset'].secondary-button,
-.panphora [type='submit'].secondary-button,
-.panphora input[type="file"].secondary-button::file-selector-button {
-  background-color: #D6EBF7;
 }
 
 .panphora .button:hover,
@@ -303,7 +296,26 @@
   background: #EEABFE;
 }
 
+.panphora .button.secondary-button,
+.panphora button.secondary-button,
+.panphora [type='button'].secondary-button,
+.panphora [type='reset'].secondary-button,
+.panphora [type='submit'].secondary-button,
+.panphora input[type="file"].secondary-button::file-selector-button {
+  background-color: #D6EBF7;
+}
+
+.panphora .button.secondary-button:hover,
+.panphora button.secondary-button:hover,
+.panphora [type='button'].secondary-button:hover,
+.panphora [type='reset'].secondary-button:hover,
+.panphora [type='submit'].secondary-button:hover,
+.panphora input[type="file"].secondary-button::file-selector-button:hover {
+  background-color: #B1DAF1;
+}
+
 .panphora .button:active,
+.panphora .secondary-button:active,
 .panphora button:active,
 .panphora [type='button']:active,
 .panphora [type='reset']:active,
@@ -314,6 +326,7 @@
 }
 
 .panphora .button::-moz-focus-inner,
+.panphora .secondary-button::-moz-focus-inner,
 .panphora button::-moz-focus-inner,
 .panphora [type='button']::-moz-focus-inner,
 .panphora [type='reset']::-moz-focus-inner,
