@@ -283,6 +283,14 @@
   font-size: 19px;
 }
 
+.panphora button.secondary-button,
+.panphora [type='button'].secondary-button,
+.panphora [type='reset'].secondary-button,
+.panphora [type='submit'].secondary-button,
+.panphora input[type="file"].secondary-button::file-selector-button {
+  background-color: #D6EBF7;
+}
+
 .panphora button:hover,
 .panphora [type='button']:hover,
 .panphora [type='reset']:hover,
