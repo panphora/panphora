@@ -258,8 +258,6 @@
   flex: 0 0 auto;
   align-self: flex-start;
   margin: 0;
-  margin-right: 1rem;
-  margin-bottom: .2rem;
   width: auto;
   overflow: visible;
   cursor: pointer;
@@ -281,6 +279,13 @@
   border-radius: 0.4em;
   box-shadow: 0.15em 0.15em;
   cursor: pointer;
+}
+
+.panphora input[type="file"].button::file-selector-button,
+.panphora input[type="file"].secondary-button::file-selector-button,
+.panphora input[type="file"].large-button::file-selector-button {
+  margin-right: 1rem;
+  margin-bottom: .2rem;
 }
 
 /* large button */
