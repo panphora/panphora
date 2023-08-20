@@ -118,7 +118,7 @@
 .panphora .e__label {
   display: block;
   padding: 5px 0 5px 9px;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1;
   font-weight: bold;
 }
@@ -173,7 +173,7 @@
 .panphora .e--expandable-pill:focus-within .e__label, 
 .panphora .e--expandable-pill.e--has-content .e__label {
   padding: 5px 0 5px 9px;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .panphora .e--expandable-pill:focus-within .e__label::after, 
