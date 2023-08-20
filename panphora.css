@@ -94,6 +94,10 @@
   vertical-align: middle;
 }
 
+.panphora svg {
+  display: inline-block;
+}
+
 .panphora img,
 .panphora video {
   height: auto;
