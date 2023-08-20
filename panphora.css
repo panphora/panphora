@@ -316,14 +316,14 @@
   background-color: #D6EBF7;
 }
 
-/* secondary button :hover */
+/* :hover secondary button */
 .panphora .secondary-button:not(input[type="file"]):hover,
 .panphora button.secondary-button:hover,
 .panphora [type='button'].secondary-button:hover,
 .panphora [type='reset'].secondary-button:hover,
 .panphora [type='submit'].secondary-button:hover,
 .panphora input[type="file"].secondary-button::file-selector-button:hover {
-  background-color: #B2DAF0;
+  background-color: #BFE0F3;
 }
 
 /* active defaults for all buttons */
