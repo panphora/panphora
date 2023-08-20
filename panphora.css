@@ -16,6 +16,8 @@
 /* GENERAL CSS RESET */
 
 .panphora {
+  margin: 0;
+  padding: 0;
   font-size: 19px;
   line-height: 1.84;
   font-family: "Space Grotesk", sans-serif;
