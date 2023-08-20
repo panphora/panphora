@@ -239,13 +239,17 @@
 
 */
 
-.panphora .button,
-.panphora .secondary-button,
+/* defaults for all buttons */
+.panphora .button:not(input[type="file"]),
+.panphora .secondary-button:not(input[type="file"]),
+.panphora .large-button:not(input[type="file"]),
 .panphora button,
 .panphora [type='button'],
 .panphora [type='reset'],
 .panphora [type='submit'],
-.panphora input[type="file"]::file-selector-button {
+.panphora input[type="file"].button::file-selector-button,
+.panphora input[type="file"].secondary-button::file-selector-button,
+.panphora input[type="file"].large-button::file-selector-button {
   white-space: nowrap;
   display: inline-block;
   flex: 0 0 auto;
@@ -276,8 +280,8 @@
   cursor: pointer;
 }
 
-.panphora .button.large-button,
-.panphora .secondary-button.large-button,
+/* large button */
+.panphora .large-button:not(input[type="file"]),
 .panphora button.large-button,
 .panphora [type='button'].large-button,
 .panphora [type='reset'].large-button,
@@ -287,16 +291,22 @@
   font-size: 19px;
 }
 
-.panphora .button:hover,
+/* hover defaults for all buttons */
+.panphora .button:not(input[type="file"]):hover,
+.panphora .secondary-button:not(input[type="file"]):hover,
+.panphora .large-button:not(input[type="file"]):hover,
 .panphora button:hover,
 .panphora [type='button']:hover,
 .panphora [type='reset']:hover,
 .panphora [type='submit']:hover,
-.panphora input[type="file"]::file-selector-button:hover {
+.panphora input[type="file"].button::file-selector-button:hover,
+.panphora input[type="file"].secondary-button::file-selector-button:hover,
+.panphora input[type="file"].large-button::file-selector-button:hover {
   background: #EEABFE;
 }
 
-.panphora .button.secondary-button,
+/* secondary button */
+.panphora .secondary-button:not(input[type="file"]),
 .panphora button.secondary-button,
 .panphora [type='button'].secondary-button,
 .panphora [type='reset'].secondary-button,
@@ -305,33 +315,41 @@
   background-color: #D6EBF7;
 }
 
-.panphora .button.secondary-button:hover,
+/* secondary button :hover */
+.panphora .secondary-button:not(input[type="file"]):hover,
 .panphora button.secondary-button:hover,
 .panphora [type='button'].secondary-button:hover,
 .panphora [type='reset'].secondary-button:hover,
 .panphora [type='submit'].secondary-button:hover,
 .panphora input[type="file"].secondary-button::file-selector-button:hover {
-  background-color: #B1DAF1;
+  background-color: #B2DAF0;
 }
 
-.panphora .button:active,
-.panphora .secondary-button:active,
+/* active defaults for all buttons */
+.panphora .button:not(input[type="file"]):active,
+.panphora .secondary-button:not(input[type="file"]):active,
+.panphora .large-button:not(input[type="file"]):active,
 .panphora button:active,
 .panphora [type='button']:active,
 .panphora [type='reset']:active,
 .panphora [type='submit']:active,
-.panphora input[type="file"]::file-selector-button:active {
+.panphora input[type="file"].button::file-selector-button:active,
+.panphora input[type="file"].secondary-button::file-selector-button:active,
+.panphora input[type="file"].large-button::file-selector-button:active {
   transform: translate(0.05em, 0.05em);
   box-shadow: 0.05em 0.05em;
 }
 
-.panphora .button::-moz-focus-inner,
-.panphora .secondary-button::-moz-focus-inner,
+.panphora .button:not(input[type="file"])::-moz-focus-inner,
+.panphora .secondary-button:not(input[type="file"])::-moz-focus-inner,
+.panphora .large-button:not(input[type="file"])::-moz-focus-inner,
 .panphora button::-moz-focus-inner,
 .panphora [type='button']::-moz-focus-inner,
 .panphora [type='reset']::-moz-focus-inner,
 .panphora [type='submit']::-moz-focus-inner,
-.panphora input[type="file"]::file-selector-button::-moz-focus-inner {
+.panphora input[type="file"].button::file-selector-button::-moz-focus-inner,
+.panphora input[type="file"].secondary-button::file-selector-button::-moz-focus-inner,
+.panphora input[type="file"].large-button::file-selector-button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
