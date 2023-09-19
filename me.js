@@ -10,22 +10,22 @@ domReady(() => {
 document.body.insertAdjacentHTML("beforeend", `
 <style>
   .me-pop, .me-pop * {
-    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    color: #fff !important;
   }
-
   .me-pop {
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;;
+    z-index: 100;
+    position: fixed;
     right: 0;
     bottom: 0;
-    position: fixed;
-    z-index: 100;
-    padding: 6px 8px 9px 8px;
-    line-height: 1;
+    padding: 6px 8px 9px 8px !important;
     border-top: 1px solid transparent;
     border-left: 1px solid transparent;
     border-top-left-radius: 14px;
     background: #000;
-    color: #fff !important;
     text-decoration: none;
     transition: none;
   }
@@ -33,14 +33,13 @@ document.body.insertAdjacentHTML("beforeend", `
     border-top: 1px solid #000;
     border-left: 1px solid #000;
     background: #F456BB;
-    color: #fff;
     transition: none;
   }
   .me-pop img {
-    display: inline;
+    display: inline !important;
     border-radius: 100%;
-    width: 22px;
-    vertical-align: middle;
+    width: 22px !important;
+    vertical-align: middle !important;
   }
   .me-pop p {
     position: relative;
@@ -49,7 +48,7 @@ document.body.insertAdjacentHTML("beforeend", `
     vertical-align: middle;
     display: inline;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 14px !important;
   }
 </style>
 <a class="me-pop" target="_blank" rel="noopener" href="https://panphora.com/">
