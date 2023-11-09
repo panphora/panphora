@@ -26,7 +26,7 @@ fs.readdir(directoryPath, (err, files) => {
           if (err) {
             console.error('Could not write to file:', err);
           } else {
-            console.log('✅ build.js');
+            console.log('✅ build.js:', filePath);
           }
         });
       });
