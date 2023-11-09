@@ -25,6 +25,8 @@ fs.readdir(directoryPath, (err, files) => {
         fs.writeFile(filePath, updatedData, 'utf8', err => {
           if (err) {
             console.error('Could not write to file:', err);
+          } else {
+            console.log('✅ build.js');
           }
         });
       });
