@@ -6,8 +6,8 @@
     <title>panphora</title>
     <link rel="stylesheet" href="https://css.panphora.com/panphora.css?v=1">
     <link rel="stylesheet" href="css/main.css?v=1" />
-    <link rel="icon" href="svgs/universe-eye-favicon.svg">
-    <script src="../panphora-js/fab.js" type="module" async data-text="Building Consciously" data-img="https://panphora.com/images/me.png" data-link="https://build.panphora.com/"></script>
+    <link rel="icon" href="svgs/favicon.svg">
+    <script src="../panphora-js/fab.js" type="module" data-text="Building Consciously" data-img="https://panphora.com/images/me.png" data-link="https://build.panphora.com/"></script>
   </head>
   <body>
     <div class="panphora content-container">
@@ -476,6 +476,42 @@
         </p>
       </div>
     </div>
+    <script>
+      const frameDelay = 10;
+      const angleChange = .5;
+      let angle = 0;
+      let lastFrameTime = 0;
+
+      const favicon = document.querySelector("[rel='icon']");
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
+      img.src = './svgs/favicon.svg';
+
+      img.onload = function() {
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        const rotateFavicon = (currentTime) => {
+          if (currentTime - lastFrameTime > frameDelay) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.save();
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            ctx.rotate((angle * Math.PI) / 180);
+            ctx.drawImage(img, -img.width / 2, -img.height / 2);
+            ctx.restore();
+
+            favicon.setAttribute('href', canvas.toDataURL('image/png'));
+            angle = (angle + angleChange) % 360;
+            lastFrameTime = currentTime;
+          }
+
+          requestAnimationFrame(rotateFavicon);
+        };
+
+        requestAnimationFrame(rotateFavicon);
+      };
+    </script>
     <script defer data-domain="panphora.com" data-api="https://round-butterfly-d351.remake.workers.dev/hello-world/event" src="https://round-butterfly-d351.remake.workers.dev/hello-world/script.js"></script>
   </body>
 </html>
