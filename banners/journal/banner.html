@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Journal banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #eef1ec; --sheet: #f7f8f3; --ink: #22282b; --ink-2: #566064; --ink-3: #6b7477;
+    --line: #d3d9d2; --rule: rgba(52, 96, 132, 0.14); --margin: rgba(204, 70, 32, 0.42);
+    --accent: #c4431d; --accent-soft: rgba(196, 67, 29, 0.10); --mark: rgba(236, 196, 60, 0.45); --syntax: rgba(34, 40, 43, 0.38);
+    --mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: radial-gradient(600px 300px at 30% 0%, #f6f8f3, transparent 70%), #e3e8e1; font-family: var(--mono); color: var(--ink); }
+
+  .app {
+    position: absolute; left: 48px; top: 30px; width: 1220px; height: 320px;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 14px 0 0 0;
+    box-shadow: 0 24px 50px -24px rgb(34 40 43 / 0.35), 0 1px 2px rgb(34 40 43 / 0.06);
+    overflow: hidden; display: grid; grid-template-rows: 56px 1fr;
+  }
+  .top { display: flex; align-items: center; border-bottom: 1px solid var(--line); }
+  .brand { display: flex; align-items: center; gap: 12px; width: 292px; height: 100%; padding: 0 22px; border-right: 1px solid var(--line); }
+  .brand-mark {
+    width: 22px; height: 26px; border-radius: 3px; border: 1.5px solid var(--ink-2);
+    background:
+      linear-gradient(90deg, transparent 5px, var(--margin) 5px, var(--margin) 6px, transparent 6px),
+      repeating-linear-gradient(180deg, transparent 0 4px, var(--rule) 4px 5px), var(--sheet);
+  }
+  .brand-name { font: 600 19px/1 var(--mono); }
+  .brand-count { margin-left: auto; font: 400 14px/1 var(--mono); color: var(--ink-3); }
+  .search { margin-left: 22px; height: 34px; width: 330px; border: 1px solid var(--line); border-radius: 8px; background: var(--sheet); display: flex; align-items: center; padding: 0 12px; font-size: 15px; color: var(--ink-3); }
+
+  .body { display: grid; grid-template-columns: 292px 1fr; }
+  .index { border-right: 1px solid var(--line); padding: 10px 0; }
+  .row { padding: 12px 22px; }
+  .row.on { background: var(--accent-soft); }
+  .row .d { font-size: 13px; color: var(--ink-3); letter-spacing: 0.2px; }
+  .row .t { margin-top: 5px; font-size: 16px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .row.on .d { color: var(--accent); }
+
+  .sheet {
+    position: relative; padding: 18px 0 0 92px; background:
+      linear-gradient(90deg, transparent 66px, var(--margin) 66px, var(--margin) 67.5px, transparent 67.5px),
+      repeating-linear-gradient(180deg, transparent 0 37px, var(--rule) 37px 38px),
+      var(--sheet);
+    font-size: 21px; line-height: 38px;
+  }
+  .date { color: var(--ink-3); font-size: 16px; }
+  .sx { color: var(--syntax); }
+  .h { font-weight: 600; font-size: 24px; }
+  mark { background: var(--mark); color: inherit; border-radius: 2px; padding: 0 2px; }
+  .done { color: var(--ink-3); text-decoration: line-through; text-decoration-color: rgba(34, 40, 43, 0.35); }
+  .caret { display: inline-block; width: 2px; height: 24px; background: var(--accent); vertical-align: -5px; margin-left: 1px; }
+</style>
+</head>
+<body>
+  <div class="app" aria-hidden="true">
+    <div class="top">
+      <div class="brand"><span class="brand-mark"></span><span class="brand-name">Journal</span><span class="brand-count">48</span></div>
+      <div class="search">Search entries</div>
+    </div>
+    <div class="body">
+      <div class="index">
+        <div class="row on"><div class="d">16 OCT</div><div class="t">Morning pages</div></div>
+        <div class="row"><div class="d">15 OCT</div><div class="t">A shelf for the hallway</div></div>
+        <div class="row"><div class="d">14 OCT</div><div class="t">Notes from the walk</div></div>
+        <div class="row"><div class="d">13 OCT</div><div class="t">Things to read</div></div>
+      </div>
+      <div class="sheet">
+        <div class="date">Thursday, 16 October 2026</div>
+        <div class="h"><span class="sx">## </span>Morning pages</div>
+        <div>Walked to the river before anyone was up.</div>
+        <div><span class="sx">- [x] </span><span class="done">call the printer</span></div>
+        <div><span class="sx">- [ ] </span>fix the shelf this weekend<span class="caret"></span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

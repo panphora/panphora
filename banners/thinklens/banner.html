@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Thinklens banner</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Roboto:300,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: #fff; color: #222; font-family: Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+  .brand { position: absolute; left: 60px; top: 70px; display: flex; align-items: center; gap: 14px; }
+  .brand img { height: 74px; }
+  .brand b { font: 700 64px/1 "Open Sans", sans-serif; letter-spacing: -.01em; }
+  .tag { position: absolute; left: 62px; top: 178px; width: 470px; font-size: 19px; font-weight: 300; line-height: 1.45; color: #777; }
+  .list { position: absolute; left: 560px; top: 0; width: 640px; height: 300px; }
+  .row { height: 75px; display: flex; flex-direction: column; justify-content: center; padding-left: 26px; border-bottom: 1px solid #ececec; }
+  .row:first-child { background: #222; color: #fff; }
+  .row:first-child .d { color: #aaa; }
+  .d { font-size: 13px; color: #999; }
+  .t { margin-top: 3px; font-size: 23px; font-weight: 300; white-space: nowrap; }
+</style>
+</head>
+<body>
+  <div class="brand"><img src="assets/logo.svg" alt=""><b>Thinklens</b></div>
+  <p class="tag">Essays on who I am, what thoughts are, and creation.</p>
+  <div class="list" aria-hidden="true">
+    <div class="row"><span class="d">June 16, 2017</span><span class="t">On Creation</span></div>
+    <div class="row"><span class="d">August 13, 2016</span><span class="t">“Who am I?” A guide for dealing with difficult emotions</span></div>
+    <div class="row"><span class="d">October 5, 2014</span><span class="t">The Terrain of Points and Opinions</span></div>
+    <div class="row"><span class="d">February 3, 2014</span><span class="t">What Are Thoughts?</span></div>
+  </div>
+</body>
+</html>

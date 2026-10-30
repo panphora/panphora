@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Polite pop banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --goo: #D98E2B; --goo-deep: #b8731c; --ink: #14181D; --line: #CDD2D8; --page: #F6F7F9; --bar: #E3E7EC; --bar-2: #ECEFF3; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: var(--page); font-family: "IBM Plex Mono", ui-monospace, monospace; color: var(--ink); }
+
+  .article { position: absolute; left: 600px; top: 40px; width: 560px; opacity: 0.9; }
+  .article .kicker { width: 110px; height: 12px; border-radius: 6px; background: #f3dcbc; }
+  .article h2 { margin-top: 16px; font-family: "IBM Plex Sans", sans-serif; font-size: 34px; font-weight: 700; color: #c4c9d0; letter-spacing: -0.4px; }
+  .article .p { height: 13px; border-radius: 7px; background: var(--bar); margin-top: 16px; }
+  .article .p:nth-of-type(3) { width: 96%; } .article .p:nth-of-type(4) { width: 88%; } .article .p:nth-of-type(5) { width: 93%; }
+  .article .p:nth-of-type(6) { width: 70%; } .article .p:nth-of-type(7) { width: 90%; background: var(--bar-2); } .article .p:nth-of-type(8) { width: 60%; background: var(--bar-2); }
+
+  .edge { position: absolute; left: 0; top: 0; bottom: 0; width: 7px; background: linear-gradient(90deg, rgb(20 24 29 / 0.08), transparent); }
+
+  .goo { position: absolute; left: -92px; top: 96px; width: 290px; height: 178px; overflow: visible; }
+  .goo svg { width: 100%; height: 100%; color: var(--goo); transform: rotate(24deg); transform-origin: 30% 100%; overflow: visible; filter: drop-shadow(0 8px 14px rgb(185 115 28 / 0.25)); }
+  .wave { position: absolute; left: 166px; top: 132px; width: 40px; height: 44px; }
+
+  .bubble {
+    position: absolute; left: 204px; top: 46px; width: 372px; padding: 22px 24px 20px;
+    background: #FFFFFF; border: 1.5px solid var(--line); border-radius: 14px;
+    box-shadow: 0 18px 36px -18px rgb(20 24 29 / 0.32), 0 2px 4px rgb(20 24 29 / 0.05);
+  }
+  .bubble::before {
+    content: ""; position: absolute; left: -10px; top: 132px; width: 18px; height: 18px; background: #fff;
+    border-left: 1.5px solid var(--line); border-bottom: 1.5px solid var(--line); transform: rotate(45deg);
+  }
+  .bubble p { font-size: 21px; line-height: 1.38; font-weight: 500; }
+  .row { display: flex; gap: 10px; margin-top: 16px; }
+  .field { flex: 1; height: 44px; border: 1.5px solid var(--line); border-radius: 9px; display: flex; align-items: center; padding: 0 12px; font-size: 17px; color: #8a929c; background: #F6F7F9; }
+  .btn { height: 44px; padding: 0 16px; border-radius: 9px; background: var(--goo); color: #221503; font-size: 17px; font-weight: 600; display: flex; align-items: center; white-space: nowrap; box-shadow: inset 0 -2px 0 rgb(0 0 0 / 0.12); }
+  .no { margin-top: 12px; font-size: 15px; color: #64748b; text-decoration: underline; text-decoration-color: rgb(100 116 139 / 0.4); text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+  <div class="article" aria-hidden="true">
+    <div class="kicker"></div>
+    <h2>A page you were reading</h2>
+    <div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div>
+  </div>
+  <div class="edge"></div>
+  <div class="goo" aria-hidden="true">
+    <svg viewBox="-45.87 -57.96 100.26 60.98"><ellipse cx="4.5" cy="-24.5" rx="16" ry="13.5" fill="#221503"/><path fill="currentColor" fill-rule="evenodd" d="M44.35 -4.56Q40.03 -0.52 34.69 -0.39Q29.34 -0.25 24.81 -0.14Q20.27 -0.02 15.6 0Q10.93 0.02 6.41 0Q1.89 -0.02 -2.79 -0.02Q-7.48 -0.02 -12.11 -0.14Q-16.73 -0.25 -21.64 -0.27Q-26.55 -0.3 -31.72 -2.25Q-36.88 -4.2 -39.87 -9.12Q-42.87 -14.03 -42.8 -19.61Q-42.74 -25.18 -40.43 -29.94Q-38.12 -34.69 -34.82 -38.78Q-31.52 -42.87 -27.25 -45.6Q-22.98 -48.33 -18.35 -50.59Q-13.73 -52.85 -8.7 -53.88Q-3.68 -54.91 1.32 -54.93Q6.32 -54.96 11.44 -54.56Q16.55 -54.16 21.35 -52.2Q26.16 -50.24 30.69 -48.01Q35.22 -45.78 38.99 -42.18Q42.76 -38.59 45.67 -34.37Q48.59 -30.15 49.99 -24.87Q51.39 -19.59 50.04 -14.09Q48.68 -8.6 44.35 -4.56ZM0.66 -30.49C0.5 -28.73 -0.88 -27.42 -2.42 -27.57C-3.96 -27.71 -5.08 -29.25 -4.91 -31.01C-4.75 -32.77 -3.36 -34.08 -1.83 -33.94C-0.29 -33.79 0.83 -32.25 0.66 -30.49ZM13.61 -29.28C13.44 -27.52 12.06 -26.21 10.52 -26.35C8.98 -26.5 7.87 -28.04 8.03 -29.8C8.2 -31.56 9.58 -32.87 11.12 -32.73C12.66 -32.58 13.77 -31.04 13.61 -29.28ZM-1.23 -17.71Q-0.62 -17.35 -0.03 -17.08Q0.56 -16.81 1.15 -16.54Q1.73 -16.28 2.4 -16Q3.07 -15.72 3.87 -15.6Q4.66 -15.48 5.4 -15.55Q6.13 -15.62 6.77 -15.79Q7.41 -15.96 7.97 -16.23Q8.53 -16.5 9 -16.91Q9.46 -17.32 9.73 -17.9Q9.99 -18.47 10.08 -19.12Q10.17 -19.77 10.08 -20.42Q9.99 -21.06 9.45 -21.32Q8.91 -21.58 8.27 -21.38Q7.63 -21.17 6.99 -20.91Q6.36 -20.65 5.7 -20.61Q5.04 -20.56 4.33 -20.73Q3.62 -20.9 2.92 -21.14Q2.23 -21.39 1.54 -21.68Q0.85 -21.97 0.16 -22.27Q-0.52 -22.56 -1.22 -22.79Q-1.92 -23.03 -2.49 -22.61Q-3.05 -22.19 -3.23 -21.5Q-3.4 -20.81 -3.2 -20.09Q-3.01 -19.38 -3.02 -19.15Q-3.02 -18.93 -2.42 -18.5Q-1.83 -18.06 -1.23 -17.71Z"/></svg>
+  </div>
+  <svg class="wave" viewBox="0 0 40 44" aria-hidden="true"><path d="M8 30c3-8 9-14 18-17M14 38c4-5 9-9 16-10" fill="none" stroke="#D98E2B" stroke-width="3.2" stroke-linecap="round"/></svg>
+  <div class="bubble">
+    <p>Malleable documents get more powerful every day.</p>
+    <div class="row"><div class="field">you@email.com</div><div class="btn">Follow along</div></div>
+    <div class="no">no thanks</div>
+  </div>
+</body>
+</html>

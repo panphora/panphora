@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Newsletter studio banner</title>
+<style>
+  :root { --bg: #f1eee8; --card: #fff; --line: #ddd8cf; --ink: #222; --muted: #7a746b; --tag: #a8551b; --orange: #ff6a00; --green: #22a35a; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: var(--bg); color: var(--ink); font-family: system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+
+  h1 { position: absolute; left: 58px; top: 70px; font-size: 40px; line-height: 1.05; font-weight: 700; letter-spacing: -.015em; }
+  .tag { position: absolute; left: 60px; top: 144px; width: 300px; font-size: 17px; line-height: 1.45; color: var(--muted); }
+
+  .pane { position: absolute; top: 34px; height: 300px; background: var(--card); border: 1px solid var(--line); border-radius: 8px 8px 0 0; overflow: hidden; box-shadow: 0 12px 30px -18px rgb(0 0 0 / .25); }
+  .bar { height: 32px; display: flex; align-items: center; gap: 8px; padding: 0 14px; border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+  .bar b { color: var(--ink); font-weight: 600; }
+  .ok { color: var(--green); font-weight: 600; }
+
+  .src { left: 400px; width: 360px; }
+  .src pre { padding: 12px 16px; font: 12px/1.55 "Courier New", Courier, monospace; color: var(--ink); white-space: pre-wrap; }
+  .src .mk { color: var(--tag); font-weight: 700; }
+
+  .arrow { position: absolute; left: 768px; top: 140px; font: 22px/1 system-ui; color: var(--muted); }
+
+  .out { left: 800px; width: 360px; background: #fafafa; }
+  .out img { display: block; width: 100%; padding: 0 4px; }
+</style>
+</head>
+<body>
+  <h1>Newsletter<br>studio</h1>
+  <p class="tag" style="top:168px">Markdown-style writing and ASCII diagrams, sent through Postmark.</p>
+
+  <div class="pane src" aria-hidden="true">
+    <div class="bar"><b>09-sap-js.txt</b><span class="ok">✓ saved</span></div>
+<pre><span class="mk">SUBJECT:</span> The world's first DOM-first reactive library
+
+<span class="mk">[CLAYGOO=classic]</span>
+
+<span class="mk">[BOX]</span>
+Last time, AI talked to HTML files. This time: a reactive library for malleable documents.
+<span class="mk">[/BOX]</span>
+
+Hi web explorers,</pre>
+  </div>
+
+  <div class="arrow" aria-hidden="true">→</div>
+
+  <div class="pane out" aria-hidden="true">
+    <div class="bar"><b>Preview</b><span>exact email HTML</span></div>
+    <img src="assets/email.png" alt="">
+  </div>
+</body>
+</html>

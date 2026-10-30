@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Look Say banner</title>
+<style>
+  :root {
+    --bg-a: #f3efe8; --bg-b: #e9e3d9; --ink: #26221d; --muted: #8a8276; --line: #e4ded3; --bar: #ece7de; --bar-2: #dcd5c9;
+    --rec: #e0483a; --rec-soft: #fbe3df; --sel: #2f6fdf; --sel-tint: rgb(47 111 223 / 0.1); --card: #fffdf9; --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body { background: var(--bg-a); overflow: hidden; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); }
+  .fit { width: 100%; height: 100%; }
+  .fit-inner { width: 1200px; height: 300px; transform-origin: 0 0; }
+  #stage:not([data-uimotion]) .later { visibility: hidden; }
+  #stage { position: relative; width: 1200px; height: 300px; overflow: hidden; background: linear-gradient(120deg, var(--bg-a), var(--bg-b)); }
+
+  .menubar { position: absolute; left: 0; right: 0; top: 0; height: 30px; display: flex; align-items: center; justify-content: flex-end; gap: 18px; padding: 0 26px; background: rgb(255 255 255 / 0.55); border-bottom: 1px solid rgb(38 34 29 / 0.06); font-size: 13.5px; color: var(--ink); }
+  .menubar .clock { color: var(--muted); }
+  #rec { position: relative; min-width: 96px; justify-content: center; height: 22px; display: flex; align-items: center; gap: 7px; padding: 0 10px; border-radius: 6px; font: 600 13px/1 var(--mono); color: var(--rec); }
+  #rec .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--rec); }
+  #rec-on { position: absolute; inset: 0; border-radius: 6px; background: var(--rec-soft); }
+  #rec span { position: relative; }
+  #rec-idle { position: absolute; inset: 0; white-space: nowrap; background: #f7f4ef; display: flex; align-items: center; justify-content: center; gap: 7px; border-radius: 6px; color: var(--muted); }
+  #rec-idle i { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--muted); }
+
+  #app { position: absolute; left: 40px; top: 50px; width: 500px; height: 226px; background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 18px 36px -24px rgb(38 34 29 / 0.35); overflow: hidden; }
+  .top { height: 40px; display: flex; align-items: center; gap: 7px; padding: 0 14px; border-bottom: 1px solid var(--line); }
+  .top i { width: 10px; height: 10px; border-radius: 50%; background: var(--bar-2); }
+  .top b { margin-left: 10px; font-size: 14.5px; font-weight: 600; }
+  .row { position: absolute; left: 24px; right: 24px; display: flex; align-items: center; gap: 12px; }
+  .lbl { height: 10px; border-radius: 5px; background: var(--bar-2); }
+  .row { justify-content: space-between; height: 24px; }
+  .tg { position: relative; width: 40px; height: 24px; border-radius: 12px; background: var(--bar-2); }
+  .tg::after { content: ""; position: absolute; left: 3px; top: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgb(38 34 29 / 0.25); }
+  .tg.on { background: var(--sel); }
+  .tg.on::after { left: 19px; }
+
+  #sel { position: absolute; left: 54px; top: 100px; width: 472px; height: 134px; border: 2px solid var(--sel); background: var(--sel-tint); border-radius: 3px; transform-origin: 0 0; }
+  #flash { position: absolute; left: 54px; top: 100px; width: 472px; height: 134px; background: #fff; border-radius: 3px; }
+
+  #key { position: absolute; left: 558px; top: 196px; width: 66px; height: 54px; border-radius: 9px; background: #fff; border: 1px solid var(--bar-2); box-shadow: 0 4px 0 var(--bar-2); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; }
+  #key b { font-size: 19px; line-height: 1; }
+  #key span { font-size: 11px; color: var(--muted); }
+
+  #say { position: absolute; left: 64px; top: 239px; height: 30px; display: flex; align-items: center; gap: 9px; padding: 0 13px 0 10px; border-radius: 15px; background: var(--ink); color: #f5f1ea; font-size: 14px; z-index: 2; }
+  #say svg { width: 16px; height: 16px; fill: none; stroke: #f5f1ea; stroke-width: 2; stroke-linecap: round; }
+
+  #md { position: absolute; left: 642px; top: 50px; width: 518px; height: 226px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 18px 36px -24px rgb(38 34 29 / 0.35); overflow: hidden; }
+  .md-top { height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 16px; border-bottom: 1px solid var(--line); font: 13px/1 var(--mono); color: var(--muted); }
+  .md-top b { color: var(--ink); font-weight: 600; }
+  #listen { position: absolute; left: 0; right: 0; top: 40px; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--muted); font-size: 14px; }
+  .wave { display: flex; align-items: center; gap: 4px; height: 34px; }
+  .wave i { width: 4px; border-radius: 2px; background: var(--rec); opacity: 0.7; }
+  .md-body { position: absolute; left: 22px; right: 22px; top: 56px; }
+  #h { font-size: 19px; font-weight: 700; }
+  #p { margin-top: 8px; font-size: 15px; line-height: 1.4; }
+  #shot { margin-top: 10px; display: flex; align-items: center; gap: 14px; }
+  .thumb { position: relative; width: 196px; height: 52px; border: 1px solid var(--line); border-radius: 5px; background: #fff; overflow: hidden; }
+  .tr { position: absolute; left: 8px; right: 8px; height: 9px; display: flex; align-items: center; justify-content: space-between; }
+  .tr i { height: 4px; border-radius: 2px; background: var(--bar-2); }
+  .tr b { position: relative; width: 16px; height: 9px; border-radius: 5px; background: var(--bar-2); }
+  .tr b::after { content: ""; position: absolute; left: 1px; top: 1px; width: 7px; height: 7px; border-radius: 50%; background: #fff; }
+  .tr b.on { background: var(--sel); }
+  .tr b.on::after { left: 8px; }
+  #shot code { font: 12px/1.3 var(--mono); color: var(--muted); }
+  .uimotion-cursor svg { filter: drop-shadow(0 2px 3px rgb(0 0 0 / 0.25)); }
+</style>
+</head>
+<body>
+<div class="fit"><div class="fit-inner">
+<div id="stage">
+  <div class="menubar" aria-hidden="true">
+    <div id="rec"><b id="rec-on"></b><span class="dot"></span><span>0:14</span><div id="rec-idle" class="later"><i></i>Look Say</div></div>
+    <span class="clock">Fri 10:42</span>
+  </div>
+
+  <div id="app" aria-hidden="true">
+    <div class="top"><i></i><i></i><i></i><b>Settings</b></div>
+    <div class="row" style="top:62px"><span class="lbl" style="width:150px"></span><span class="tg on"></span></div>
+    <div class="row" style="top:100px"><span class="lbl" style="width:110px"></span><span class="tg on"></span></div>
+    <div class="row" style="top:160px"><span class="lbl" style="width:132px"></span><span class="tg"></span></div>
+  </div>
+  <div id="sel" class="later" aria-hidden="true"></div>
+  <div id="flash" class="later" aria-hidden="true"></div>
+  <div id="say" class="later" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>“This section has way too much space.”</div>
+  <div id="key" class="later" aria-hidden="true"><b>⌥</b><span>hold</span></div>
+
+  <div id="md" aria-hidden="true">
+    <div class="md-top"><b>feedback.md</b><span>~/LookSay/2026-10-30-1042</span></div>
+    <div id="listen"><div class="wave"><i style="height:10px"></i><i style="height:22px"></i><i style="height:14px"></i><i style="height:30px"></i><i style="height:18px"></i><i style="height:26px"></i><i style="height:12px"></i><i style="height:20px"></i><i style="height:8px"></i></div>Recording your voice</div>
+    <div class="md-body">
+      <div id="h" class="later"># Settings spacing</div>
+      <div id="p" class="later">This section has way too much space.</div>
+      <div id="shot" class="later">
+        <div class="thumb"><span class="tr" style="top:7px"><i style="width:44px"></i><b class="on"></b></span><span class="tr" style="top:19px"><i style="width:32px"></i><b class="on"></b></span><span class="tr" style="top:36px"><i style="width:38px"></i><b></b></span></div>
+        <code>![Screenshot 1](screenshots/001.png)</code>
+      </div>
+    </div>
+  </div>
+</div>
+</div></div>
+
+<script type="module">
+import { scene } from './assets/uimotion.js'
+
+const fit = document.querySelector('.fit')
+const inner = document.querySelector('.fit-inner')
+const resize = () => { inner.style.transform = `scale(${fit.clientWidth / 1200})` }
+resize()
+addEventListener('resize', resize)
+
+const fade = (sel, to, duration = 160) => [sel, 'opacity', to, { duration, ease: 'linear' }]
+const rest = [600, 150]
+
+const s = scene('#stage', { cursor: rest })
+  .rise('#say')
+  .wait(900)
+  .pop('#key', { from: 0.9 })
+  .with(200).move([54, 100], { duration: 650 })
+  .tween('#sel', 'opacity', 1, { from: 0, duration: 0, ease: 'linear' })
+  .with().tween('#sel', 'scale', [1, 1], { from: [0.02, 0.04], duration: 700, ease: 'standard' })
+  .with().move([526, 234], { duration: 700 })
+  .wait(160)
+  .tween('#flash', 'opacity', 0.85, { from: 0, duration: 90, ease: 'linear' })
+  .tween(...fade('#flash', 0, 260))
+  .with().tween(...fade('#sel', 0))
+  .with().tween(...fade('#key', 0))
+  .with(120).tween(...fade('#say', 0, 220))
+  .wait(300)
+  .move('#rec', { duration: 750 })
+  .click('#rec')
+  .with(285).tween(...fade('#rec-on', 0))
+  .with().tween('#rec-idle', 'opacity', 1, { from: 0, duration: 160, ease: 'linear' })
+  .with().exit('#listen', { opacity: 0 })
+  .with(200).rise('#h, #p, #shot', { fade: 0 })
+  .wait(2000)
+  .move(rest, { duration: 700 })
+  .wait(500)
+  .reset()
+
+const t = new URLSearchParams(location.search).get('t')
+if (t != null) s.seek(Number(t))
+else s.play()
+if (new URLSearchParams(location.search).has('debug')) s.debug()
+window.uimotionScene = s
+</script>
+</body>
+</html>

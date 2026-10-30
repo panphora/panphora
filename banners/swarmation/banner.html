@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Swarmation banner</title>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; color: #024; font-family: "Source Sans Pro", sans-serif;
+    background-color: #dbe5eb; background-image: linear-gradient(#cad8e1 1px, transparent 1px), linear-gradient(90deg, #cad8e1 1px, transparent 1px); background-size: 18px 18px; }
+  h1 { position: absolute; left: 58px; top: 64px; font: 400 72px/1 "Lobster", cursive; color: #fff; text-shadow: #8ca2ad 3px 3px 0; }
+  p { position: absolute; left: 62px; top: 168px; width: 400px; font-size: 21px; line-height: 1.4; font-weight: 700; color: #024; }
+  .px i { position: absolute; width: 18px; height: 18px; background: #9badb8; box-shadow: inset -1px -1px 0 rgba(0,36,62,.2), inset 1px 1px 0 rgba(255,255,255,.3); }
+  .px i.active { background: #ffbb33; box-shadow: inset -1px -1px 0 rgba(0,36,62,.2), inset 1px 1px 0 rgba(255,255,255,.4); }
+  .px i.self { background: #66dddd; }
+  .card { position: absolute; right: 30px; top: 26px; width: 88px; height: 88px; padding: 18px; background: #fff; border: 1px solid #8ca2ad; border-radius: 3px; box-shadow: rgba(0,36,62,.2) 2px 2px 0; }
+  .card div { position: relative; }
+  .card i { position: absolute; width: 8px; height: 8px; background: #ffbb33; box-shadow: inset -1px -1px 0 rgba(0,36,62,.2), inset 1px 1px 0 rgba(255,255,255,.4); }
+  .card span { position: absolute; left: 0; right: 0; top: 94px; text-align: center; font-weight: 700; font-size: 15px; }
+  .tip { position: absolute; left: 909px; top: 62px; transform: translate(-50%, -100%); padding: 5px 11px; background: #fff; border: 1px solid #8ca2ad; border-radius: 3px; box-shadow: rgba(0,36,62,.2) 2px 2px 0; font-size: 14px; white-space: nowrap; }
+</style>
+</head>
+<body>
+  <div class="px" aria-hidden="true"><i class="active" style="left:828px;top:72px"></i><i class="active" style="left:810px;top:90px"></i><i class="active" style="left:846px;top:90px"></i><i class="active" style="left:792px;top:108px"></i><i class="active" style="left:810px;top:126px"></i><i class="active" style="left:828px;top:144px"></i><i class="active" style="left:828px;top:108px"></i><i class="self" style="left:900px;top:108px"></i><i class="player" style="left:882px;top:162px"></i><i class="player" style="left:648px;top:54px"></i><i class="player" style="left:702px;top:162px"></i><i class="player" style="left:936px;top:108px"></i><i class="player" style="left:990px;top:36px"></i><i class="player" style="left:882px;top:198px"></i><i class="player" style="left:1044px;top:162px"></i><i class="player" style="left:738px;top:234px"></i><i class="player" style="left:1098px;top:72px"></i><i class="player" style="left:594px;top:180px"></i><i class="player" style="left:828px;top:234px"></i><i class="player" style="left:972px;top:216px"></i><i class="player" style="left:1134px;top:198px"></i><i class="player" style="left:540px;top:108px"></i><i class="player" style="left:1062px;top:252px"></i></div>
+  <div class="card" aria-hidden="true"><div><i style="left:18px;top:0px"></i><i style="left:9px;top:9px"></i><i style="left:27px;top:9px"></i><i style="left:0px;top:18px"></i><i style="left:36px;top:18px"></i><i style="left:9px;top:27px"></i><i style="left:27px;top:27px"></i><i style="left:18px;top:36px"></i><i style="left:18px;top:18px"></i></div></div>
+  <div class="tip" aria-hidden="true"><b>Welcome!</b> Use your arrow keys to move.</div>
+  <h1>Swarmation</h1>
+  <p>Move as one pixel among many and form shapes together.</p>
+</body>
+</html>

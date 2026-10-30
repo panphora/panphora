@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Deploys an agent can't misuse banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EFF1F4; --surface: #F7F8FA; --grid: #E0E4EA; --hairline: #C9CFD8; --ink: #232B36; --ink-soft: #5C6675;
+    --amber: #D98E2B; --amber-deep: #8F5A10; --amber-glow: #F7E3BF;
+    --term: #1f2630; --term-ink: #d9dee6; --term-dim: #8b95a3; --no: #ef8a76; --ok: #8fd19e;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body {
+    position: relative; font-family: var(--mono); color: var(--ink);
+    background:
+      linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 30px 30px,
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 30px 30px,
+      var(--paper);
+  }
+  .term {
+    position: absolute; left: 40px; top: 34px; width: 470px; height: 232px; background: var(--term); border-radius: 12px;
+    box-shadow: 0 20px 40px -22px rgb(35 43 54 / 0.6); padding: 16px 22px; color: var(--term-ink); font-size: 18px; line-height: 1.62;
+  }
+  .term .dots { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; }
+  .term .dots span { margin-left: 10px; font-size: 15px; color: var(--term-dim); }
+  .term .dots i { width: 11px; height: 11px; border-radius: 50%; background: #3a4452; }
+  .p { color: var(--amber); }
+  .dim { color: var(--term-dim); }
+  .no { color: var(--no); }
+  .ok { color: var(--ok); }
+
+  .gate {
+    position: absolute; left: 566px; top: 38px; width: 180px; height: 224px; background: var(--surface);
+    border: 1.5px solid var(--hairline); border-radius: 12px; padding: 16px 18px; box-shadow: 0 14px 28px -20px rgb(35 43 54 / 0.45);
+  }
+  .gate h3 { font-size: 17px; font-weight: 600; color: var(--ink-soft); margin-bottom: 10px; }
+  .verb { height: 34px; border-radius: 8px; background: var(--amber-glow); color: var(--amber-deep); font-size: 17px; font-weight: 600; display: flex; align-items: center; padding: 0 12px; margin-top: 6px; }
+
+  .wire { position: absolute; height: 3px; background: var(--hairline); border-radius: 2px; }
+  .w1 { left: 512px; top: 150px; width: 52px; }
+  .w2 { left: 748px; top: 150px; width: 52px; }
+  .wire::after { content: ""; position: absolute; right: -2px; top: -5px; border: 6.5px solid transparent; border-left: 9px solid var(--hairline); border-right: 0; }
+
+  .server {
+    position: absolute; left: 802px; top: 46px; width: 358px; height: 208px; background: var(--surface);
+    border: 1.5px solid var(--hairline); border-radius: 12px; padding: 18px 22px; box-shadow: 0 14px 28px -20px rgb(35 43 54 / 0.45);
+  }
+  .server h2 { font-size: 24px; font-weight: 600; letter-spacing: -0.3px; }
+  .row { display: flex; align-items: center; gap: 12px; margin-top: 16px; font-size: 18px; }
+  .row svg { width: 22px; height: 22px; flex: none; stroke: var(--ink-soft); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .live { width: 12px; height: 12px; border-radius: 50%; background: #3fa45b; box-shadow: 0 0 0 4px rgb(63 164 91 / 0.18); margin: 0 5px; flex: none; }
+</style>
+</head>
+<body>
+  <div class="term" aria-hidden="true">
+    <div class="dots"><i></i><i></i><i></i><span>agent</span></div>
+    <div><span class="p">$</span> ssh deploy@hyperclay.com</div>
+    <div class="no">&nbsp; no shell for this key</div>
+    <div><span class="p">$</span> deploy upload <span class="dim">9f3a&hellip;</span></div>
+    <div class="ok">&nbsp; received</div>
+    <div><span class="p">$</span> deploy finish</div>
+  </div>
+  <div class="wire w1"></div>
+  <div class="gate" aria-hidden="true">
+    <h3>receiver</h3>
+    <div class="verb">upload</div>
+    <div class="verb">approve</div>
+    <div class="verb">finish</div>
+    <div class="verb">rollback</div>
+  </div>
+  <div class="wire w2"></div>
+  <div class="server" aria-hidden="true">
+    <h2>hyperclay.com</h2>
+    <div class="row"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>no shell, ever</div>
+    <div class="row"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>signed approval checked</div>
+    <div class="row"><span class="live"></span>release is live</div>
+  </div>
+</body>
+</html>

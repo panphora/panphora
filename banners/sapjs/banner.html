@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>sapjs banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fbf8f1; --ink: #1f1c17; --ink-2: #4d473d; --ink-3: #7c7466; --rule: #e2d9c7;
+    --accent: #b4532a; --accent-soft: #f2dfd2; --code-bg: #efe8da;
+    --mono: "JetBrains Mono", ui-monospace, monospace; --serif: "Newsreader", Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body {
+    position: relative; color: var(--ink); font-family: var(--serif);
+    background: radial-gradient(640px 300px at 75% 50%, #f6efe1, transparent 70%), var(--paper);
+  }
+  .code {
+    position: absolute; left: 40px; top: 38px; width: 560px; height: 224px; background: var(--code-bg); border-radius: 12px;
+    padding: 18px 24px; font-family: var(--mono); font-size: 17px; line-height: 1.6; color: var(--ink-3); white-space: pre;
+    border: 1px solid var(--rule);
+  }
+  .a { color: var(--accent); font-weight: 600; }
+  .v { color: var(--ink-2); }
+  .t { color: var(--ink); }
+
+  .arrow { position: absolute; left: 616px; top: 132px; width: 56px; height: 36px; }
+
+  .app {
+    position: absolute; left: 690px; top: 34px; width: 466px; height: 232px; padding: 16px 30px;
+    background: color-mix(in oklab, var(--paper), var(--ink) 5%); border: 1px solid color-mix(in oklab, var(--rule), var(--ink) 8%);
+    border-radius: 16px; box-shadow: 0 1px 0 rgba(60,45,20,.05), 0 18px 34px -16px rgba(60,45,20,.28);
+  }
+  .item { display: flex; align-items: center; gap: 14px; height: 50px; border-bottom: 1px solid var(--rule); font-size: 26px; }
+  .box { width: 24px; height: 24px; border: 2px solid #b9ad97; border-radius: 6px; background: var(--paper); flex: none; display: grid; place-items: center; }
+  .box.on { background: var(--accent); border-color: var(--accent); }
+  .box.on svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+  .done { color: var(--ink-3); text-decoration: line-through; text-decoration-color: rgba(31,28,23,.35); }
+  .add { margin-top: 14px; height: 46px; border: 1px solid var(--rule); border-radius: 10px; background: var(--paper); display: flex; align-items: center; padding: 0 14px; font-size: 23px; color: var(--ink); }
+  .caret { display: inline-block; width: 2px; height: 26px; background: var(--accent); margin-left: 2px; }
+  .left { margin-top: 12px; font-family: var(--mono); font-size: 17px; color: var(--ink-3); }
+</style>
+</head>
+<body>
+<div class="code" aria-hidden="true">&lt;main <span class="a">sap</span>&gt;
+  &lt;ul <span class="a">items</span>=<span class="v">"todos"</span>&gt;
+    &lt;li <span class="a">item</span>&gt;&lt;input <span class="a">bind</span>=<span class="v">"done"</span> <span class="a">persist</span>&gt;
+      &lt;span <span class="a">bind</span>=<span class="v">"title"</span>&gt;<span class="t">Buy milk</span>&lt;/span&gt;
+  &lt;form <span class="a">trigger-add</span>=<span class="v">"todos"</span>&gt;&hellip;
+  &lt;output <span class="a">text</span>=<span class="v">"&hellip; + ' left'"</span>&gt;
+&lt;/main&gt;</div>
+  <svg class="arrow" viewBox="0 0 56 36" aria-hidden="true"><path d="M4 18h40" stroke="#b4532a" stroke-width="3.5" stroke-linecap="round"/><path d="M34 7l12 11-12 11" fill="none" stroke="#b4532a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <div class="app" aria-hidden="true">
+    <div class="item"><span class="box on"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="done">Buy milk</span></div>
+    <div class="item"><span class="box"></span><span>Call the landlord</span></div>
+    <div class="add">Water the plants<span class="caret"></span></div>
+    <div class="left">1 task left</div>
+  </div>
+</body>
+</html>

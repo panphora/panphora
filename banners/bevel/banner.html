@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" style="color-scheme: light">
+<head>
+<meta charset="utf-8">
+<title>Bevel banner</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap">
+<link rel="stylesheet" href="assets/bevel.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; margin: 0; }
+  body { position: relative; background: var(--bevel-ground); color: var(--bevel-ink); font-family: var(--bevel-font-sans); }
+  h1 { position: absolute; left: 52px; top: 58px; width: 470px; margin: 0; font-family: var(--bevel-font-serif); font-weight: 400; font-size: 46px; line-height: 1.08; letter-spacing: -0.015em; }
+  h1 em { color: var(--bevel-brass); }
+  .tape { position: absolute; left: 54px; top: 206px; display: flex; gap: 26px; font-family: var(--bevel-font-mono); font-size: 16px; color: var(--bevel-muted); }
+  .tape b { color: var(--bevel-ink); font-weight: 500; }
+  .card { position: absolute; left: 440px; top: 48px; width: 410px; zoom: 1.36; padding: 16px 18px; background: var(--bevel-surface); border: 1px solid var(--bevel-line-2); display: grid; gap: 13px; }
+  .row { display: flex; align-items: center; gap: 14px; flex-wrap: nowrap; }
+  .row .bevel-sliderrow { flex: 1; gap: 8px; }
+  .row .bevel-sliderrow__value { min-width: 0; text-align: left; }
+  .card .bevel-field { margin: 0; flex: 1; }
+</style>
+</head>
+<body>
+  <h1>Beveled controls in an <em>editorial</em> page.</h1>
+  <div class="tape"><span><b>1</b> stylesheet</span><span><b>1</b> script</span><span>no build</span></div>
+
+  <div class="card" aria-hidden="true">
+    <div class="row">
+      <div class="bevel-seg">
+        <button type="button" class="bevel-button" aria-pressed="true"><span class="bevel-button__label">Auto</span></button>
+        <button type="button" class="bevel-button" aria-pressed="false"><span class="bevel-button__label">Light</span></button>
+        <button type="button" class="bevel-button" aria-pressed="false"><span class="bevel-button__label">Dark</span></button>
+      </div>
+      <label class="bevel-toggle">
+        <input type="checkbox" class="bevel-sr-only" checked>
+        <span class="bevel-toggle__track"><span class="bevel-toggle__thumb"></span></span>
+        <span class="bevel-toggle__label">Live sync</span>
+      </label>
+    </div>
+    <div class="row">
+      <label class="bevel-checkbox">
+        <input type="checkbox" class="bevel-sr-only" checked>
+        <span class="bevel-checkbox__box"></span>
+        <span class="bevel-checkbox__label">Weekly digest</span>
+      </label>
+      <label class="bevel-radio">
+        <input type="radio" class="bevel-sr-only" name="c" checked>
+        <span class="bevel-radio__ring"></span>
+        <span class="bevel-radio__label">Daily</span>
+      </label>
+    </div>
+    <div class="row">
+      <div class="bevel-sliderrow">
+        <div class="bevel-slider" style="--bevel-value: 40%">
+          <input type="range" class="bevel-slider__input" min="0" max="100" value="40">
+          <div class="bevel-slider__track"><div class="bevel-slider__fill"></div></div>
+          <div class="bevel-slider__nub"></div>
+        </div>
+        <output class="bevel-sliderrow__value">40</output>
+      </div>
+      <button type="button" class="bevel-button"><span class="bevel-button__label">Preview</span></button>
+      <button type="button" class="bevel-button bevel-button--primary"><span class="bevel-button__label">Save changes</span></button>
+    </div>
+  </div>
+</body>
+</html>

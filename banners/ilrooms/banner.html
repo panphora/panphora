@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Industry Lab rooms banner</title>
+<style>
+  :root {
+    --bg: #eef0f4; --col: #fbfcfd; --past: #dfe3e9; --ink: #15181c; --muted: #6f7883; --faint: #9aa2ac; --line: #dfe3e9; --edge: #c8cfd7;
+    --accent: #1f5fd0; --free: #1f7a4d; --busy: #bc4238; --block: #eceff3; --block-edge: #cbd2da; --block-ink: #39424c;
+    --mine-bg: #cfe9db; --mine-edge: #2f8757; --r1: #2f6fd0; --r2: #12857f; --r3: #7a4bb8; --hatch: rgba(127,138,152,.09);
+    --hour: 50px;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: var(--bg); color: var(--ink); font: 15px/1.45 ui-sans-serif, -apple-system, "Segoe UI", Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+  @font-face { font-family: "Workbench"; src: url("assets/workbench.woff2") format("woff2"); }
+  .title { position: absolute; left: 58px; top: 76px; font: 400 52px/1.12 "Workbench", monospace; color: var(--ink); letter-spacing: 0; }
+  .sub { position: absolute; left: 60px; top: 210px; font-size: 15px; color: var(--muted); }
+
+  .app { position: absolute; left: 556px; top: 34px; width: 610px; display: grid; grid-template-columns: 38px repeat(3, minmax(0, 1fr)); gap: 0 8px; }
+  .head { display: grid; grid-template-columns: auto 1fr; align-items: baseline; column-gap: 6px; padding: 7px 10px 6px; background: var(--col); border: 1px solid var(--line); border-bottom: 0; border-top: 2px solid var(--tone); border-radius: 9px 9px 0 0; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; align-self: center; }
+  .dot.free { background: var(--free); } .dot.busy { background: var(--busy); }
+  .nm { font-size: 13px; font-weight: 660; letter-spacing: -.01em; white-space: nowrap; }
+  .st { grid-column: 2; font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+
+  .rail { position: relative; height: 260px; }
+  .tk { position: absolute; right: 7px; transform: translateY(-.62em); font-size: 10.5px; color: var(--faint); font-variant-numeric: tabular-nums; }
+  .col { position: relative; height: 260px; background: var(--col); border: 1px solid var(--line); border-top: 0; overflow: hidden; }
+  .hours { position: absolute; inset: 0; background-image: repeating-linear-gradient(to bottom, var(--line) 0 1px, transparent 1px var(--hour)); }
+  .gone { position: absolute; left: 0; right: 0; top: 0; height: 38px; background: repeating-linear-gradient(-45deg, var(--hatch) 0 5px, transparent 5px 10px), var(--past); border-bottom: 1px solid var(--edge); }
+  .ev { position: absolute; left: 2px; right: 2px; background: var(--block); color: var(--block-ink); border: 1px solid var(--block-edge); border-radius: 7px; box-shadow: 0 1px 2px rgba(21,24,28,.06); }
+  .ev .t { margin-top: 3px; padding-inline: 7px; font-size: 10px; opacity: .8; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ev .w { margin-block: 2px; padding-inline: 7px; font-size: 12px; font-weight: 620; line-height: 1.2; white-space: nowrap; }
+  .ev.mine { background: var(--mine-bg); border-color: var(--mine-edge); color: var(--ink); box-shadow: inset 3px 0 0 var(--mine-edge), 0 1px 2px rgba(21,24,28,.06); }
+  .peek { position: absolute; left: 2px; right: 2px; display: flex; align-items: center; padding: 0 8px; border-radius: 7px; background: var(--tone); color: var(--col); font-size: 11.5px; font-weight: 640; font-variant-numeric: tabular-nums; box-shadow: 0 6px 14px -6px rgba(31,95,208,.6); }
+</style>
+</head>
+<body>
+  <h1 class="title">Industry Lab<br>Conference Rooms</h1>
+  <p class="sub">Every booking is a real Google Calendar event.</p>
+
+  <div class="app" aria-hidden="true">
+    <span></span>
+    <div class="head" style="--tone:var(--r1)"><span class="dot free"></span><span class="nm">4th Floor Conf Room</span><span class="st">Free at 12:00</span></div>
+    <div class="head" style="--tone:var(--r2)"><span class="dot busy"></span><span class="nm">4th Floor Phone Booth</span><span class="st">Busy until 12:30</span></div>
+    <div class="head" style="--tone:var(--r3)"><span class="dot free"></span><span class="nm">5th Floor Conf Room</span><span class="st">Free until 2:30</span></div>
+
+    <div class="rail"><span class="tk" style="top:0">11</span><span class="tk" style="top:50px">12</span><span class="tk" style="top:100px">1</span><span class="tk" style="top:150px">2</span><span class="tk" style="top:200px">3</span><span class="tk" style="top:250px">4</span></div>
+
+    <div class="col" style="--tone:var(--accent)">
+      <div class="hours"></div><div class="gone"></div>
+      <div class="ev" style="top:2px;height:46px"><div class="t">11:00–12:00</div><div class="w">Lambda</div></div>
+      <div class="peek" style="top:76px;height:48px">Book 12:30–1:30</div>
+      <div class="ev" style="top:152px;height:96px"><div class="t">2:00–4:00</div><div class="w">LeafLabs</div></div>
+    </div>
+    <div class="col">
+      <div class="hours"></div><div class="gone"></div>
+      <div class="ev" style="top:26px;height:47px"><div class="t">11:30–12:30</div><div class="w">Brian</div></div>
+      <div class="ev mine" style="top:127px;height:22px"><div class="w" style="margin-top:3px">You · 1:30</div></div>
+      <div class="ev" style="top:176px;height:22px"><div class="w" style="margin-top:3px">Sammy · 2:30</div></div>
+    </div>
+    <div class="col">
+      <div class="hours"></div><div class="gone"></div>
+      <div class="ev" style="top:2px;height:21px"><div class="w" style="margin-top:3px">Standup · 11:00</div></div>
+      <div class="ev mine" style="top:177px;height:46px"><div class="t">2:30–3:30</div><div class="w">You</div></div>
+    </div>
+  </div>
+</body>
+</html>

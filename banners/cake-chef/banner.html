@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cake Chef banner</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: #f7e4d6; color: #333; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+  h1 { position: absolute; left: 60px; top: 82px; font-size: 56px; line-height: 1; font-weight: 800; color: #3a2a20; }
+  p { position: absolute; left: 62px; top: 154px; width: 420px; font-size: 18px; line-height: 1.45; color: #6d5546; }
+
+  .card { position: absolute; top: 28px; width: 300px; height: 300px; padding: 14px 16px; background: #fff; border-radius: 14px; box-shadow: 0 8px 22px -12px rgb(90 50 20 / .35); }
+  .card h2 { text-align: center; font-size: 18px; font-weight: 700; color: #333; }
+  .well { margin-top: 10px; height: 168px; display: grid; place-items: center; background: #fff5f5; border: 2px solid #e2dada; border-radius: 9px; }
+  .well img { width: 236px; }
+  .row { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 13px; font-weight: 700; color: #555; }
+  .row span { width: 66px; }
+  .sw { width: 30px; height: 30px; border-radius: 6px; border: 2px solid #333; }
+  .sw.on { box-shadow: 0 0 0 3px #fff, 0 0 0 5px #4caf50; }
+  .send { position: absolute; left: 920px; top: 248px; }
+</style>
+</head>
+<body>
+  <h1>Cake Chef</h1>
+  <p>Fill each customer’s cake order, earn money, and unlock new cakes, frostings and toppings.</p>
+
+  <div class="card" style="left:540px" aria-hidden="true">
+    <h2>Customer Order</h2>
+    <div class="well"><img src="assets/order.png" alt=""></div>
+  </div>
+  <div class="card" style="left:860px" aria-hidden="true">
+    <h2>Your Cake</h2>
+    <div class="well"><img src="assets/order.png" alt=""></div>
+    <div class="row"><span>Topping:</span><b class="sw on" style="background:linear-gradient(45deg,red,orange,yellow,green,blue,indigo,violet)"></b><b class="sw" style="background:#ff6b6b"></b><b class="sw" style="background:#ffd700"></b><b class="sw" style="background:#f8f8ff"></b></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>panphora social preview</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; background: #FDF8F0; color: #2B241B; font-family: system-ui, -apple-system, sans-serif; }
+  canvas { position: absolute; left: 72px; top: 62px; }
+  .strip { position: absolute; left: 72px; right: 72px; bottom: 64px; display: flex; gap: 18px; }
+  .strip img { width: calc((100% - 36px) / 3); aspect-ratio: 4 / 1; object-fit: cover; display: block; border: 1px solid #E3D8C6; }
+  .url { position: absolute; right: 74px; top: 74px; font: 600 22px/1 ui-monospace, "SF Mono", Menlo, monospace; color: #8A7B66; }
+</style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div class="url">panphora.com</div>
+  <div class="strip"><img src="assets/htmlclay-banner.png" alt=""><img src="assets/claygoo-banner.png" alt=""><img src="assets/pie-rush-banner.png" alt=""></div>
+<script>
+      const GLYPHS = {
+        p: ['......','......','......','#####.','#....#','#....#','#....#','#....#','#....#','#####.','#.....','#.....','#.....'],
+        a: ['......','......','......','.####.','.....#','.....#','.#####','#....#','#....#','.#####','......','......','......'],
+        n: ['......','......','......','#####.','#....#','#....#','#....#','#....#','#....#','#....#','......','......','......'],
+        h: ['#.....','#.....','#.....','#####.','#....#','#....#','#....#','#....#','#....#','#....#','......','......','......'],
+        o: ['......','......','......','.####.','#....#','#....#','#....#','#....#','#....#','.####.','......','......','......'],
+        r: ['....','....','....','#.##','##..','#...','#...','#...','#...','#...','....','....','....'],
+        i: ['.#.','...','...','##.','.#.','.#.','.#.','.#.','.#.','###','...','...','...'],
+        s: ['......','......','......','.####.','#....#','#.....','.####.','.....#','#....#','.####.','......','......','......'],
+        m: ['.........','.........','.........','####.###.','#...#...#','#...#...#','#...#...#','#...#...#','#...#...#','#...#...#','.........','.........','.........'],
+        k: ['#.....','#.....','#.....','#...#.','#..#..','#.#...','##....','#.#...','#..#..','#...#.','......','......','......'],
+        g: ['......','......','......','.#####','#....#','#....#','#....#','#....#','#....#','.#####','.....#','#....#','.####.'],
+        f: ['..##','.#..','.#..','####','.#..','.#..','.#..','.#..','.#..','.#..','....','....','....'],
+        u: ['......','......','......','#....#','#....#','#....#','#....#','#....#','#....#','.#####','......','......','......'],
+        t: ['.#..','.#..','.#..','####','.#..','.#..','.#..','.#..','.#..','..##','....','....','....'],
+        l: ['##.','.#.','.#.','.#.','.#.','.#.','.#.','.#.','.#.','###','...','...','...']
+      };
+const KERN = { ra: -1 };
+const B = 9, ROWS = 13, GAP = 4, WORDGAP = 6;
+const lines = ['panphora is', 'making fun tools'];
+const cols = (w) => [...w].reduce((t, ch, i) => t + (i ? 2 + (KERN[w[i - 1] + ch] || 0) : 0) + GLYPHS[ch][0].length, 0);
+const lineCols = (l) => l.split(' ').reduce((t, w, i) => t + (i ? WORDGAP : 0) + cols(w), 0);
+const W = Math.max(...lines.map(lineCols)) * B, H = (lines.length * ROWS + GAP) * B + B * 6;
+const c = document.getElementById('c'), x = c.getContext('2d');
+c.width = W * 2; c.height = H * 2; c.style.width = W + 'px'; c.style.height = H + 'px'; x.scale(2, 2);
+x.fillStyle = '#2B241B';
+lines.forEach((line, li) => {
+  let col = 0;
+  line.split(' ').forEach((w, wi) => {
+    if (wi) col += WORDGAP;
+    [...w].forEach((ch, ci) => {
+      if (ci) col += 2 + (KERN[w[ci - 1] + ch] || 0);
+      GLYPHS[ch].forEach((row, r) => [...row].forEach((v, cc) => {
+        if (v !== '#') return;
+        x.fillRect((col + cc) * B, (li * (ROWS + GAP) + r) * B + B * 6, B, B);
+      }));
+      col += GLYPHS[ch][0].length;
+    });
+  });
+});
+</script>
+</body>
+</html>

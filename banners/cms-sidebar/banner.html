@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" style="color-scheme: light">
+<head>
+<meta charset="utf-8">
+<title>CMS sidebar banner</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="assets/bevel.css">
+<style>
+  :root { --paper: #EFF1F4; --grid: #E0E4EA; --ink: #232B36; --code: #232B36; --code-ink: #C9D1DC; --key: #F2C38B; --sel: #9FB0FF; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body {
+    position: relative; font-family: "IBM Plex Sans", system-ui, sans-serif; color: var(--ink);
+    background: linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 32px 32px, linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 32px 32px, var(--paper);
+  }
+  .code { position: absolute; left: 30px; top: 34px; width: 392px; height: 232px; padding: 18px 0; display: flex; flex-direction: column; justify-content: center; background: var(--code); border-radius: 12px; font-family: "IBM Plex Mono", monospace; font-size: 16.5px; color: var(--code-ink); box-shadow: 0 16px 30px -18px rgb(35 43 54 / .6); }
+  .ln { position: relative; height: 28px; line-height: 28px; padding: 0 20px; white-space: pre; }
+  .ln.on::before { content: ""; position: absolute; inset: 0 8px; border-radius: 6px; background: rgb(242 195 139 / .16); }
+  .ln span { position: relative; }
+  .k { color: var(--key); } .s { color: var(--sel); }
+  .arrow { position: absolute; left: 430px; top: 138px; width: 30px; height: 24px; }
+
+  .win { position: absolute; left: 468px; top: 22px; width: 702px; height: 256px; background: #fff; border: 1.5px solid var(--ink); border-radius: 12px; overflow: hidden; box-shadow: 5px 5px 0 var(--ink); }
+  .bar { height: 34px; border-bottom: 1px solid #DDE1E7; display: flex; align-items: center; gap: 7px; padding: 0 14px; background: #F7F8FA; }
+  .bar i { width: 10px; height: 10px; border-radius: 50%; background: #CBD1D9; }
+  .bar .url { margin-left: 12px; height: 22px; padding: 0 12px; border: 1px solid #DDE1E7; border-radius: 6px; font-family: "IBM Plex Mono", monospace; font-size: 13.5px; color: #6B7482; display: flex; align-items: center; background: #fff; }
+  .site { position: absolute; left: 0; top: 34px; width: 372px; bottom: 0; padding: 18px 24px; background: #FBF7F0; }
+  .brand { font-family: "IBM Plex Mono", monospace; font-size: 15px; font-weight: 600; color: #6B4E2A; letter-spacing: .02em; }
+  .site h1 { margin-top: 16px; font-family: "Newsreader", serif; font-weight: 600; font-size: 36px; white-space: nowrap; line-height: 1.05; color: #2B241B; }
+  .site h1 mark { background: #F4DFB3; color: inherit; padding: 0 4px; margin: 0 -4px; box-shadow: 0 0 0 2px #D9A445; border-radius: 2px; }
+  .bars { margin-top: 14px; margin-left: 142px; display: grid; gap: 9px; }
+  .bars b { height: 9px; border-radius: 5px; background: #E9DFCF; }
+  .img { position: absolute; left: 24px; top: 108px; width: 124px; height: 93px; border-radius: 6px; object-fit: cover; }
+
+  .side { position: absolute; right: 0; top: 34px; width: 330px; bottom: 0; padding: 14px 18px; background: var(--bevel-surface); border-left: 1px solid var(--bevel-line-2); display: grid; gap: 10px; align-content: start; }
+  .side .bevel-field { margin: 0; gap: 4px; }
+  .side .bevel-field__label { font-size: 13px; }
+  .side .bevel-input { height: 38px; font-size: 17px; display: flex; align-items: center; padding-top: 0; padding-bottom: 0; }
+  .side .focus { box-shadow: 0 0 0 2px var(--bevel-brass); }
+  .caret { display: inline-block; width: 2px; height: 20px; background: var(--bevel-ink); vertical-align: -4px; margin-left: 1px; }
+  .thumbrow { display: flex; align-items: center; gap: 10px; }
+  .thumb { width: 54px; height: 40px; border-radius: 4px; object-fit: cover; border: 1px solid var(--bevel-line-2); }
+</style>
+</head>
+<body>
+  <div class="code" aria-hidden="true">
+    <div class="ln"><span>{</span></div>
+    <div class="ln"><span>  <span class="k">"Site name"</span>: <span class="s">".brand"</span>,</span></div>
+    <div class="ln on"><span>  <span class="k">"Headline"</span>: <span class="s">"h1"</span>,</span></div>
+    <div class="ln"><span>  <span class="k">"Introduction"</span>: <span class="s">".intro"</span>,</span></div>
+    <div class="ln"><span>  <span class="k">"Cover image"</span>: <span class="s">".cover@src"</span>,</span></div>
+    <div class="ln"><span>  <span class="k">"Caption"</span>: <span class="s">".caption"</span></span></div>
+    <div class="ln"><span>}</span></div>
+  </div>
+  <svg class="arrow" viewBox="0 0 30 24" aria-hidden="true"><path d="M2 12h24M17 4l9 8-9 8" fill="none" stroke="#232B36" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+  <div class="win" aria-hidden="true">
+    <div class="bar"><i></i><i></i><i></i><span class="url">bakery.hyperclay.com</span></div>
+    <div class="site">
+      <div class="brand">Pine &amp; Paper</div>
+      <h1><mark>Fresh bread daily</mark></h1>
+      <div class="bars"><b style="width:100%"></b><b style="width:88%"></b><b style="width:70%"></b></div>
+      <img class="img" src="assets/bread.svg" alt="">
+    </div>
+    <div class="side">
+      <div class="bevel-field"><span class="bevel-field__label">Site name</span><div class="bevel-input">Pine &amp; Paper</div></div>
+      <div class="bevel-field"><span class="bevel-field__label">Headline</span><div class="bevel-input focus">Fresh bread daily<span class="caret"></span></div></div>
+      <div class="bevel-field"><span class="bevel-field__label">Cover image</span><div class="thumbrow"><img class="thumb" src="assets/bread.svg" alt=""><button type="button" class="bevel-button bevel-button--small"><span class="bevel-button__label">Replace</span></button></div></div>
+    </div>
+  </div>
+</body>
+</html>

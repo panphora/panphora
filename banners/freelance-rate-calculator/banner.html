@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Freelance Rate Calculator banner</title>
+<style>
+  :root {
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --paper: #f8f6f0; --ink: #1c1c1e; --muted: #757575; --edge: #e4e4e4; --card: #fffefb;
+    --cream: #fdf7e1; --gold: #ecce52; --gold-deep: #be9530; --goldink: #9c6a1c; --red: #e1362a;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: var(--paper); color: var(--ink); font-family: var(--sans); }
+
+  .title { position: absolute; left: 60px; top: 80px; width: 500px; font: 400 47px/1.14 var(--serif); letter-spacing: -.012em; text-wrap: balance; }
+  .sw { position: relative; white-space: nowrap; z-index: 0; }
+  .sw::after {
+    content: ""; position: absolute; left: -.02em; right: -.02em; bottom: .06em; height: .3em; z-index: -1;
+    background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2012'%20preserveAspectRatio='none'%3E%3Cpath%20d='M4%209%20C%2058%202%20142%202%20196%207.5'%20fill='none'%20stroke='%23ecce52'%20stroke-width='8'%20stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center bottom / 100% 100%;
+  }
+
+  .card {
+    position: absolute; left: 592px; top: 40px; width: 560px; height: 212px;
+    background: var(--card); border: 1px solid var(--edge); border-radius: 5px; box-shadow: 0 8px 0 #dcdcdc; overflow: hidden;
+  }
+  .head { display: flex; align-items: baseline; justify-content: space-between; height: 44px; padding: 13px 22px 0; background: var(--cream); border-bottom: 1px solid var(--edge); }
+  .kicker { font: 700 15px/1 var(--sans); letter-spacing: .13em; color: var(--goldink); }
+  .unit { font: italic 18px/1 var(--serif); color: var(--gold-deep); }
+
+  .body { position: absolute; left: 22px; right: 22px; top: 62px; bottom: 18px; display: grid; grid-template-columns: 300px 1fr; column-gap: 26px; }
+  .rows { display: flex; flex-direction: column; justify-content: space-between; }
+  .row { display: grid; grid-template-columns: 1fr 104px; align-items: center; column-gap: 12px; }
+  .label { font: 20px/1 var(--serif); white-space: nowrap; }
+  .amt { position: relative; height: 34px; display: flex; align-items: center; justify-content: center; background: var(--cell); color: var(--gink); font: 600 18px/1 var(--sans); font-variant-numeric: tabular-nums; }
+  .amt::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 6px; background: var(--bar); }
+  .living { --cell: #edcecc; --bar: #de9d9b; --gink: #8e3b33; }
+  .biz { --cell: #fdf3d0; --bar: #fae9ae; --gink: #7e6400; }
+  .fees { --cell: #ccdaf5; --bar: #b5c8f1; --gink: #3055c2; }
+
+  .result { position: relative; display: flex; flex-direction: column; justify-content: center; padding-left: 30px; border-left: 2px solid #222; }
+  .arrow { position: absolute; left: -15px; top: 50%; margin-top: -14px; width: 28px; height: 28px; display: grid; place-items: center; background: var(--card); color: var(--red); font: 22px/1 var(--sans); }
+  .must { font: italic 21px/1.15 var(--serif); }
+  .must small { display: block; margin-top: 4px; font: 15px/1.2 var(--sans); font-style: normal; color: var(--muted); }
+  .rate { margin-top: 12px; height: 62px; display: flex; align-items: center; justify-content: center; gap: 6px; padding-bottom: 5px; background: var(--gold); box-shadow: inset 0 -7px 0 var(--gold-deep); }
+  .money { font: 700 38px/1 var(--serif); }
+  .per { font: 600 16px/1 var(--sans); color: var(--goldink); margin-top: 8px; }
+</style>
+</head>
+<body>
+  <h1 class="title">Find the <span class="sw">sustainable</span> rate your business needs.</h1>
+
+  <div class="card">
+    <div class="head"><span class="kicker">BREAK-EVEN LEDGER</span><span class="unit">= $/hr</span></div>
+    <div class="body">
+      <div class="rows">
+        <div class="row"><span class="label">Living expenses</span><span class="amt living">$3,400</span></div>
+        <div class="row"><span class="label">Business costs</span><span class="amt biz">$900</span></div>
+        <div class="row"><span class="label">Sales fees &amp; taxes</span><span class="amt fees">+30%</span></div>
+      </div>
+      <div class="result">
+        <span class="arrow">&#8594;</span>
+        <span class="must">You must charge<small>to stay sustainable</small></span>
+        <span class="rate"><span class="money">$92</span><span class="per">/hr</span></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OverType banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Yellowtail&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --night: #121833; --grid: rgb(120 140 230 / 0.13); --violet: #6a5cf5; --pink: #e0468f; --gold: #f6c62c; --glass-ink: #a9b6ff; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body {
+    position: relative; font-family: "Inter", system-ui, sans-serif;
+    background:
+      radial-gradient(420px 260px at 72% 70%, rgb(122 92 255 / 0.28), transparent 70%),
+      radial-gradient(500px 300px at 15% 20%, rgb(60 90 200 / 0.18), transparent 70%),
+      linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 44px 44px,
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 44px 44px,
+      var(--night);
+  }
+  .mark { position: absolute; left: 56px; top: 64px; width: 330px; height: 170px; }
+  .over { position: absolute; left: 0; top: 0; font-family: "Silkscreen", monospace; font-size: 92px; line-height: 1; color: #f4f2ff; letter-spacing: -2px; }
+  .type { position: absolute; left: 104px; top: 46px; font-family: "Yellowtail", cursive; font-size: 118px; line-height: 1; color: var(--gold); text-shadow: 0 4px 18px rgb(246 198 44 / 0.25); }
+  .bar { position: absolute; left: 292px; top: 0; width: 5px; height: 150px; background: #f4f2ff; }
+
+  .scene { position: absolute; left: 430px; top: 0; width: 770px; height: 300px; perspective: 1100px; }
+  .layer {
+    position: absolute; width: 392px; height: 196px; border-radius: 14px; padding: 18px 26px;
+    transform: rotateX(14deg) rotateY(-20deg) rotateZ(-5deg); transform-style: preserve-3d;
+  }
+  .card { left: 40px; top: 66px; background: #fbfaff; box-shadow: 0 30px 50px -20px rgb(0 0 0 / 0.6); color: #23233a; font-size: 20px; line-height: 1.5; }
+  .card h3 { font-size: 26px; font-weight: 800; color: #1c1c30; margin-bottom: 4px; }
+  .card h3 .hash { color: #d9502e; margin-right: 6px; }
+  .card code { font-family: ui-monospace, Menlo, monospace; font-size: 18px; background: #ffd6ea; color: #b0246a; padding: 1px 6px; border-radius: 5px; }
+  .card li { margin-left: 22px; }
+  .card ul { padding: 0; }
+  .glass {
+    left: 236px; top: 44px; background: rgb(150 170 255 / 0.07); border: 1.5px solid rgb(140 165 255 / 0.65);
+    box-shadow: 0 0 0 1px rgb(140 165 255 / 0.12), 0 0 40px rgb(110 130 255 / 0.25), inset 0 0 30px rgb(140 160 255 / 0.08);
+    backdrop-filter: blur(3px);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 17px; line-height: 1.68; color: var(--glass-ink);
+  }
+  .glass .caret { display: inline-block; width: 2.5px; height: 22px; background: #8fa8ff; vertical-align: -4px; margin-left: 2px; }
+  .tag { position: absolute; padding: 8px 16px; border-radius: 8px; font-size: 17px; font-weight: 700; letter-spacing: 1.2px; color: #fff; text-transform: uppercase; white-space: nowrap; }
+  .tag.t1 { left: 452px; top: 26px; background: var(--violet); box-shadow: 0 8px 22px -6px rgb(106 92 245 / 0.8); transform: rotate(-7deg); }
+  .tag.t2 { left: 96px; top: 238px; background: var(--pink); box-shadow: 0 8px 22px -6px rgb(224 70 143 / 0.8); transform: rotate(-7deg); }
+</style>
+</head>
+<body>
+  <div class="mark" aria-hidden="true">
+    <span class="over">Over</span>
+    <span class="type">type</span>
+    <span class="bar"></span>
+  </div>
+  <div class="scene" aria-hidden="true">
+    <div class="layer card">
+      <h3><span class="hash">#</span>Welcome</h3>
+      <div>This is <b>bold</b> and <i>italic</i></div>
+      <div>Here's some <code>code</code></div>
+      <ul><li>First item</li></ul>
+    </div>
+    <div class="layer glass">
+      <div># Welcome</div>
+      <div>This is **bold** and *italic*<span class="caret"></span></div>
+      <div>Here's some `code`</div>
+      <div>- First item</div>
+    </div>
+    <div class="tag t1">Invisible textarea</div>
+    <div class="tag t2">Rendered Markdown</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>redpen banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rp-ground: #FDF8F0; --rp-paper: #FFFCF6; --rp-sunk: #F4ECDF;
+    --rp-ink: #2B241B; --rp-ink2: #4A4033; --rp-muted: #6B5942; --rp-faint: #9A8A70;
+    --rp-line: #E8DCC6; --rp-line2: #D8C8AF; --rp-brass: #8F6310; --rp-flag: #A83A2C; --rp-ok: #256056;
+    --rp-face: #F1E7D4; --rp-edge-hi: #FFF9ED; --rp-edge-lo: #D6C3A5; --rp-face-in: #E3D0B3; --rp-edge-in: #B89F7B; --rp-edge-in-hi: #F0E1C9;
+    --rp-shadow: 6px 6px 0 color-mix(in srgb, var(--rp-ink) 10%, transparent);
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: var(--rp-sunk); color: var(--rp-ink); font-family: var(--mono); }
+
+  .name { position: absolute; left: 60px; top: 74px; font: 600 50px/1 var(--mono); letter-spacing: -.02em; }
+  .name span { color: var(--rp-flag); }
+  .line { position: absolute; left: 62px; top: 146px; width: 330px; font: 400 17px/1.5 var(--mono); color: var(--rp-ink2); }
+
+  .page { position: absolute; left: 430px; top: 34px; width: 360px; height: 300px; background: #fffdf9; border: 1px solid var(--rp-line2); padding: 34px 30px; }
+  .page h2 { position: relative; display: inline-block; font: 700 27px/1.15 Georgia, serif; color: #222; }
+  .box { position: absolute; inset: -6px -8px; border: 2px solid var(--rp-flag); }
+  .tag { position: absolute; top: -10px; left: -10px; min-width: 19px; height: 19px; padding: 0 4px; display: flex; align-items: center; justify-content: center; background: var(--rp-flag); color: var(--rp-paper); border: 2px solid var(--rp-paper); box-shadow: 2px 2px 0 rgba(43,36,27,.25); font: 600 10px/13px var(--mono); }
+  .bar { height: 9px; border-radius: 5px; background: #ece5d8; margin-top: 12px; }
+  .page .bar:first-of-type { margin-top: 22px; }
+
+  .pop { position: absolute; left: 828px; top: 92px; width: 330px; background: var(--rp-paper); border: 1px solid var(--rp-line2); padding: 16px 22px 22px; box-shadow: 10px 10px 0 color-mix(in srgb, var(--rp-ink) 10%, transparent); font-family: var(--mono); letter-spacing: .01em; }
+  .top { display: flex; align-items: center; margin-bottom: 12px; font: 500 19px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--rp-muted); }
+  .top .x { margin-left: auto; color: var(--rp-muted); font-size: 26px; line-height: 1; }
+  .said { font: 400 25px/1.45 var(--mono); color: var(--rp-ink); }
+</style>
+</head>
+<body>
+  <div class="name">red<span>pen</span></div>
+  <p class="line">Comment on any HTML page. An agent edits it and answers.</p>
+
+  <div class="page" aria-hidden="true">
+    <h2>Your break-even rate<span class="box"><span class="tag">1</span></span></h2>
+    <div class="bar" style="width:96%"></div><div class="bar" style="width:88%"></div><div class="bar" style="width:92%"></div><div class="bar" style="width:58%"></div>
+  </div>
+
+  <div class="pop" aria-hidden="true">
+    <div class="top">Comment 1 · h2<span class="x">×</span></div>
+    <div class="said">shorter, and say who it’s for</div>
+  </div>
+</body>
+</html>

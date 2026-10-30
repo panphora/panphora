@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Animatize banner</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: #000; color: #fff; font-family: system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+  .scene { position: absolute; left: 520px; top: 14px; width: 720px; filter: brightness(.42); }
+  h1 { position: absolute; left: 52px; top: 62px; font: 900 76px/1 "Arial Black", system-ui, sans-serif; letter-spacing: .02em; color: #fff3b0;
+    -webkit-text-stroke: 7px #f5a300; paint-order: stroke fill; filter: drop-shadow(0 0 0 #ef3e36) drop-shadow(3px 0 0 #ef3e36) drop-shadow(-3px 0 0 #ef3e36) drop-shadow(0 3px 0 #ef3e36) drop-shadow(0 -3px 0 #ef3e36); }
+  p { position: absolute; left: 58px; top: 172px; width: 420px; font-size: 21px; line-height: 1.4; font-weight: 600; color: #f2f2f2; }
+  .path { position: absolute; left: 0; top: 0; }
+  .boat { position: absolute; left: 640px; top: 196px; width: 104px; }
+  .hand { position: absolute; left: 726px; top: 236px; width: 42px; }
+</style>
+</head>
+<body>
+  <img class="scene" src="assets/bg.png" alt="">
+  <svg class="path" width="1200" height="300" aria-hidden="true"><path d="M742 252 C 800 226, 850 214, 900 240 S 1000 290, 1060 262 S 1150 214, 1210 236" fill="none" stroke="#a51616" stroke-width="5" stroke-dasharray="16 13" stroke-linecap="round"/></svg>
+  <img class="boat" src="assets/boat.png" alt="">
+  <img class="hand" src="assets/clicking-cursor.svg" alt="">
+  <h1>Animatize</h1>
+  <p>Make an animation by dragging a character around the screen.</p>
+</body>
+</html>

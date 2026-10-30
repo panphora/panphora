@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Space Escape banner</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: #0e1a3d url("assets/game.png") 0 -292px / 1200px 600px no-repeat; color: #eaf2ff; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgb(10 18 46 / .94) 0%, rgb(10 18 46 / .86) 34%, rgb(10 18 46 / 0) 58%); }
+  .meteor { position: absolute; right: 70px; top: 16px; width: 110px; }
+  h1 { position: absolute; left: 60px; top: 78px; font-size: 58px; line-height: 1; font-weight: 800; letter-spacing: .01em; color: #f4f8ff; text-shadow: 0 0 22px rgb(140 190 255 / .55); }
+  p { position: absolute; left: 62px; top: 154px; width: 440px; font-size: 18px; line-height: 1.45; color: #c9d7f2; }
+</style>
+</head>
+<body>
+  <div class="shade"></div>
+  <img class="meteor" src="assets/meteor.png" alt="">
+  <h1>SPACE ESCAPE</h1>
+  <p>A meteor is heading for Earth. Grab every glowing cube to build your ship, then launch before it hits.</p>
+</body>
+</html>

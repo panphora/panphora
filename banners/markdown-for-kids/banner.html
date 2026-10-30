@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Markdown for Kids banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fraunces:opsz,wght,SOFT@9..144,800..900,100&family=Recursive:wght@500..800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6EEDD; --paper-deep: #ECDFC4; --card: #FFFBF2; --line: #E4D5B8;
+    --ink: #2B2238; --ink-soft: #5C516A; --tomato: #D2452C; --mark: #C8402A;
+    --wood: #EFCF98; --wood-side: #C9924C; --plum: #7B4A9C; --marigold: #F2A93B;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body {
+    position: relative;
+    background:
+      radial-gradient(520px 300px at 22% 55%, #FBF5E8 0%, transparent 70%),
+      radial-gradient(1px 1px at 12px 12px, rgba(43,34,56,.10) 1px, transparent 1.6px) 0 0 / 24px 24px,
+      var(--paper);
+    font-family: "Andika", system-ui, sans-serif;
+    color: var(--ink);
+  }
+  .logo { position: absolute; left: 34px; top: 30px; height: 252px; }
+  .card {
+    position: absolute; left: 474px; top: 40px; width: 560px; height: 232px;
+    background: var(--card); border: 2px solid var(--line); border-radius: 18px;
+    box-shadow: 0 2px 0 var(--paper-deep), 0 14px 28px -14px rgba(91,63,24,.35);
+    transform: rotate(-1.4deg);
+    padding: 26px 34px;
+  }
+  .card::before {
+    content: ""; position: absolute; inset: 14px auto 14px 16px; width: 3px; border-radius: 2px;
+    background: repeating-linear-gradient(var(--line) 0 6px, transparent 6px 12px);
+  }
+  .mk { color: var(--mark); opacity: .55; font-family: "Recursive", ui-monospace, monospace; font-weight: 700; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-variation-settings: "SOFT" 100; font-weight: 900; font-size: 60px; line-height: 1.05; letter-spacing: -0.5px; }
+  h1 .mk { font-size: 46px; margin-right: 10px; vertical-align: 6px; }
+  p { font-size: 33px; line-height: 1.32; margin-top: 12px; color: var(--ink-soft); }
+  p b { color: var(--ink); }
+  p .mk { font-size: 28px; }
+  ul { list-style: none; padding: 0; margin-top: 4px; font-size: 33px; line-height: 1.32; color: var(--ink-soft); }
+  ul .mk { margin-right: 12px; }
+  .caret { display: inline-block; width: 3px; height: 34px; background: var(--tomato); vertical-align: -5px; margin-left: 3px; border-radius: 2px; }
+  .tile {
+    position: absolute; width: 74px; height: 74px; border-radius: 13px;
+    background:
+      linear-gradient(rgba(201,146,76,.22) 0 2px, transparent 2px) 12px 11px / calc(100% - 24px) 17px no-repeat,
+      linear-gradient(rgba(201,146,76,.16) 0 2px, transparent 2px) 18px 52px / calc(100% - 30px) 17px no-repeat,
+      linear-gradient(160deg, #F6DDAE, var(--wood) 60%);
+    box-shadow: 0 6px 0 var(--wood-side), 0 14px 16px -8px rgba(91,63,24,.45);
+    display: grid; place-items: center;
+    font-family: "Recursive", ui-monospace, monospace; font-weight: 800; font-size: 38px; color: var(--tomato);
+  }
+  .t1 { left: 1070px; top: 22px; transform: rotate(9deg); }
+  .t2 { left: 1094px; top: 114px; transform: rotate(-6deg); font-size: 34px; }
+  .t3 { left: 1064px; top: 198px; transform: rotate(4deg); }
+  .sparkle { position: absolute; left: 452px; top: 70px; width: 30px; height: 30px; }
+</style>
+</head>
+<body>
+  <img class="logo" src="assets/logo.svg" alt="">
+  <div class="card">
+    <h1><span class="mk">#</span>My cat</h1>
+    <p>She is <span class="mk">**</span><b>very</b><span class="mk">**</span> fluffy.</p>
+    <ul><li><span class="mk">-</span>naps all day<span class="caret"></span></li></ul>
+  </div>
+  <div class="tile t1">#</div>
+  <div class="tile t2">**</div>
+  <div class="tile t3">-</div>
+</body>
+</html>

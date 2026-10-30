@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>What The Func banner</title>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0d1117; --panel: #161b22; --line: #30363d; --ink: #e6edf3; --muted: #8b949e; --add: #1b3326; --add-edge: #2ea043;
+    --kw: #ff7b72; --fn: #d2a8ff; --str: #a5d6ff; --const: #79c0ff; --type: #7ee787; --red: #f0625a; --green: #4fb06d; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body { position: relative; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+  .mono { font-family: "Google Sans Code", ui-monospace, monospace; }
+
+  .mark { position: absolute; left: 60px; top: 62px; width: 128px; height: 58px; }
+  .mark i { position: absolute; height: 11px; }
+  .mark .r { background: var(--red); right: 70px; }
+  .mark .g { background: var(--green); left: 70px; }
+  .mark b { position: absolute; left: 63px; top: -6px; bottom: -6px; width: 2px; background: var(--ink); }
+  h1 { position: absolute; left: 58px; top: 140px; width: 400px; font-size: 38px; line-height: 1.05; font-weight: 700; letter-spacing: -.01em; }
+  .tag { position: absolute; left: 60px; top: 194px; width: 400px; font-size: 16.5px; line-height: 1.45; color: var(--muted); }
+
+  .file { position: absolute; left: 500px; top: 34px; width: 660px; height: 300px; border: 1px solid var(--line); border-radius: 6px 6px 0 0; background: var(--bg); overflow: hidden; }
+  .path { height: 34px; display: flex; align-items: center; padding: 0 14px; background: var(--panel); border-bottom: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+  .rows { display: grid; grid-template-columns: 330px 1fr; }
+  .code { padding: 10px 0; font-size: 13px; line-height: 23px; }
+  .code div { padding-left: 12px; white-space: pre; }
+  .code .add { background: var(--add); }
+  .code .add::before { content: "+ "; color: var(--muted); }
+  .code .ctx::before { content: "  "; }
+  .kw { color: var(--kw); } .fn { color: var(--fn); } .str { color: var(--str); } .c { color: var(--const); } .ty { color: var(--type); } .m { color: var(--muted); }
+  .notes { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; border-left: 1px solid var(--line); }
+  .note { padding: 11px 14px 11px 30px; position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; font-size: 14.5px; line-height: 1.4; }
+  .note::before { content: ""; position: absolute; left: 14px; top: 18px; width: 5px; height: 5px; border-radius: 50%; background: var(--ink); }
+</style>
+</head>
+<body>
+  <div class="mark" aria-hidden="true">
+    <i class="r" style="top:0;width:58px"></i><i class="r" style="top:23px;width:46px"></i><i class="r" style="top:46px;width:34px"></i>
+    <b></b>
+    <i class="g" style="top:0;width:58px"></i><i class="g" style="top:23px;width:40px"></i><i class="g" style="top:46px;width:50px"></i>
+  </div>
+  <h1>What The Func</h1>
+  <p class="tag">Turns a diff into plain English, so anyone can review what changed and why.</p>
+
+  <div class="file" aria-hidden="true">
+    <div class="path mono">src/auth/login.ts</div>
+    <div class="rows">
+      <div class="code mono">
+<div class="ctx"><span class="kw">import</span> <span class="m">{ db }</span> <span class="kw">from</span> <span class="str">'../db'</span>;</div>
+<div class="add"><span class="kw">import</span> bcrypt <span class="kw">from</span> <span class="str">'bcrypt'</span>;</div>
+<div class="ctx"> </div>
+<div class="add"><span class="kw">const</span> <span class="c">user</span> = <span class="kw">await</span> db.<span class="fn">find</span>(email);</div>
+<div class="add"><span class="kw">if</span> (!<span class="c">user</span>) <span class="kw">throw</span> <span class="kw">new</span> <span class="ty">AuthError</span>();</div>
+<div class="add"><span class="kw">const</span> <span class="c">ok</span> = <span class="kw">await</span> bcrypt.<span class="fn">compare</span>(</div>
+<div class="add">  password, <span class="c">user</span>.hash);</div>
+<div class="add"><span class="kw">if</span> (!<span class="c">ok</span>) <span class="kw">throw</span> <span class="kw">new</span> <span class="ty">AuthError</span>();</div>
+      </div>
+      <div class="notes">
+        <div class="note">Passwords are now checked against a secure hash.</div>
+        <div class="note">A wrong email and a wrong password show the same “Invalid credentials” message.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
