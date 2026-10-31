@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
-import { mkdtemp, readFile } from 'node:fs/promises';
+import { mkdtemp, readFile, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -21,4 +21,11 @@ for (const reveal of [false, true]) test(`public build retains registry and gate
   assert.equal(html.includes('.like-slot, .notify-region { display: none'), !reveal);
   assert.ok(!html.includes('stub until'));
   for (const marker of ['clay.js', 'redpen.js', 'opens-in', 'documentid', '../claygoo']) assert.ok(!html.includes(marker), marker);
+});
+
+test('revealing refuses a source page that still has the stub', async () => {
+  const dir = await mkdtemp(join(tmpdir(), 'panphora-stub-'));
+  const source = join(dir, 'index.htmlclay');
+  await writeFile(source, '<html><head><style></style></head><body><script>// stub until the backend exists</script></body></html>');
+  await assert.rejects(exec(process.execPath, [join(repo, 'scripts/build-site.mjs'), '--out', join(dir, 'out'), '--reveal-reactions'], { env: { ...process.env, PANPHORA_SOURCE: source } }), /in-memory stub/);
 });

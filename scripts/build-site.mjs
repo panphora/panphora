@@ -4,6 +4,9 @@
 //   node scripts/build-site.mjs           writes the site into LOCAL_APPS (Hyperclay Local syncs it to production)
 //   node scripts/build-site.mjs --out DIR writes the same files under DIR instead, for a dry run
 //
+// The like and notify controls stay hidden until "revealReactions": true is set in site/meta.json (or
+// --reveal-reactions is passed), and revealing refuses a source page that still has the in-memory stub.
+//
 // The editable page loads ClayJS and redpen in edit mode and points at ../bevel and ../assets, which only
 // exist beside it in ~/htmlfile. The public page drops the edit runtime, loads Bevel from jsDelivr, serves
 // images from Hyperclay uploads (/_/uploads/panphora/), and inlines each animated banner into one .html file,
@@ -22,7 +25,7 @@ const SOURCE = process.env.PANPHORA_SOURCE || join(SOURCE_DIR, 'seat-argon-v2/in
 const SOCIAL = join(REPO, 'social');
 const META = JSON.parse(readFileSync(join(REPO, 'site/meta.json'), 'utf8'));
 
-const revealReactions = process.argv.includes('--reveal-reactions');
+const revealReactions = META.revealReactions === true || process.argv.includes('--reveal-reactions');
 const outFlag = process.argv.indexOf('--out');
 const ROOT = outFlag > -1 ? process.argv[outFlag + 1] : join(homedir(), 'Documents/GitHub/hyper/LOCAL_APPS');
 const OUT_PAGE = join(ROOT, 'core/panphora.html');
@@ -51,6 +54,10 @@ const upload = (src, name) => {
 };
 
 let html = readFileSync(SOURCE, 'utf8');
+
+if (revealReactions && (!html.includes('id="panphora-client"') || html.includes('stub until'))) {
+  throw new Error('refusing to reveal the like and notify controls: the source page still has the in-memory stub instead of the panphora client');
+}
 
 html = replaceOnce(html, /<html\b[^>]*>/, '<html lang="en">', '<html> tag');
 
@@ -92,6 +99,7 @@ html = replaceOnce(
 );
 
 if (!revealReactions) {
+  console.log('like and notify controls are hidden (set "revealReactions": true in site/meta.json once the backend is live)');
   html = replaceOnce(html, /<\/style>\s*<\/head>/, `  .like-slot, .notify-region { display: none !important; }\n  </style>\n</head>`, 'end of head style');
 }
 
