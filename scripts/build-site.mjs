@@ -18,10 +18,11 @@ import { fileURLToPath } from 'node:url';
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCE_DIR = join(homedir(), 'htmlfile/20261029-panphora-bakeoff');
-const SOURCE = join(SOURCE_DIR, 'seat-argon-v2/index.htmlclay');
+const SOURCE = process.env.PANPHORA_SOURCE || join(SOURCE_DIR, 'seat-argon-v2/index.htmlclay');
 const SOCIAL = join(REPO, 'social');
 const META = JSON.parse(readFileSync(join(REPO, 'site/meta.json'), 'utf8'));
 
+const revealReactions = process.argv.includes('--reveal-reactions');
 const outFlag = process.argv.indexOf('--out');
 const ROOT = outFlag > -1 ? process.argv[outFlag + 1] : join(homedir(), 'Documents/GitHub/hyper/LOCAL_APPS');
 const OUT_PAGE = join(ROOT, 'core/panphora.html');
@@ -78,7 +79,6 @@ html = replaceOnce(html, /href="\.\.\/bevel\/bevel-fonts\.css"/, `href="${BEVEL}
 html = replaceOnce(html, /href="\.\.\/bevel\/bevel\.css"/, `href="${BEVEL}/bevel.css"`, 'bevel.css link');
 html = replaceOnce(html, /src="\.\.\/bevel\/bevel\.js"/, `src="${BEVEL}/bevel.js"`, 'bevel.js script');
 
-html = replaceOnce(html, /\n<script type="application\/json" data-rules-name="api"[^\n]*<\/script>/, '', 'api rules tag');
 html = replaceOnce(html, /\n<script type="application\/json" id="redpen-data">[^\n]*<\/script>/, '', 'redpen data');
 html = replaceOnce(html, /\n<script src="[^"]*\/clay\/clay\.js[^"]*"><\/script>/, '', 'clay.js script');
 html = replaceOnce(html, /\n<script>window\.REDPEN_OPTIONS[^\n]*<\/script>/, '', 'redpen options');
@@ -91,8 +91,9 @@ html = replaceOnce(
   'polite pop module',
 );
 
-// Likes and "notify me" call an in-memory stub until the Hyperclay endpoint exists, so the public page hides them.
-html = replaceOnce(html, /<\/style>\s*<\/head>/, `  .like-slot, .notify-region { display: none !important; }\n  </style>\n</head>`, 'end of head style');
+if (!revealReactions) {
+  html = replaceOnce(html, /<\/style>\s*<\/head>/, `  .like-slot, .notify-region { display: none !important; }\n  </style>\n</head>`, 'end of head style');
+}
 
 html = html.replace(/src="\.\.\/assets\/([a-z0-9-]+)-banner\/index\.html(?:\?v=\d+)?"/g, (_, id) => {
   const dir = join(SOURCE_DIR, 'assets', `${id}-banner`);
