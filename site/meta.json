@@ -1,4 +1,5 @@
 {
   "title": "panphora: fun tools by David Miranda",
-  "description": "Playful, useful software you can own and change: HTML files that save themselves, web libraries, Mac helpers, little games, and projects since 2010."
+  "description": "Playful, useful software you can own and change: HTML files that save themselves, web libraries, Mac helpers, little games, and projects since 2010.",
+  "revealReactions": true
 }
