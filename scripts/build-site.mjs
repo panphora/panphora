@@ -123,6 +123,8 @@ html = html.replace(/src="\.\.\/assets\/([^"?]+\.(?:png|jpe?g|gif|webp|mp4))(?:\
 
 const leftovers = html.match(/(?:src|href)="\.\.?\/[^"]*"/g);
 if (leftovers) throw new Error(`relative paths left in the page: ${leftovers.join(', ')}`);
+const offDomain = html.match(/(?:src|href)="\/(?!_\/|\/|")[^"]*"/g);
+if (offDomain) throw new Error(`panphora.com serves only the homepage and /_/ paths, so these load the homepage instead: ${offDomain.join(', ')}`);
 for (const marker of ['clay.js', 'redpen.js', 'opens-in', 'documentid', '../claygoo']) {
   if (html.includes(marker)) throw new Error(`edit-mode marker left in the page: ${marker}`);
 }
