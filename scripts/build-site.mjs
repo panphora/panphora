@@ -112,7 +112,7 @@ html = html.replace(/src="\.\.\/assets\/([a-z0-9-]+)-banner\/index\.html(?:\?v=\
   );
   if (page.includes('./assets/')) throw new Error(`${id} banner still references ./assets/`);
   writeFileSync(join(OUT_BANNERS, `${id}-banner.html`), page);
-  return `src="/panphora/${id}-banner.html?v=${short(page)}"`;
+  return `src="https://panphora.hyperclay.com/panphora/${id}-banner.html?v=${short(page)}"`;
 });
 
 const images = new Set();
