@@ -10,7 +10,8 @@
 // The editable page loads ClayJS and redpen in edit mode and points at ../bevel and ../assets, which only
 // exist beside it in ~/htmlfile. The public page drops the edit runtime, loads Bevel from jsDelivr, serves
 // images from Hyperclay uploads (/_/uploads/panphora/), and inlines each animated banner into one .html file,
-// because outside uploads/ Hyperclay Local only syncs .html files.
+// because outside uploads/ Hyperclay Local only syncs .html files. Single-file games in GAMES are copied there too,
+// served at panphora.hyperclay.com/panphora/<id>.html (panphora.com itself only serves the homepage).
 
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
@@ -34,6 +35,7 @@ const OUT_BANNERS = join(ROOT, 'panphora');
 const UPLOAD_URL = '/_/uploads/panphora';
 const BEVEL = 'https://cdn.jsdelivr.net/npm/@panphora/bevel@0.2.1';
 const SITE = 'https://panphora.com';
+const GAMES = { 'block-dodger': join(homedir(), 'Documents/GitHub/block-dodger/index.html') };
 
 const short = (buf) => createHash('sha256').update(buf).digest('hex').slice(0, 10);
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -130,6 +132,7 @@ for (const marker of ['clay.js', 'redpen.js', 'opens-in', 'documentid', '../clay
 }
 
 writeFileSync(OUT_PAGE, html);
+for (const [id, src] of Object.entries(GAMES)) copyFileSync(src, join(OUT_BANNERS, `${id}.html`));
 console.log(`${OUT_PAGE} (${Math.round(html.length / 1024)} KB)`);
 console.log(`${images.size} images and the favicon set in ${OUT_UPLOADS}`);
 console.log(`animated banners in ${OUT_BANNERS}`);
