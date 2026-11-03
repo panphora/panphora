@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Clay Agent banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --paper: #EFF1F4;
+    --grid: #E0E4EA;
+    --surface: #F7F8FA;
+    --hairline: #C9CFD8;
+    --ink: #232B36;
+    --ink-soft: #5C6675;
+    --amber: #D98E2B;
+    --goo: #D18500;
+    --amber-glow: #F7E3BF;
+    --amber-deep: #8F5A10;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; }
+  body {
+    position: relative;
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    background:
+      radial-gradient(560px 280px at 76% 42%, var(--amber-glow) 0%, transparent 72%),
+      linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 36px 36px,
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 36px 36px,
+      var(--paper);
+  }
+
+  .doc {
+    position: absolute; left: 600px; top: 18px; width: 566px; height: 320px;
+    background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px 14px 0 0;
+    box-shadow: 0 2px 0 color-mix(in srgb, var(--ink) 4%, transparent), 0 26px 44px -26px color-mix(in srgb, var(--ink) 38%, transparent);
+    overflow: hidden;
+  }
+  .strip {
+    height: 44px; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px 0 52px; background: var(--paper); border-bottom: 1px solid var(--hairline);
+    font-size: 18px; font-weight: 500; color: var(--ink-soft);
+  }
+  .strip .ref {
+    font: 500 18px/1 "IBM Plex Mono", ui-monospace, Menlo, monospace; color: var(--ink-soft);
+    padding: 5px 9px; border: 1px solid var(--hairline); border-radius: 6px; background: var(--surface);
+  }
+  .page { padding: 20px 40px 0 52px; }
+  h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.6px; line-height: 44px; }
+  .status {
+    display: inline-flex; align-items: center; gap: 10px; height: 44px; margin-top: 12px; padding: 0 20px 0 9px;
+    border-radius: 22px; background: var(--amber-glow); border: 2px solid var(--amber); color: var(--amber-deep);
+    font-size: 26px; font-weight: 600; line-height: 1;
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--amber) 16%, transparent);
+  }
+  .status .tick { width: 26px; height: 26px; border-radius: 50%; background: var(--goo); display: grid; place-items: center; }
+  .status .tick svg { width: 16px; height: 16px; fill: none; stroke: var(--surface); stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+  .rule { height: 1px; background: var(--hairline); margin-top: 18px; }
+  h2 { margin-top: 14px; font-size: 26px; line-height: 32px; font-weight: 600; }
+  .page p { margin-top: 2px; font-size: 22px; line-height: 30px; color: var(--ink-soft); }
+
+  .mascot {
+    position: absolute; left: 478px; top: -2px; width: 80px; height: 80px; transform: rotate(-5deg);
+    filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--goo) 30%, transparent));
+  }
+
+  .term {
+    position: absolute; left: 34px; top: 52px; width: 590px; height: 270px;
+    background: var(--ink); border: 1px solid var(--ink); border-radius: 14px 14px 0 0;
+    box-shadow: 0 28px 46px -22px color-mix(in srgb, var(--ink) 62%, transparent);
+    overflow: hidden;
+  }
+  .bar {
+    height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 18px;
+    background: color-mix(in srgb, var(--paper) 6%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--paper) 10%, transparent);
+  }
+  .bar i { width: 12px; height: 12px; border-radius: 50%; background: var(--ink-soft); }
+  .bar span { margin-left: 8px; font-size: 18px; font-weight: 500; color: var(--hairline); }
+  .cmd {
+    padding: 22px 30px; font: 500 26px/40px "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    color: var(--paper); white-space: pre;
+  }
+  .cmd .ind { padding-left: 2ch; }
+  .pr { color: var(--amber); font-weight: 600; }
+  .bin { font-weight: 600; }
+  .tgt { color: var(--amber-glow); }
+  .flag { color: var(--hairline); font-weight: 400; }
+  .bs { color: var(--ink-soft); }
+  .old { color: var(--hairline); text-decoration: line-through; text-decoration-color: var(--ink-soft); text-decoration-thickness: 2px; }
+  .new { color: var(--amber); font-weight: 600; background: color-mix(in srgb, var(--amber) 20%, transparent); border-radius: 5px; padding: 0 4px; margin: 0 -4px; }
+  .etag { font-style: italic; }
+  .cursor { display: inline-block; width: 14px; height: 29px; margin-left: 8px; vertical-align: -5px; background: var(--amber); border-radius: 2px; }
+</style>
+</head>
+<body>
+  <div class="doc">
+    <div class="strip"><span>hyperclay.com</span><span class="ref">hyperclay:123</span></div>
+    <div class="page">
+      <h1>Field notes</h1>
+      <div class="status"><span class="tick"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Final</div>
+      <div class="rule"></div>
+      <h2>Saturday walk</h2>
+      <p>Take the path by the river.</p>
+    </div>
+  </div>
+
+  <img class="mascot" src="assets/claygoo.svg" alt="">
+
+  <div class="term" aria-hidden="true">
+    <div class="bar"><i></i><i></i><i></i><span>clay-agent</span></div>
+    <div class="cmd"><div><span class="pr">$</span> <span class="bin">clay-agent</span> edit <span class="tgt">hyperclay:123</span> <span class="bs">\</span></div><div class="ind"><span class="flag">--find</span> <span class="old">'Draft'</span> <span class="bs">\</span></div><div class="ind"><span class="flag">--replace</span> <span class="new">'Final'</span> <span class="bs">\</span></div><div class="ind"><span class="flag">--if-match</span> <span class="etag">&lt;etag&gt;</span><span class="cursor"></span></div></div>
+  </div>
+</body>
+</html>
