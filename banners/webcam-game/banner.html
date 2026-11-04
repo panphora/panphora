@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Webcam Game banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #11182d; --cream: #fff8ee;
+    --stone1: #525e7a; --stone2: #2e354c; --stone3: #1a2032; --border: #8796b7;
+    --gold1: #fff0a8; --gold2: #f8b43c; --gold3: #b86d11;
+    --blue: #2474ea; --blue-hi: #69bdff; --blue-lo: #16469f; --identity: #2f80ff;
+    --sky1: #2d193c; --sky2: #7d2b3b; --sky3: #e86a28; --sky4: #ffc247; --warn: #ffd369;
+    --toy: Nunito, ui-rounded, "SF Pro Rounded", "Avenir Next", "Arial Rounded MT Bold", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 300px; overflow: hidden; background: var(--bg); }
+  body { font-family: var(--toy); }
+  #banner-scene { position: relative; width: 1200px; height: 300px; overflow: hidden; }
+  #banner-scene svg { position: absolute; left: 0; top: 0; width: 1200px; height: 300px; display: block; }
+  .hl text { font: 900 46px/1 var(--toy); paint-order: stroke; stroke-linejoin: round; }
+  .cam {
+    position: absolute; left: 151px; top: 145px; transform: translateX(-50%);
+    height: 38px; padding: 0 18px 0 14px; display: flex; align-items: center; gap: 9px; white-space: nowrap;
+    font: 800 24px/1 var(--toy); color: var(--cream);
+    background: linear-gradient(var(--stone1), var(--stone2) 55%, var(--stone3));
+    border: 2px solid var(--border); border-radius: 19px; box-shadow: 0 5px 0 rgb(8 12 28 / 0.45);
+  }
+  .cam i { width: 14px; height: 14px; border-radius: 50%; background: #5fe08a; box-shadow: 0 0 0 3px rgb(95 224 138 / 0.28); }
+</style>
+</head>
+<body>
+<div id="banner-scene">
+<svg viewBox="0 0 1200 300" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="250">
+      <stop offset="0" style="stop-color:var(--sky1)"/><stop offset=".52" style="stop-color:var(--sky2)"/>
+      <stop offset=".88" style="stop-color:var(--sky3)"/><stop offset="1" style="stop-color:var(--sky4)"/>
+    </linearGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="#ffc247" stop-opacity=".5"/><stop offset="1" stop-color="#ff6e1a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="massif" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4e2236"/><stop offset="1" stop-color="#2a1625"/></linearGradient>
+    <linearGradient id="lava" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0561a"/><stop offset=".5" stop-color="#c92e0c"/><stop offset="1" stop-color="#8e1d0e"/></linearGradient>
+    <linearGradient id="stoneBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#566078"/><stop offset="1" stop-color="#252d42"/></linearGradient>
+    <linearGradient id="stoneCap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c5d0e8"/><stop offset="1" stop-color="#7485a6"/></linearGradient>
+    <linearGradient id="warnBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#685044"/><stop offset="1" stop-color="#31202a"/></linearGradient>
+    <linearGradient id="warnCap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe6a0"/><stop offset="1" stop-color="#aa7448"/></linearGradient>
+    <linearGradient id="cloth" gradientUnits="userSpaceOnUse" x1="-21" y1="4" x2="28" y2="42">
+      <stop offset="0" style="stop-color:var(--blue-hi)"/><stop offset=".4" style="stop-color:var(--blue)"/><stop offset="1" style="stop-color:var(--blue-lo)"/>
+    </linearGradient>
+    <radialGradient id="camBg" cx=".55" cy=".42" r=".8"><stop offset="0" stop-color="#4c5a7d"/><stop offset="1" stop-color="#1f2639"/></radialGradient>
+    <linearGradient id="person" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9b7d4"/><stop offset="1" stop-color="#7687aa"/></linearGradient>
+    <clipPath id="above"><rect width="1200" height="250"/></clipPath>
+    <clipPath id="camClip"><rect x="3" y="3" width="224" height="134" rx="19"/></clipPath>
+    <filter id="blur" x="-20%" y="-300%" width="140%" height="700%"><feGaussianBlur stdDeviation="4"/></filter>
+    <path id="wave" fill="none" d="M0,270C90,262 210,276 330,282S560,278 700,284S980,280 1200,288"/>
+    <path id="sp" d="M0,-9C1.5,-3 3,-1.5 9,0C3,1.5 1.5,3 0,9C-1.5,3 -3,1.5 -9,0C-3,-1.5 -1.5,-3 0,-9Z" fill="#fff0a8"/>
+    <g id="limbs" fill="none">
+      <path d="M20,9L40,-12L44,-44"/>
+      <path d="M-20,9L-40,22L-58,16"/>
+      <path d="M-9,40L-17,55L-30,62"/>
+      <path d="M9,40L22,54L20,70"/>
+    </g>
+    <g id="rock">
+      <path d="M0,204H190L178,282H12Z" fill="url(#stoneBody)"/>
+      <path d="M6.3,218H40.5L53.8,282H13.9ZM133,218H167.2L180.5,282H140.6Z" fill="#8996b1" fill-opacity=".15"/>
+      <path d="M69.7,218H103.9L117.2,282H77.3Z" fill="#1a2139" fill-opacity=".33"/>
+      <path d="M0,204H190L181,219H9Z" fill="url(#stoneCap)"/>
+      <path d="M2,206H188" stroke="#e1ebff" stroke-width="3" fill="none"/>
+      <path d="M7,237L95,242L183,237" stroke="#ff8c3c" stroke-opacity=".53" stroke-width="2" fill="none"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="250" fill="url(#sky)"/>
+  <ellipse cx="600" cy="250" rx="640" ry="70" fill="#ff8c29" opacity=".3"/>
+  <circle cx="1000" cy="132" r="105" fill="url(#glow)"/>
+
+  <path d="M690,250L820,196L930,146C960,134 1040,134 1070,146L1160,200L1220,230V250Z" fill="url(#massif)"/>
+  <path d="M930,146L962,138L948,196L905,250H770L820,196Z" fill="#5c2839" opacity=".8"/>
+  <path d="M1040,138L1070,146L1160,200L1220,230V250H1120L1060,190Z" fill="#281222" opacity=".8"/>
+  <path d="M820,196L930,146L962,138" fill="none" stroke="#ff8b33" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+  <ellipse cx="1000" cy="141" rx="62" ry="9" fill="#ff6e1a"/>
+  <ellipse cx="1000" cy="139" rx="42" ry="5" fill="#fff08a"/>
+  <path d="M1028,148C1040,180 1022,214 1046,250" fill="none" stroke="#ff8e36" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1028,148C1040,180 1022,214 1046,250" fill="none" stroke="#fff08a" stroke-width="3" stroke-linecap="round"/>
+
+  <path d="M0,214L60,198L140,208L250,190L330,210L430,196L520,214L640,192L760,212L880,198L1000,216L1110,200L1200,210V250H0Z" fill="#3b1a2b" fill-opacity=".85" stroke="#ff852b" stroke-opacity=".35" stroke-width="2" stroke-linejoin="round"/>
+
+  <g fill="#fff1ac" opacity=".7">
+    <circle cx="300" cy="226" r="2.5"/><circle cx="458" cy="190" r="2"/><circle cx="612" cy="150" r="2.5"/><circle cx="700" cy="214" r="2"/>
+    <circle cx="742" cy="168" r="2.5"/><circle cx="1094" cy="224" r="2"/><circle cx="1170" cy="190" r="2.5"/><circle cx="690" cy="116" r="2"/>
+  </g>
+
+  <g clip-path="url(#above)">
+    <use href="#rock" transform="translate(55 0)"/>
+    <use href="#rock" transform="translate(450 0) scale(.9 1)"/>
+    <g transform="translate(795 0)">
+      <path d="M0,204H170L158,282H12Z" fill="url(#warnBody)"/>
+      <path d="M5.7,218H36.3L48.2,282H12.5ZM119,218H149.6L161.5,282H125.8Z" fill="#8996b1" fill-opacity=".15"/>
+      <path d="M62.3,218H92.9L104.8,282H69.1Z" fill="#1a2139" fill-opacity=".33"/>
+      <path d="M0,204H170L161,219H9Z" fill="url(#warnCap)"/>
+      <path d="M2,206H168" stroke="#fff1b7" stroke-width="3" fill="none"/>
+      <path d="M7,237L85,242L163,237" stroke="#ff8c3c" stroke-opacity=".53" stroke-width="2" fill="none"/>
+      <path d="M47.6,220L59.6,234L44.6,248M122.4,220L110.4,234L125.4,248" fill="none" stroke="#ffd369" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <rect y="250" width="1200" height="50" fill="url(#lava)"/>
+  <rect y="250" width="1200" height="3.5" fill="#fff1ac"/>
+  <use href="#wave" stroke="#ffa424" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+  <use href="#wave" stroke="#fff6b3" stroke-width="2" stroke-linecap="round" opacity=".8" transform="translate(0 -1)"/>
+  <g fill="none" stroke="#ffdd78" stroke-opacity=".35" stroke-width="2">
+    <ellipse cx="210" cy="264" rx="28" ry="5"/><ellipse cx="520" cy="268" rx="22" ry="4"/>
+    <ellipse cx="780" cy="271" rx="26" ry="5"/><ellipse cx="1010" cy="266" rx="30" ry="5"/>
+  </g>
+  <ellipse cx="690" cy="285" rx="46" ry="8" fill="#3b1112" stroke="#ff851b" stroke-width="1.5"/>
+  <path d="M668,285l14,-4 12,4" fill="none" stroke="#ff9429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="120" cy="288" rx="36" ry="6" fill="#3b1112" stroke="#ff851b" stroke-width="1.5"/>
+
+  <ellipse cx="880" cy="252" rx="95" ry="9" fill="none" stroke="#ffd369" stroke-width="9" opacity=".5" filter="url(#blur)"/>
+  <ellipse cx="880" cy="252" rx="95" ry="9" fill="none" stroke="#ffdc78" stroke-opacity=".85" stroke-width="4"/>
+
+  <path d="M344,250C350,238 356,224 366,214C370,210 374,210 377,215C386,226 392,238 398,250Z" fill="#ff6e1a"/>
+  <path d="M358,250C362,238 368,228 372,220C377,230 382,240 386,250Z" fill="#ffb028"/>
+  <g fill="#ffb028"><circle cx="350" cy="224" r="4"/><circle cx="391" cy="217" r="3.5"/><circle cx="372" cy="203" r="3"/></g>
+
+  <g transform="translate(36 24)">
+    <rect y="6" width="230" height="140" rx="22" fill="#080c1c" opacity=".45"/>
+    <rect width="230" height="140" rx="22" fill="url(#camBg)" stroke="#8796b7" stroke-width="3.5"/>
+    <g clip-path="url(#camClip)">
+      <g fill="url(#person)">
+        <circle cx="108" cy="58" r="17"/>
+        <rect x="100" y="70" width="16" height="18" rx="6"/>
+        <path d="M56,150C56,108 72,86 108,86C144,86 160,108 160,150Z"/>
+      </g>
+      <path d="M74,94L66,118L68,142M142,94L166,78L172,58" fill="none" stroke="url(#person)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M74,94H142L166,78L172,58" fill="none" stroke="#ffd369" stroke-width="2.5" stroke-linejoin="round"/>
+      <g fill="#ffd369" stroke="#1a2032" stroke-width="1.5"><circle cx="74" cy="94" r="4.5"/><circle cx="142" cy="94" r="4.5"/><circle cx="166" cy="78" r="4.5"/><circle cx="172" cy="58" r="4.5"/></g>
+      <image href="assets/hand.svg" x="157" y="29" width="30" height="30"/>
+      <path d="M172,25V16M186.5,29.5l6,-6M157.5,29.5l-6,-6" fill="none" stroke="#ffd369" stroke-width="3" stroke-linecap="round"/>
+      <path d="M14,30V14H30M200,14H216V30M14,98V114H30M216,98V114H200" fill="none" stroke="#fff8ee" stroke-opacity=".55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <g transform="translate(380 98) rotate(5) scale(.92)">
+    <path d="M44,-69V-78M57.4,-63.4l6.4,-6.4M30.6,-63.4l-6.4,-6.4" fill="none" stroke="#ffd369" stroke-width="4" stroke-linecap="round"/>
+    <g stroke-linecap="round" stroke-linejoin="round">
+      <use href="#limbs" stroke="#16469f" stroke-width="13"/>
+      <use href="#limbs" stroke="#2474ea" stroke-width="9.9" transform="translate(-.8 0)"/>
+      <use href="#limbs" stroke="#69bdff" stroke-width="2.4" transform="translate(-2.6 0)"/>
+    </g>
+    <path d="M-21,4H21L15,42Q0,47 -15,42Z" fill="url(#cloth)" stroke="#16469f" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M-16,36H16" stroke="#69bdff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-17,9L-12,33" stroke="#fff" stroke-opacity=".33" stroke-width="1.6" stroke-linecap="round"/>
+    <image href="assets/hand.svg" x="31" y="-63" width="26" height="26"/>
+    <image href="assets/hand.svg" x="-71" y="3" width="26" height="26"/>
+    <image href="assets/boot-blue-l.svg" x="-45" y="55.4" width="30" height="21.6" preserveAspectRatio="none"/>
+    <image href="assets/boot-blue-r.svg" x="5" y="63.4" width="30" height="21.6" preserveAspectRatio="none"/>
+    <image href="assets/head-blue-joy.svg" x="-29" y="-55.7" width="58" height="60.3"/>
+  </g>
+
+  <use href="#sp" transform="translate(480 44)"/>
+  <use href="#sp" transform="translate(498 92) scale(.7)"/>
+  <use href="#sp" transform="translate(322 52) scale(.8)"/>
+
+  <g class="hl" text-anchor="end" stroke-width="8">
+    <text x="1148" y="96" fill="#0e1220" stroke="#0e1220">The floor is lava!</text>
+    <text x="1148" y="92" fill="#fff8ee" stroke="#1a2032">The floor is lava!</text>
+  </g>
+</svg>
+<div class="cam"><i></i>Camera ready</div>
+</div>
+</body>
+</html>

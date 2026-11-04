@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -16 40 18" width="120" height="54"><defs><linearGradient id="sh-blue-boot" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#2D6BE0" />
+      <stop offset="55%" stop-color="#16429B" />
+      <stop offset="100%" stop-color="#0E2B6B" />
+    </linearGradient>
+    <linearGradient id="sh-sole-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFDF9" />
+      <stop offset="65%" stop-color="#EAE0D3" />
+      <stop offset="100%" stop-color="#C7B8A5" />
+    </linearGradient>
+    </defs><g id="sh-boot-blue-l">
+      <path d="M -14,-14 L 8,-14 C 12,-14 13,-4 13,0 L -18,0 C -18,-8 -17,-14 -14,-14 Z" fill="url(#sh-blue-boot)" />
+      <path d="M -15,-9 Q -6,-12 5,-10" fill="none" stroke="#7DC4FF" stroke-width="2" stroke-linecap="round" opacity="0.55" />
+      <rect x="-18.5" y="-4.5" width="32" height="4.5" rx="2.2" fill="url(#sh-sole-grad)" />
+    </g>
+    </svg>
